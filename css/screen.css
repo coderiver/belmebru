@@ -19,9 +19,64 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
+@font-face { font-family: PFAgoraSansBold; src: url("fonts/pfagorasanspro-bold.eot"); src: url("fonts/pfagorasanspro-bold.eot?#iefix") format("embedded-opentype"), url("fonts/pfagorasanspro-bold.woff") format("woff"), url("fonts/pfagorasanspro-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: PFAgoraSansBoldItalic; src: url("fonts/pfagorasanspro-bolditalic.eot"); src: url("fonts/pfagorasanspro-bolditalic.eot?#iefix") format("embedded-opentype"), url("fonts/pfagorasanspro-bolditalic.woff") format("woff"), url("fonts/pfagorasanspro-bolditalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: PFAgoraSansMedium; src: url("fonts/pfagorasanspro-medium.eot"); src: url("fonts/pfagorasanspro-medium.eot?#iefix") format("embedded-opentype"), url("fonts/pfagorasanspro-medium.woff") format("woff"), url("fonts/pfagorasanspro-medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+
+input, textarea { width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12px; }
+
+.top { position: relative; background-color: white; box-shadow: 0 2px 4px rgba(105, 99, 83, 0.15); background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(245, 242, 233, 0.54)), color-stop(77.76%, rgba(255, 255, 255, 0.54)), color-stop(100%, rgba(255, 255, 255, 0.54))); background-image: -webkit-linear-gradient(bottom, rgba(245, 242, 233, 0.54) 0%, rgba(255, 255, 255, 0.54) 77.76%, rgba(255, 255, 255, 0.54) 100%); background-image: -moz-linear-gradient(bottom, rgba(245, 242, 233, 0.54) 0%, rgba(255, 255, 255, 0.54) 77.76%, rgba(255, 255, 255, 0.54) 100%); background-image: -o-linear-gradient(bottom, rgba(245, 242, 233, 0.54) 0%, rgba(255, 255, 255, 0.54) 77.76%, rgba(255, 255, 255, 0.54) 100%); background-image: linear-gradient(bottom, rgba(245, 242, 233, 0.54) 0%, rgba(255, 255, 255, 0.54) 77.76%, rgba(255, 255, 255, 0.54) 100%); }
+.top .top__nav { float: left; padding: 13px 65px 0 0; }
+.top .top__nav ul, .top .top__nav li { float: left; }
+.top .top__nav li { margin-left: 23px; }
+.top .top__nav li:first-child { margin: 0; }
+.top .top__nav li.is-active a { text-decoration: none; }
+.top .top__nav a { color: #5c584b; }
+.top .top__nav a:hover { text-decoration: none; color: #f27623; }
+.top .top__auth { float: right; padding: 5px 0; }
+.top .top__auth a { position: relative; display: block; height: 31px; padding: 0 30px 0 50px; background: #fef1bc; border-radius: 15px; line-height: 33px; text-decoration: none; color: #64482a; }
+.top .top__auth i { position: absolute; top: 9px; left: 25px; background: url('../img/icons-s0613d8e56a.png') 0 -151px no-repeat; width: 14px; height: 14px; }
+.top .top__auth span { color: #64482a; }
+.top .top__callback { position: relative; float: left; }
+.top .top__callback:hover { box-shadow: 0 5px 15px rgba(137, 117, 59, 0.65); }
+.top .top__callback:hover .top__callback-head span { border: none; color: #f48829; }
+.top .top__callback:hover .top__callback-drop { display: block; }
+.top .top__callback-head { position: relative; height: 40px; padding: 0 17px 0 37px; background: white; line-height: 42px; cursor: default; z-index: 4; }
+.top .top__callback-head span { border-bottom: 1px dashed; color: #f27623; }
+.top .top__callback-head i { position: absolute; top: 12px; left: 11px; background: url('../img/icons-s0613d8e56a.png') 0 -125px no-repeat; width: 14px; height: 16px; }
+.top .top__callback-drop { display: none; position: absolute; top: 40px; left: 0; width: 220px; padding: 17px 37px 27px; background: white; box-shadow: 0 5px 15px rgba(137, 117, 59, 0.65); }
+
+.header { height: 118px; background: #f5f2e9; }
+.header .header__city { position: relative; float: left; width: 180px; margin-right: 20px; padding-left: 20px; margin-top: 33px; }
+.header .header__city:before { content: ""; position: absolute; top: 7px; left: 0; width: 13px; height: 1px; background: #787262; }
+.header .header__city-in { margin-bottom: 5px; }
+.header .header__city-select span { border-bottom: 1px dashed; color: #f27623; }
+.header .header__cart { float: right; background-color: white; box-shadow: 0 2px 4px rgba(105, 99, 83, 0.15); }
+
+.logo { float: left; margin: 25px 20px 0 0; background: url('../img/icons-s0613d8e56a.png') 0 0 no-repeat; width: 234px; height: 48px; }
+
+.phone { position: relative; float: left; padding: 17px 0 0 23px; }
+.phone .phone__title { color: #c3bca9; }
+.phone .phone__title span { color: #f7a634; }
+.phone .phone__big { font-family: "PFAgoraSansBold", Arial, sans-serif; font-size: 22px; }
+.phone .phone__small { font-family: "PFAgoraSansMedium", Arial, sans-serif; font-size: 14px; }
+
+.field { display: block; margin-bottom: 20px; }
+.field .field__label, .field .field__el { display: block; }
+.field .field__label { margin-bottom: 5px; color: #3d3d3d; }
+.field .field__el input, .field .field__el textarea { border: 1px solid #d6d6d6; }
+.field .field__el input { height: 29px; padding: 0 7px; }
+
+.btn { height: 33px; padding: 0 17px; border-radius: 3px; background-color: #87bf1b; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #aad223), color-stop(100%, #65ad13)); background-image: -webkit-linear-gradient(#aad223, #65ad13); background-image: -moz-linear-gradient(#aad223, #65ad13); background-image: -o-linear-gradient(#aad223, #65ad13); background-image: linear-gradient(#aad223, #65ad13); box-shadow: 0 2px 4px rgba(84, 147, 0, 0.54); border-bottom: 2px solid #5c940b; font-size: 12px; font-weight: bold; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); color: #fefefe; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.l-center { width: 980px; margin: 0 auto; *zoom: 1; }
+.l-center:after { content: " "; display: table; clear: both; }

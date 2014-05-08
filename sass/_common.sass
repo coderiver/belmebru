@@ -36,14 +36,741 @@
 //				display: none
 // ## fonts 
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
++font(PFAgoraSansBold, pfagorasanspro-bold)  
+=fb
+	font-family: "PFAgoraSansBold", Arial, sans-serif 
++font(PFAgoraSansBoldItalic, pfagorasanspro-bolditalic)  
+=fbi
+	font-family: "PFAgoraSansBoldItalic", Arial, sans-serif 
++font(PFAgoraSansMedium, pfagorasanspro-medium)  
+=fm
+	font-family: "PFAgoraSansMedium", Arial, sans-serif 
+
+
+$org: #f27623
 	
 body
-	font-size: 12px 
 	font-family: Arial, sans-serif 
+	font-size: 12px 
 	line-height: 1.4
 
+input, textarea
+	width: 100%
+	+box
+	font-family: Arial, sans-serif
+	font-size: 12px 
 
 // common blocks      
+.top
+	position: relative
+	background-color: #fff
+	box-shadow: 0 2px 4px rgba(105,99,83,.15)
+	+background-image(linear-gradient(bottom, rgba(245,242,233,.54) 0%, rgba(255,255,255,.54) 77.76%, rgba(255,255,255,.54) 100%))
+	.top__nav
+		float: left
+		padding: 13px 65px 0 0
+		ul, li
+			float: left
+		li
+			margin-left: 23px
+			&:first-child
+				margin: 0
+			&.is-active
+				a
+					text-decoration: none
+		a
+			color: #5C584B 
+			&:hover
+				text-decoration: none
+				color: $org 
+	.top__auth
+		float: right
+		padding: 5px 0 
+		a
+			position: relative
+			display: block
+			height: 31px
+			padding: 0 30px 0 50px
+			background: #fef1bc 
+			border-radius: 15px
+			line-height: 33px
+			text-decoration: none
+			color: #64482a 
+		i
+			position: absolute
+			top: 9px
+			left: 25px 
+			+s(top-auth)
+		span
+			color: #64482A 
+	.top__callback
+		position: relative
+		float: left
+		&:hover
+			box-shadow: 0 5px 15px rgba(137,117,59,.65)
+			.top__callback-head
+				span
+					border: none
+					color: #F48829 
+			.top__callback-drop
+				display: block
+	.top__callback-head
+		position: relative
+		height: 40px
+		padding: 0 17px 0 37px
+		background: #FFF 
+		line-height: 42px
+		cursor: default
+		z-index: 4 
+		span
+			border-bottom: 1px dashed 
+			color: $org 
+		i
+			position: absolute
+			top: 12px
+			left: 11px
+			+s(top-callback)
+	.top__callback-drop
+		display: none
+		position: absolute
+		top: 40px
+		left: 0
+		width: 220px
+		padding: 17px 37px 27px
+		background: #FFF 
+		box-shadow: 0 5px 15px rgba(137,117,59,.65)
+
+.header
+	height: 118px
+	background: #F5F2E9 
+	.header__city
+		position: relative
+		float: left
+		width: 180px
+		margin-right: 20px
+		padding-left: 20px
+		margin-top: 33px
+		&:before
+			content: ""
+			position: absolute
+			top: 7px
+			left: 0
+			width: 13px
+			height: 1px
+			background: #787262 
+	.header__city-in
+		margin-bottom: 5px
+	.header__city-select
+		span
+			border-bottom: 1px dashed 
+			color: $org 
+	.header__cart
+		float: right
+		background-color: #fff
+		box-shadow: 0 2px 4px rgba(105,99,83,.15)
+
+.logo
+	float: left
+	margin: 25px 20px 0 0
+	+s(logo)
+
+.phone
+	position: relative
+	float: left
+	padding: 17px 0 0 23px 
+	.phone__title
+		color: #c3bca9 
+		span
+			color: #F7A634 
+	.phone__big
+		+fb
+		font-size: 22px
+	.phone__small
+		+fm
+		font-size: 14px 
+
+.field
+	display: block
+	margin-bottom: 20px
+	.field__label, .field__el
+		display: block
+	.field__label
+		margin-bottom: 5px
+		color: #3d3d3d
+	.field__el
+		input, textarea
+			border: 1px solid #d6d6d6
+		input
+			height: 29px
+			padding: 0 7px
+
+.btn
+	height: 33px
+	padding: 0 17px
+	border-radius: 3px
+	background-color: #87bf1b
+	+g(#aad223, #65ad13)
+	box-shadow: 0 2px 4px rgba(84,147,0,.54)
+	border-bottom: 2px solid #5c940b
+	font-size: 12px
+	font-weight: bold
+	text-shadow: 0 1px 2px rgba(0,0,0,.2)
+	color: #FEFEFE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
