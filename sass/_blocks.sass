@@ -1,0 +1,129 @@
+.field
+	display: block
+	margin-bottom: 20px
+.field__label, 
+.field__el
+	display: block
+.field__label
+	margin-bottom: 5px
+	color: #3d3d3d
+	sup
+		font-size: 12px
+		color: #FFF 
+.field__el
+	position: relative
+	input, 
+	textarea
+		border: 1px solid #d6d6d6
+		font: normal 12px Arial,sans-serif
+		+tr
+		+placeholder
+			font-style: italic
+			color: #a1a1a1
+		&:hover,
+		&:focus
+			border-color: #aaa 
+	input
+		height: 29px
+		padding: 0 11px
+		&.has-error
+			border-color: #f00
+			color: #f00 
+	label
+		&.has-error
+			color: #f00 
+			position: absolute
+			top: 100%
+			left: 0
+
+.btn
+	display: inline-block
+	height: 35px
+	padding: 0 17px
+	border-radius: 3px
+	border-bottom: 2px solid 
+	font: normal 12px/33px "Arial Black",Arial,sans-serif
+	text-decoration: none
+	color: #fefefe !important
+	+box
+.btn_green
+	border-bottom-color: #5c940b 
+	background: #aad223
+	+g(#aad223, #65ad13)
+	text-shadow: 0 1px 2px rgba(0,0,0,.2)
+	+box-shadow(0 2px 4px rgba(84,147,0,.54))
+	&:hover
+		background: #65ad13
+		+g(#65ad13, #aad223)
+	&:active
+		background: #87bf1a 
+.btn_orange
+	background: #f7aa35
+	+g(#f7aa35, #f1651d)
+	border-bottom-color: #ce530e 
+	+box-shadow(0 2px 4px rgba(206,75,22,.54))
+	&:hover
+		background: #f7aa35
+		+g(#f1651d, #f7aa35)
+	&:active
+		background: #f1651d 
+		
+
+.cart-item
+	+clr
+	padding: 22px 0 
+	border-bottom: 1px solid #e7e7e7 
+.cart-item__img
+	float: left
+	margin-right: 10px
+	width: 67px
+	text-align: left
+	overflow: hidden
+	img 
+		vertical-align: middle
+		max-width: 100%
+
+.cart-item__info
+	overflow: hidden
+	+fb
+	a
+		text-transform: uppercase
+		color: $orange
+		font-size: 11px
+	span 
+		display: block
+		font-size: 14px
+.price
+	color: #000
+	font-size: 18px
+	+fb
+	text-align: center 
+.old-price
+	font-size: 14px
+	color: #c3c3c3
+	+fb 
+	span
+		display: inline-block
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 9px
+			left: -2px
+			right: -2px
+			height: 1px
+			background: $red  
+			
+.badge
+	position: absolute
+	line-height: 30px
+	text-align: center
+	font-weight: bold  
+	font-size: 10px
+	color: #fff 
+.badge_new
+	+s(badge-new)
+.badge_discount
+	+s(badge-discount)
+.badge_eco
+	+s(badge-eco)

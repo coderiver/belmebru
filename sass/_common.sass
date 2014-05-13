@@ -1,41 +1,3 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
 +font(PFAgoraSansBold, pfagorasanspro-bold)  
 =fb
 	font-family: "PFAgoraSansBold", Arial, sans-serif 
@@ -45,11 +7,27 @@
 +font(PFAgoraSansMedium, pfagorasanspro-medium)  
 =fm
 	font-family: "PFAgoraSansMedium", Arial, sans-serif 
++font(pfagorasanspro-black, pfagorasanspro-black)  
+=fblack
+	font-family: "pfagorasanspro-black", Arial, sans-serif 
 
 
-$org: #f27623
-	
+$orange: #f27623
+$red: #fe4747
+html
+	+scrollbar
+		width: 5px
+		height: 5px
+		+border-radius(2px)
+		background: #ededed
+	+scrollbar-thumb
+		background: #c9c9c9
+		+border-radius(2px)
+	+scrollbar-track-piece     
+		width: 5px 
+		+border-radius(2px)
 body
+	min-width: 1024px
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
@@ -59,205 +37,439 @@ input, textarea
 	+box
 	font-family: Arial, sans-serif
 	font-size: 12px 
-
+a
+	&:hover
+		text-decoration: none
 // common blocks      
 .top
 	position: relative
+	z-index: 600
 	background-color: #fff
 	box-shadow: 0 2px 4px rgba(105,99,83,.15)
 	+background-image(linear-gradient(bottom, rgba(245,242,233,.54) 0%, rgba(255,255,255,.54) 77.76%, rgba(255,255,255,.54) 100%))
-	.top__nav
+.top__nav
+	float: left
+	padding: 13px 65px 0 0
+	ul, li
 		float: left
-		padding: 13px 65px 0 0
-		ul, li
-			float: left
-		li
-			margin-left: 23px
-			&:first-child
-				margin: 0
-			&.is-active
-				a
-					text-decoration: none
-		a
-			color: #5C584B 
-			&:hover
+	li
+		margin-left: 23px
+		&:first-child
+			margin: 0
+		&.is-active
+			a
 				text-decoration: none
-				color: $org 
-	.top__auth
-		float: right
-		padding: 5px 0 
-		a
-			position: relative
-			display: block
-			height: 31px
-			padding: 0 30px 0 50px
-			background: #fef1bc 
-			border-radius: 15px
-			line-height: 33px
-			text-decoration: none
-			color: #64482a 
-		i
-			position: absolute
-			top: 9px
-			left: 25px 
-			+s(top-auth)
-		span
-			color: #64482A 
-	.top__callback
-		position: relative
-		float: left
+	a
+		color: #5C584B 
 		&:hover
-			box-shadow: 0 5px 15px rgba(137,117,59,.65)
-			.top__callback-head
-				span
-					border: none
-					color: #F48829 
-			.top__callback-drop
-				display: block
-	.top__callback-head
+			color: $orange
+.top__auth
+	float: right
+	padding: 5px 0 
+	a
 		position: relative
-		height: 40px
-		padding: 0 17px 0 37px
-		background: #FFF 
-		line-height: 42px
-		cursor: default
-		z-index: 4 
-		span
-			border-bottom: 1px dashed 
-			color: $org 
-		i
-			position: absolute
-			top: 12px
-			left: 11px
-			+s(top-callback)
-	.top__callback-drop
-		display: none
+		display: block
+		height: 31px
+		padding: 0 30px 0 50px
+		background: #fef1bc 
+		border-radius: 15px
+		line-height: 33px
+		text-decoration: none
+		color: #64482a 
+	i
 		position: absolute
-		top: 40px
-		left: 0
-		width: 220px
-		padding: 17px 37px 27px
-		background: #FFF 
+		top: 9px
+		left: 25px 
+		+s(top-auth)
+	span
+		color: #64482A 
+.top__callback
+	position: relative
+	float: left
+	&:hover
 		box-shadow: 0 5px 15px rgba(137,117,59,.65)
+		.top__callback-head
+			background: #fff 
+			span
+				border: none
+				color: #F48829 
+		.top__callback-drop
+			display: block
+.top__callback-head
+	position: relative
+	height: 40px
+	padding: 0 17px 0 37px
+	line-height: 42px
+	cursor: default
+	z-index: 4 
+	span
+		border-bottom: 1px dotted
+		color: $orange
+	i
+		position: absolute
+		top: 12px
+		left: 11px
+		+s(top-callback)
+.top__callback-drop
+	display: none
+	position: absolute
+	z-index: 2
+	left: 0
+	width: 220px
+	padding: 17px 37px 27px
+	background: #fff
+	+tr
+	box-shadow: 0 5px 15px rgba(137,117,59,.65)
 
 .header
 	height: 118px
-	background: #F5F2E9 
-	.header__city
-		position: relative
-		float: left
-		width: 180px
-		margin-right: 20px
-		padding-left: 20px
-		margin-top: 33px
-		&:before
-			content: ""
-			position: absolute
-			top: 7px
-			left: 0
-			width: 13px
-			height: 1px
-			background: #787262 
-	.header__city-in
+	background: #F5F2E9
+.header__top
+	+clr
+	margin-bottom: 10px 
+.header__city
+	position: relative
+	float: left
+	width: 180px
+	margin-right: 20px
+	padding-left: 20px
+	margin-top: 33px
+	&:before
+		content: ""
+		position: absolute
+		top: 7px
+		left: 0
+		width: 13px
+		height: 1px
+		background: #787262 
+	div
 		margin-bottom: 5px
-	.header__city-select
-		span
-			border-bottom: 1px dashed 
-			color: $org 
-	.header__cart
-		float: right
-		background-color: #fff
-		box-shadow: 0 2px 4px rgba(105,99,83,.15)
+	a
+		border-bottom: 1px dotted
+		color: $orange
+		cursor: pointer
+		text-decoration: none
+.header__cart
+	float: right
+	background-color: #fff
+	box-shadow: 0 2px 4px rgba(105,99,83,.15)
 
-.logo
+.header__logo
 	float: left
 	margin: 25px 20px 0 0
 	+s(logo)
 
-.phone
+.header__phone
 	position: relative
 	float: left
 	padding: 17px 0 0 23px 
-	.phone__title
-		color: #c3bca9 
-		span
-			color: #F7A634 
-	.phone__big
-		+fb
-		font-size: 22px
-	.phone__small
-		+fm
-		font-size: 14px 
+.header__phone-title
+	color: #c3bca9 
+	span
+		color: #F7A634 
+.header__phone-big
+	+fb
+	font-size: 22px
+.header__phone-small
+	+fm
+	font-size: 14px 
 
-.field
+.header__cart	
+	position: relative
+	z-index: 2
+	float: right
+	margin-top: 17px
+	&:hover
+		.header__cart-in
+			+background-image(linear-gradient(top, rgba(245,242,233,.46) 0%, rgba(255,255,255,.46) 100%))
+			&:after
+				+rotate(-180) 
+		.header__cart-drop
+			+opacity(1)
+			visibility: visible
+.header__cart-in
+	position: relative
+	z-index: 2
 	display: block
-	margin-bottom: 20px
-	.field__label, .field__el
+	padding: 15px 0 0 64px
+	width: 231px
+	height: 58px
+	background: #fff
+	+box
+	+box-shadow(0 2px 4px rgba(105,99,83,.15))
+	+background-image(linear-gradient(bottom, rgba(245,242,233,.46) 0%, rgba(255,255,255,.46) 100%))
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 16px
+		margin-top: -14px
+		+s(header-cart)
+	&:after
+		content: ""
+		position: absolute
+		right: 16px
+		top: 50%
+		margin-top: -3px
+		+arr(8,6,$orange,b)
+		+tr
+	a
+		color: $orange 
+.header__cart-drop
+	+opacity(0)
+	visibility: hidden
+	+tr
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding-bottom: 24px
+	background: #fff
+	+box-shadow(0 5px 15px rgba(137,117,59,.65))
+
+.header__cart-list
+	position: relative
+	margin: 86px 9px 10px 0
+	padding-left: 17px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 20px
+		+g(#fff,rgba(#fff,.0)) 
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 20px
+		+g(rgba(#fff,.0),#fff) 
+	.cart-item
+		margin-right: 12px
+.header__cart-scroll
+	max-height: 290px
+	overflow-y: auto
+	+scrollbar
+		width: 5px
+		height: 5px
+		+border-radius(2px)
+		background: #ededed
+	+scrollbar-thumb
+		background: #c9c9c9
+		+border-radius(2px)
+	+scrollbar-track-piece     
+		width: 5px 
+		+border-radius(2px)
+.header__cart-btn
+	padding: 0 30px 
+	text-align: center
+	.btn
 		display: block
-	.field__label
-		margin-bottom: 5px
-		color: #3d3d3d
-	.field__el
-		input, textarea
-			border: 1px solid #d6d6d6
-		input
-			height: 29px
-			padding: 0 7px
+		margin-bottom: 11px
+.header__cart-price
+	margin-bottom: 12px
+	span
+		+fb
+		font-size: 20px
 
-.btn
-	height: 33px
-	padding: 0 17px
-	border-radius: 3px
-	background-color: #87bf1b
-	+g(#aad223, #65ad13)
-	box-shadow: 0 2px 4px rgba(84,147,0,.54)
-	border-bottom: 2px solid #5c940b
+.nav-wrap
+	border-bottom: 3px solid #ce530e  
+	height: 50px
+	+box
+	background: #f7a734 
+	+g(#f7a734,#f1671e)
+	clear: both
+	+clr
+.nav
+	position: relative
+	z-index: 500
+	float: left
+	+clr
+.nav__item
+	position: relative 
+	float: left
+	&:nth-child(4),
+	&:nth-child(5),
+	&:nth-child(6),
+	&:nth-child(7),
+		.subnav
+			left: -300px
+	&.is-marked
+		a
+			color: #ffd83e
+	&.has-not-subnav
+		.nav__link
+			padding: 0 21px
+			span
+				&:after
+					display: none
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 10px
+		bottom: 7px
+		width: 1px
+	&:before
+		background: #f8b43a 
+		right: -1px
+	&:after
+		right: 0
+		background: #df6118
+	&:hover
+		z-index: 2
+		+box-shadow(0 5px 15px rgba(137,117,59,.65))
+		&:before,
+		&:after
+			display: none
+		.nav__link
+			background: #fff 
+			color: #e7651e
+			text-shadow: none 
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				bottom: 0
+				z-index: 2
+				width: 1px
+				background: #fff
+			&:before
+				left: -1px
+			&:after
+				right: -1px
+			span
+				&:after
+					+sp(arr2)
+		.subnav
+			display: block
+.nav__link
+	position: relative
+	z-index: 3
+	display: block
+	padding: 0 35px 0 20px
+	height: 47px
+	line-height: 47px
+	font-size: 14px
+	color: #fff 
+	text-transform: uppercase
+	text-shadow: 0 1px 2px rgba(186,70,17,.75)
+	+fblack
+	text-decoration: none
+	span
+		display: inline-block
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			top: 20px
+			right: -19px
+			+s(arr3)    
+
+.subnav
+	display: none
+	position: absolute
+	z-index: 2
+	left: -1px
+	top: 100%
+	padding: 25px 
+	width: 708px
+	background: #fff
+	+box
+	+clr
+	+tr
+	+box-shadow(0 5px 15px rgba(137,117,59,.65))
+.subnav__left
+	float: left
+	margin-right: -1px
+	padding-right: 31px
+	border-right: 1px solid #dadada
+	a
+		color: #5c584b
+		font-size: 12px
+		&:hover
+			color: $orange 
+.subnav__col
+	float: left
+	width: 182px
+	margin-right: 10px
+.subnav__title
+	margin-bottom: 10px
+	font-size: 14px
+	+fb
+	text-transform: uppercase
+	color: #000 
+.subnav__list
+	margin-bottom: 27px
+	line-height: 24px  
+.subnav__promo
+	overflow: hidden
+	border-left: 1px solid #dadada 
+.promo-item
+	position: relative
+	margin: 0 0 0 15px
+	padding-top: 52px
+	width: 230px
+	text-align: center
+	.btn 
+		margin-top: 40px
+		width: 120px
+	.price
+		margin: 2px 0 0 
+	.badge
+		top: 18px
+	.badge_eco
+		right: 7px
+	.badge_discount
+		right: 47px
+	.badge_new
+		right: 87px
+.promo-item__img
+	margin-bottom: 10px
+	height: 170px
+	overflow: hidden
+	line-height: 170px
+	img
+		max-width: 100%	
+		vertical-align: middle	
+.promo-item__title
+	color: $orange    
 	font-size: 12px
-	font-weight: bold
-	text-shadow: 0 1px 2px rgba(0,0,0,.2)
-	color: #FEFEFE 
+	text-transform: uppercase
+	+fb 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.search-form
+	position: relative 
+	float: right
+	margin: 9px 25px 0 0
+	width: 206px
+	height: 31px
+.search-form__text
+	display: block
+	padding: 0 18px 
+	width: 100%
+	+box
+	height: 31px
+	+border-radius(15px)
+	+g(#d1641f,#ce4615)
+	font-size: 12px
+	color: #fff 
+	+box-shadow(0 1px 0 rgba(255,255,255,.23), inset 0 1px 3px rgba(0,0,0,.47))
+	+placeholder
+		color: #fff 
+	&:focus
+		+placeholder  
+			+hide-text
+.search-form__btn
+	position: absolute
+	right: 16px
+	top: 9px 
+	+s(glass)
+	+hide-text
 
 
 
