@@ -14,6 +14,7 @@
 
 $orange: #f27623
 $red: #fe4747
+$black: #282621
 html
 	+scrollbar
 		width: 5px
@@ -31,16 +32,30 @@ body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
-
+	color: $black
 input, textarea
 	width: 100%
 	+box
 	font-family: Arial, sans-serif
 	font-size: 12px 
 a
+	color: $orange 
 	&:hover
 		text-decoration: none
-// common blocks      
+// common blocks    
+.wrap
+	+clr
+.wrapper
+	overflow: hidden
+.out
+	position: relative
+	margin: 0 0 -425px
+	min-height: 100%
+	height: auto !important
+	height: 100%	 
+.push
+	clear: both
+	height: 425px
 .top
 	position: relative
 	z-index: 600
@@ -159,18 +174,18 @@ a
 	margin: 25px 20px 0 0
 	+s(logo)
 
-.header__phone
+.phone
 	position: relative
 	float: left
 	padding: 17px 0 0 23px 
-.header__phone-title
+.phone__title
 	color: #c3bca9 
 	span
 		color: #F7A634 
-.header__phone-big
+.phone__big
 	+fb
 	font-size: 22px
-.header__phone-small
+.phone__small
 	+fm
 	font-size: 14px 
 
@@ -471,58 +486,93 @@ a
 	+s(glass)
 	+hide-text
 
+.footer
+	position: relative
+	z-index: 2
+	min-height: 425px
+	overflow: hidden
+.footer__logo
+	float: left
+	margin: 10px 100px 0 -50px
+	+s(footer-logo)
+.footer__top
+	padding: 37px 0 18px
+	background: #f5f2e9
+	+box-shadow(inset 0 1px 12px rgba(61,57,44,.11))
+	.phone
+		padding: 0
+		margin: 0 103px 0 0
+	.soc
+		float: right
+		margin-top: 25px
+.footer__links
+	float: left
+	margin-top: 28px
+	font-size: 12px
+	a
+		position: relative
+		margin-left: 18px
+		&:hover
+			color: #282621  
+		&:before
+			content: "/"
+			position: absolute
+			left: -11px 
+			color: #ccc8bc 
+		&:first-child
+			&:before
+				display: none
+				margin-left: 0
+	.icon-pin
+		display: inline-block
+		vertical-align: top
+		margin: -2px 9px 0 0
+		+s(pin)
 
+.footer__bottom
+	padding: 37px 0 
+	background: #efe9d9
+	+box-shadow(inset 0 1px 3px rgba(61,57,44,.2))
+.footer__col
+	float: left
+	margin-left: 50px
+	&:first-child
+		width: 185px
+		margin-left: 0
+	&:nth-child(2)
+		width: 290px
+	a
+		color: #5c584b
+		&:hover
+			color: $orange 
 
+.footer__title
+	margin-bottom: 18px
+	+fb
+	font-size: 14px
+	text-transform: uppercase
+	+clr
+.footer__nav
+	line-height: 2
+	float: left
+	margin-left: 30px
+	&:first-child
+		margin-left: 0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			
-
-
-
-
-
-
-
+.footer__info
+	padding: 65px 0 0
+	+clr
+.footer__copy
+	float: left
+	margin-right: 82px
+.footer__pay
+	float: left
+.footer__created
+	float: right
+	margin-top: 4px
+	+s(logo-flex)
+	&:hover
+		+s(logo-flex-hover)
 
 
 
