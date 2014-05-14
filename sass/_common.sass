@@ -468,21 +468,65 @@ a
 	+box
 	height: 31px
 	+border-radius(15px)
+	background: #d1641f 
 	+g(#d1641f,#ce4615)
 	font-size: 12px
-	color: #fff 
+	color: #5c584b 
 	+box-shadow(0 1px 0 rgba(255,255,255,.23), inset 0 1px 3px rgba(0,0,0,.47))
 	+placeholder
 		color: #fff 
+	&:hover
+		background: #ea7510 
 	&:focus
+		background: #fff
 		+placeholder  
 			+hide-text
+		+ .search-form__btn
+			+sp(glass-h)
 .search-form__btn
 	position: absolute
 	right: 16px
 	top: 9px 
 	+s(glass)
 	+hide-text
+.search-drop
+	position: absolute
+	z-index: 100
+	top: 100%
+	right: 12px
+	width: 406px
+	background: #fff
+	+box-shadow(0 5px 15px rgba(207,175,130,.65))
+.list-categ
+	padding: 13px 20px 
+	background: #fcf7e1 
+	+clr
+	border-bottom: 1px solid #f1e7b8
+	border-top: 1px solid #fff
+	&:first-child 
+		border-top: 0
+.list-categ__name
+	float: left
+	width: 260px
+	a
+		color: #64482a
+		font-size: 14px
+		+fb
+		text-transform: uppercase 
+.list-categ__price
+	float: right
+	font-size: 12px
+.list-item
+	+clr
+	padding: 10px
+	background: #fff  
+.list-item__img
+	width: 80px
+	overflow: hidden
+	text-align: center
+	img
+		max-width: 100%
+		height: auto	
 
 .footer
 	position: relative
