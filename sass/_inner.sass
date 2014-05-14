@@ -1,0 +1,172 @@
+.main
+	padding-bottom: 75px
+.breadcrumbs
+	margin: 0 0 30px 0 
+	a
+		display: inline-block
+		margin-left: 46px
+		position: relative
+		font-size: 14px
+		&:first-child
+			margin-left: 0
+			&:before
+				display: none
+		&:before
+			content: ""
+			position: absolute
+			left: -27px
+			top: 6px
+			+s(arr6) 
+.page-top
+	margin: 30px 0 20px
+	border-bottom: 1px solid #e7e7e7 
+	padding-bottom: 10px
+	color: #575652
+	line-height: 20px
+	font-size: 12px
+	p
+		margin-bottom: 20px
+.title
+	margin-bottom: 20px
+	font-weight: normal
+	+fb
+	font-size: 30px
+	color: $black 
+
+.items-row
+	+clr
+	margin-bottom: 16px
+	border-bottom: 1px solid $border
+	&:last-child
+		border-bottom: 0
+.items-row__top
+	margin-bottom: 20px
+	+clr
+.items-row__title
+	float: left
+	a
+		font-size: 20px
+		color: $black
+		+fb 
+		text-decoration: none
+		border-bottom: 1px solid
+		&:hover
+			border-bottom-color: transparent
+			color: $orange 
+	span
+		display: inline-block
+		margin-left: 10px
+		font-size: 10px
+		color: #b1b1b1 
+.items-row__all
+	float: right
+	margin-top: 10px
+	color: #6e6855
+	font-size: 12px 
+	&:hover
+		color: $orange 
+
+
+.item
+	position: relative
+	float: left 
+	width: 225px
+	height: 335px
+	+box
+	.badge
+		z-index: 2
+		top: 7px
+	.badge_new
+		right: 88px
+	.badge_discount
+		right: 48px
+	.badge_eco
+		right: 9px
+	&:hover
+		z-index: 2
+		.item__in
+			top: -12px
+			bottom: -32px
+			padding: 32px 0 20px 
+			border-color: #9cca20
+			+box-shadow(0 2px 15px rgba(160,144,128,.35))
+		.btn,
+		.item__size
+			visibility: visible
+			+opacity(1)
+		.badge
+			//top: 14px
+		
+.item_round
+	.item__img
+		img
+			+border-radius(7px)
+.item_action
+	border: 3px solid #f22020
+	height: auto
+	+border-radius(20px)
+	.item__save
+		height: 39px
+		line-height: 39px
+		background: #f22020
+		font-size: 18px
+		color: #fff
+		+fb
+		text-align: center 
+		+border-radius(0 0 16px 16px) 
+.item__counter
+	position: absolute
+	left: 50%
+	margin-left: -60px
+	width: 120px
+	top: -23px
+	background: #fff 
+	text-align: center
+	color: #a4a4a4
+	font-size: 9px
+	text-transform: uppercase 
+.item__in
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	border: 3px solid transparent
+	padding: 20px 0
+	+tr
+	+border-radius(20px)
+	background: #fff 
+	
+.item__img
+	overflow: hidden
+	margin: 0 auto 
+	width: 215px
+	height: 170px
+	line-height: 170px
+	text-align: center
+	img
+		max-width: 100%
+		height: auto
+		vertical-align: middle
+.item__main
+	padding: 12px
+	text-align: center
+	.btn
+		margin-top: 19px
+		width: 120px
+		visibility: hidden
+		+opacity(0)
+		+tr
+	.price
+		margin: 8px 0 
+.item__size
+	font-size: 11px
+	color: #80807d 
+	visibility: hidden
+	+opacity(0)
+	+tr
+.prod-title
+	color: $orange
+	font-size: 12px
+	+fb
+	text-transform: uppercase 

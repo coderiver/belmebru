@@ -15,6 +15,7 @@
 $orange: #f27623
 $red: #fe4747
 $black: #282621
+$border: #e7e7e7
 html
 	+scrollbar
 		width: 5px
@@ -137,6 +138,9 @@ a
 	box-shadow: 0 5px 15px rgba(137,117,59,.65)
 
 .header
+	position: relative
+	z-index: 10
+	margin-bottom: 54px
 	height: 118px
 	background: #F5F2E9
 .header__top
@@ -437,12 +441,6 @@ a
 		margin: 2px 0 0 
 	.badge
 		top: 18px
-	.badge_eco
-		right: 7px
-	.badge_discount
-		right: 47px
-	.badge_new
-		right: 87px
 .promo-item__img
 	margin-bottom: 10px
 	height: 170px
@@ -493,7 +491,7 @@ a
 	overflow: hidden
 .footer__logo
 	float: left
-	margin: 10px 100px 0 -50px
+	margin: 10px 50px 0 0
 	+s(footer-logo)
 .footer__top
 	padding: 37px 0 18px
@@ -530,7 +528,7 @@ a
 		+s(pin)
 
 .footer__bottom
-	padding: 37px 0 
+	padding: 37px 0 0   
 	background: #efe9d9
 	+box-shadow(inset 0 1px 3px rgba(61,57,44,.2))
 .footer__col
@@ -560,8 +558,15 @@ a
 		margin-left: 0
 
 .footer__info
-	padding: 65px 0 0
+	position: relative
+	padding: 65px 0 37px   
 	+clr
+	&:before
+		content: ""
+		position: absolute
+		bottom: 0
+		right: 220px
+		+s(tree) 
 .footer__copy
 	float: left
 	margin-right: 82px

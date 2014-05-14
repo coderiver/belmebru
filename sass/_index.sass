@@ -1,0 +1,97 @@
+.index-promo
+	margin-top: -24px
+	padding-top: 24px
+	background: #f5f2e9 
+.promo-links
+	padding: 26px 0 7px
+	margin: 0 auto 
+	width: 854px
+	text-align: justify
+	&:after
+		content: ""
+		display: inline-block
+		width: 100% 
+	a
+		display: inline-block
+		vertical-align: top
+		w220
+		color: #716a54
+		text-decoration: none
+		line-height: 1.5
+		text-align: left
+		+fb
+		font-size: 0
+		text-transform: uppercase
+		&:hover
+			color: $orange 
+			.icon-delivery
+				+sp(icon-delivery-h)
+			.icon-gift
+				+sp(icon-gift-h)
+			.icon-choice
+				+sp(icon-choice-h)
+	i,div
+		display: inline-block
+		vertical-align: middle
+	div
+		width: 163px
+		font-size: 12px
+	span
+		border-bottom: 1px dotted 
+	.icon-delivery
+		margin-right: 9px
+		+s(icon-delivery)
+	.icon-gift
+		margin-right: 15px
+		+s(icon-gift)
+	.icon-choice
+		margin-right: 14px
+		+s(icon-choice)
+.slider-banner
+	position: relative
+	margin-bottom: 50px
+	&:before
+		content: ""
+		position: absolute
+		left: 12px
+		right: 12px
+		top: 40px
+		bottom: 0
+		+box-shadow(0 0 50px #645e50)
+	.slider-banner__prev,
+	.slider-banner__next
+		position: absolute
+		top: 50%
+		margin-top: -33px
+		width: 66px
+		height: 66px
+		+border-radius(50%)
+		background: #f9c909
+		overflow: visible
+		+tr
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -11px
+		&:hover
+			background: #ffe16a 
+	.slider-banner__prev
+		left: -37px
+		&:before
+			left: 15px
+			+s(arr4)
+	.slider-banner__next
+		right: -37px
+		&:before
+			right: 15px
+			+s(arr5)
+	.fotorama
+		position: relative
+		z-index: 2
+		border: 5px solid #faca0a
+		visibility: hidden
+		height: 326px		 
+		background: #fff 
+		&.is-visible
+			visibility: visible

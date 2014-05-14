@@ -121,12 +121,32 @@
 	font-weight: bold  
 	font-size: 10px
 	color: #fff 
-.badge_new
+.badge_new	
+	right: 88px
 	+s(badge-new)
 .badge_discount
+	right: 48px
 	+s(badge-discount)
 .badge_eco
+	cursor: pointer
+	right: 8px
 	+s(badge-eco)
+
+.tooltip
+	display: none
+	position: absolute
+	top: auto
+	margin: 0 0 0 14px
+	z-index: 1000
+.tooltip__in
+	padding: 3px 10px
+	font-size: 11px
+	color: #585858
+	max-width: 255px
+	+box
+	background: #fff
+	+box-shadow(0 1px 3px rgba(0,0,0,.54))
+
 
 .soc
 	font-size: 0
@@ -143,3 +163,12 @@
 	+s(soc-fb)
 .soc__tw
 	+s(soc-tw) 
+
+.counter
+	text-align: center
+	white-space: nowrap
+.counter__item
+	+fb
+	display: inline-block
+	font-size: 24px
+	color: #f22020 
