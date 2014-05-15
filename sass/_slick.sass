@@ -1,0 +1,163 @@
+$slick-font-path: "./fonts/" !default
+$slick-loader-path: "./" !default
+$slick-arrow-color: white !default
+$slick-dot-color: black !default
+$slick-prev-character: "\2190" !default
+$slick-next-character: "\2192" !default
+$slick-dot-character: "\2022" !default
+
+.slick-slider
+	position: relative
+	display: block
+	box-sizing: border-box
+	-moz-box-sizing: border-box
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	-ms-touch-action: none
+	touch-action: none
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+.slick-list
+	position: relative
+	overflow: hidden
+	display: block
+	margin: 0
+	padding: 0
+	&:focus
+		outline: none
+	.slick-loading &
+		background: white slick-image-url("ajax-loader.gif") center center no-repeat
+	&.dragging
+		cursor: pointer
+		cursor: hand
+
+.slick-slider .slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide img
+	-webkit-transform: translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
+	-ms-transform: translate3d(0, 0, 0)
+	-o-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+
+.slick-track
+	position: relative
+	left: 0
+	top: 0
+	display: block
+	zoom: 1
+	&:before,
+	&:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+	.slick-loading &
+		visibility: hidden
+
+.slick-slide
+	float: left
+	height: 100%
+	min-height: 1px
+	img
+		display: block
+	&.slick-loading img
+		display: none
+	display: none
+	&.dragging img
+		pointer-events: none
+	.slick-initialized &
+		display: block
+	.slick-loading &
+		visibility: hidden
+	.slick-vertical &
+		display: block
+		height: auto
+		border: 1px solid transparent
+
+.slick-prev,
+.slick-next
+	position: absolute
+	+hide-text
+	top: 50%
+	&:focus
+		outline: none
+		
+.slider-with-arr
+	.slick-disabled
+		opacity: 0.25
+		cursor: default
+	.slick-prev,
+	.slick-next
+		margin-top: -11px
+		width: 22px
+		height: 22px
+		background: #ededed
+		border-radius: 50%
+		+box-shadow(0 1px 2px rgba(62,48,12,.56))
+		background: #e2e2e2
+		+g(#fafafa,#e2e2e2)
+		+hide-text
+		overflow: visible
+		&:hover
+			background: #fa7c2e
+			+g(#fbb455,#fa7c2e) 
+		&.slick-disabled
+			&:before,
+			&:after
+				display: none
+			&:hover
+				background: #e2e2e2
+				+g(#fafafa,#e2e2e2)
+		&:before,
+		&:after
+			content: ""
+			position: absolute 
+			top: 7px
+	.slick-prev
+		left: -40px
+		&:before
+			left: 7px
+			+arr(6,8,#a2a2a2,l)
+		&:hover
+			&:before
+				+arr(6,8,#fff,l)
+	.slick-next
+		right: -40px
+		&:before
+			left: 9px
+			+arr(6,8,#a2a2a2,r)
+		&:hover
+			&:before
+				+arr(6,8,#fff,r)
+
+.slick-dots
+	text-align: center
+	li
+		position: relative
+		display: inline-block
+		padding: 0 22px 
+		background: #fff 
+		&:first-child
+			padding: 0 11px 0 17px 
+		&:last-child
+			padding: 0 17px 0 11px 
+		&.slick-active
+			button
+				background: $orange 
+	button
+		display: block
+		height: 8px
+		width: 8px
+		cursor: pointer
+		+hide-text
+		border-radius: 50% 
+		background: #e0dac8 
+		+tr
+		&:hover
+			background: #fbc495 
+	

@@ -1,5 +1,5 @@
 .index-promo
-	margin: -54px 0 110px
+	margin: -54px 0 107px
 	padding-top: 24px
 	height: 375px
 	background: #f5f2e9 
@@ -15,7 +15,6 @@
 	a
 		display: inline-block
 		vertical-align: top
-		w220
 		color: #716a54
 		text-decoration: none
 		line-height: 1.5
@@ -51,6 +50,15 @@
 .slider-banner
 	position: relative
 	margin-bottom: 50px
+	visibility: hidden
+	&.is-ready
+		visibility: visible
+	.slick-slider
+		position: relative
+		z-index: 2
+		
+		height: 335px		 
+		background: #fff 
 	&:before
 		content: ""
 		position: absolute
@@ -59,10 +67,8 @@
 		top: 40px
 		bottom: 0
 		+box-shadow(0 0 50px #645e50)
-	.slider-banner__prev,
-	.slider-banner__next
-		position: absolute
-		top: 50%
+	.slick-prev,
+	.slick-next
 		margin-top: -33px
 		width: 66px
 		height: 66px
@@ -77,22 +83,190 @@
 			margin-top: -11px
 		&:hover
 			background: #ffe16a 
-	.slider-banner__prev
+	.slick-prev
 		left: -37px
 		&:before
 			left: 15px
 			+s(arr4)
-	.slider-banner__next
+	.slick-next
 		right: -37px
 		&:before
 			right: 15px
 			+s(arr5)
-	.fotorama
-		position: relative
+	.slick-list
 		z-index: 2
 		border: 5px solid #faca0a
-		visibility: hidden
-		height: 326px		 
-		background: #fff 
-		&.is-visible
-			visibility: visible
+		background: #fff
+		overflow: hidden 
+.scroller-wrap
+	position: relative
+	margin-bottom: 50px
+	float: right
+	width: 730px
+	&:before
+		content: ""
+		position: absolute
+		left: 40px
+		right: 40px
+		height: 20px
+		bottom: 10px
+		+box-shadow(0 0 50px #645e50)
+.scroller
+	position: relative
+	border: 1px solid #d6d6d6
+	padding: 24px 35px 22px
+	border-radius: 20px
+	background: #fff
+	+box
+	+background-image(linear-gradient(bottom, #f6f4f0 0%, #fff 33.74%, #fff 100%))
+.scroller__in
+	white-space: nowrap
+	overflow-x: auto
+	overflow-y: hidden
+	+scrollbar
+		width: 15px
+		height: 15px
+		+border-radius(6px)
+		background: #ededed
+	+scrollbar-thumb
+		background: #c9c9c9
+		+border-radius(6px)
+	+scrollbar-track-piece     
+		width: 15px 
+		+border-radius(6px)
+	.item
+		float: none
+		display: inline-block
+		vertical-align: top
+		margin-right: 10px
+
+.tab-wrap
+	position: absolute
+	top: -16px
+	left: 0
+	right: 0
+	text-align: center
+.tab
+	display: inline-block
+	padding: 0 17px
+	background: #fff  
+	font-size: 0
+.tab__item
+	display: inline-block
+	vertical-align: middle
+	a
+		display: inline-block
+		padding: 0 15px 
+		height: 31px
+		line-height: 31px
+		font-size: 14px
+		+fb
+		color: $black
+		text-decoration: none
+		text-transform: uppercase
+		&:hover
+			color: $orange  
+	span
+		border-bottom: 1px dotted 
+	&.is-active
+		a
+			border-radius: 15px
+			background: #fbd80d
+			+g(#fbd80d,#f9bc07)
+			&:hover
+				color: $black 
+		span
+			border-bottom-color: transparent 
+
+
+.about
+	padding: 37px 25px 0 
+	background: #f6f4f0
+	+clr
+	+background-image(linear-gradient(bottom, #fff 0%, #fff 37.01%, #f6f4f0 100%))
+.about__blog
+	float: left
+	margin-right: 25px
+	width: 200px
+.about__info
+	position: relative
+	padding: 4px 0 40px
+	overflow: hidden
+	line-height: 20px   
+	.article
+		width: 415px
+.about__title
+	margin-bottom: 22px
+	font-size: 20px
+	+fb
+	color: $black 
+	+ p
+		margin-bottom: 16px
+		font-size: 14px
+		line-height: 22px
+		color: $black 
+.yandex-market
+	position: absolute
+	bottom: 11px
+	right: 0
+	text-align: center
+	div
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 17px
+		font-size: 12px
+	a
+		color: $orange 
+.post
+	margin-bottom: 21px
+	font-size: 12px
+	color: #575652 
+	line-height: 20px
+.post__meta
+	margin-bottom: 5px
+	color: #bfbeb8
+.post__title
+	color: $orange
+	font-size: 12px
+	text-transform: uppercase
+	+fb 
+.post__text
+	margin-top: 6px
+	
+.partners
+	height: 85px
+	.slick-slider
+		margin: 0 auto 
+		width: 900px
+	.slick-slide
+		height: 85px
+		text-align: center
+		line-height: 85px
+		img,a  
+			display: inline-block
+			vertical-align: middle
+.soc-widget
+	margin: 72px 0 54px
+	text-align: center
+	font-size: 12px
+	color: #575652 
+.soc-widget__title
+	margin-bottom: 8px
+	font-size: 30px
+	color: $black
+	+fb 
+.soc-widget__col
+	margin-top: 38px
+	float: left
+	margin-left: 22px
+	width: 312px
+	&:first-child
+		margin-left: 0
+		
+.soc-share
+	border-top: 1px solid $border 
+	padding: 28px 0 22px
+	text-align: center
+.soc-share__in
+	display: inline-block

@@ -101,6 +101,11 @@
 	.item__img
 		img
 			+border-radius(7px)
+.wrap
+	.item_action
+		float: left
+		width: 233px
+		margin-bottom: 50px
 .item_action
 	padding-top: 27px
 	border: 3px solid #f22020
@@ -115,17 +120,31 @@
 		+fb
 		text-align: center 
 		+border-radius(0 0 16px 16px) 
-.item__counter
-	position: absolute
-	left: 50%
-	margin-left: -60px
-	width: 120px
-	top: -23px
-	background: #fff 
-	text-align: center
-	color: #a4a4a4
-	font-size: 9px
-	text-transform: uppercase 
+	.counter
+		position: absolute
+		left: 0
+		right: 0
+		top: -23px
+.item_no-hover
+	min-height: 275px
+	height: auto
+	&:hover
+		.item__in
+			padding: 16px 0 0
+			top: 0
+			bottom: 0 
+			background: none
+			border-color: transparent 
+			+box-shadow(none)
+	.item__img
+		height: 160px
+		line-height: 160px
+	.item__in
+		padding: 16px 0 0
+		background: none
+		white-space: normal
+		position: static
+
 .item__in
 	position: absolute
 	top: 0
@@ -171,3 +190,53 @@
 	font-size: 12px
 	+fb
 	text-transform: uppercase 
+
+.item-slider
+	position: relative
+	margin: 50px 0 
+	border: 1px solid $border
+	border-radius: 20px
+	.slick-slider
+		margin: 30px 0 0 
+	.item__img
+		width: 140px
+		margin: 0 auto 
+		img
+			display: inline-block
+	.slick-dots
+		position: absolute
+		bottom: -4px
+		left: 0  
+		right: 0
+		
+.item-slider__title
+	position: absolute
+	top: -10px
+	left: 0
+	right: 0
+	font-size: 14px
+	+fb
+	text-transform: uppercase
+	text-align: center
+	span
+		display: inline-block
+		padding: 0 25px 
+		background: #fff 
+		
+
+.article
+	font-size: 12px
+	color: #575652
+	line-height: 20px
+	p
+		margin-bottom: 19px
+		&:first-child
+			strong
+				font-size: 14px
+				color: $black 
+.article__more
+	font-size: 12px
+	+fb
+	text-transform: uppercase
+	color: $orange 
+	

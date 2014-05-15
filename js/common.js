@@ -111,25 +111,25 @@ head.ready(function() {
 		event.stopPropagation();
 	});
 
-  	// 1. Initialize fotorama manually.
-    var $fotoramaDiv = $('.js-fotorama').on('fotorama:ready ',
-            function (e, fotorama, extra) {
-              $('.js-fotorama').addClass("is-visible");
-            }
-        )
-        // Initialize fotorama manually
-        .fotorama();
+ //  	// 1. Initialize fotorama manually.
+ //    var $fotoramaDiv = $('.js-fotorama').on('fotorama:ready ',
+ //            function (e, fotorama, extra) {
+ //              $('.js-fotorama').addClass("is-visible");
+ //            }
+ //        )
+ //        // Initialize fotorama manually
+ //        .fotorama();
 
-    // 2. Get the API object.
-    var fotorama = $fotoramaDiv.data('fotorama');
-	$(".js-prev-banner").on("click", function(){
-		fotorama.show('<');
-		return false;
-	});
-	$(".js-next-banner").on("click", function(){
-		fotorama.show('>');
-		return false;
-	});
+ //    // 2. Get the API object.
+ //    var fotorama = $fotoramaDiv.data('fotorama');
+	// $(".js-prev-banner").on("click", function(){
+	// 	fotorama.show('<');
+	// 	return false;
+	// });
+	// $(".js-next-banner").on("click", function(){
+	// 	fotorama.show('>');
+	// 	return false;
+	// });
 
 	$("body").prepend( '<div class="tooltip js-tooltip"><div class="tooltip__in"></div></div>' );
     var tooltip = $(".js-tooltip");
@@ -176,5 +176,32 @@ head.ready(function() {
     	});
 	    	
     }
+
+    $('.js-slider-banner').slick({
+		slidesToShow: 1,
+		infinite: false,
+		speed: 300,
+		touchMove: true,
+		arrows: true,
+		onInit: function(){
+			$(".slider-banner").addClass("is-ready");
+		}
+	});
+	$('.js-slider-items').slick({
+		slidesToShow: 6,
+		dots: true,
+		infinite: false,
+		speed: 300,
+		touchMove: true,
+		slidesToScroll: 6,
+		arrows: false
+	});
+	$('.js-slider-partners').slick({
+		slidesToShow: 6,
+		infinite: false,
+		speed: 300,
+		touchMove: true,
+		slidesToScroll: 6
+	});
 
 });

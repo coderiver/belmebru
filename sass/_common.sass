@@ -28,6 +28,8 @@ html
 	+scrollbar-track-piece     
 		width: 5px 
 		+border-radius(2px)
+	+selection
+		background: rgba(0,0,0,.1) 
 body
 	min-width: 1024px
 	font-family: Arial, sans-serif 
@@ -60,7 +62,7 @@ a
 .top
 	position: relative
 	z-index: 600
-	background-color: #fff
+	background: #fff
 	box-shadow: 0 2px 4px rgba(105,99,83,.15)
 	+background-image(linear-gradient(bottom, rgba(245,242,233,.54) 0%, rgba(255,255,255,.54) 77.76%, rgba(255,255,255,.54) 100%))
 .top__nav
@@ -69,7 +71,7 @@ a
 	ul, li
 		float: left
 	li
-		margin-left: 23px
+		margin-left: 22px
 		&:first-child
 			margin: 0
 		&.is-active
@@ -86,7 +88,7 @@ a
 		position: relative
 		display: block
 		height: 31px
-		padding: 0 30px 0 50px
+		padding: 0 36px 0 50px
 		background: #fef1bc 
 		border-radius: 15px
 		line-height: 33px
@@ -140,7 +142,7 @@ a
 .header
 	position: relative
 	z-index: 10
-	margin-bottom: 54px
+	margin-bottom: 50px
 	height: 118px
 	background: #F5F2E9
 .header__top
@@ -175,7 +177,7 @@ a
 
 .header__logo
 	float: left
-	margin: 25px 20px 0 0
+	margin: 24px 24px 0 0
 	+s(logo)
 
 .phone
@@ -187,6 +189,7 @@ a
 	span
 		color: #F7A634 
 .phone__big
+	margin-bottom: -3px
 	+fb
 	font-size: 22px
 .phone__small
@@ -197,7 +200,7 @@ a
 	position: relative
 	z-index: 2
 	float: right
-	margin-top: 17px
+	margin-top: 15px
 	&:hover
 		.header__cart-in
 			+background-image(linear-gradient(top, rgba(245,242,233,.46) 0%, rgba(255,255,255,.46) 100%))
@@ -370,9 +373,9 @@ a
 	position: relative
 	z-index: 3
 	display: block
-	padding: 0 35px 0 20px
+	padding: 0 30px 0 25px
 	height: 47px
-	line-height: 47px
+	line-height: 54px
 	font-size: 14px
 	color: #fff 
 	text-transform: uppercase
@@ -490,6 +493,7 @@ a
 	+s(glass)
 	+hide-text
 .search-drop
+	display: none
 	position: absolute
 	z-index: 100
 	top: 100%
@@ -518,16 +522,37 @@ a
 	font-size: 12px
 .list-item
 	+clr
-	padding: 10px
+	border-top: 1px solid #e7e7e7 
+	padding: 20px 10px
 	background: #fff  
+	&:first-child
+		border-top: 0
 .list-item__img
+	float: left
+	margin-right: 10px
 	width: 80px
 	overflow: hidden
 	text-align: center
 	img
 		max-width: 100%
 		height: auto	
-
+.list-item__info
+	float: left
+	width: 225px
+	font-size: 11px
+	text-transform: uppercase 
+	span
+		display: block
+		margin-top: 6px
+		color: #80807d 
+.list-item__price
+	overflow: hidden
+	text-align: left
+	.price
+		font-size: 14px
+		text-align: left
+	.old-price
+		font-size: 12px
 .footer
 	position: relative
 	z-index: 2
@@ -603,7 +628,7 @@ a
 
 .footer__info
 	position: relative
-	padding: 65px 0 37px   
+	padding: 57px 0 37px   
 	+clr
 	&:before
 		content: ""
