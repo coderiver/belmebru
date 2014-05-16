@@ -20,19 +20,41 @@
 .page-top
 	margin: 30px 0 20px
 	border-bottom: 1px solid #e7e7e7 
-	padding-bottom: 10px
+	padding: 0 0 10px 26px
 	color: #575652
 	line-height: 20px
 	font-size: 12px
+	+clr
 	p
+		clear: both
 		margin-bottom: 20px
+.page-top_no-border
+	border-bottom: 0
 .title
+	float: left
 	margin-bottom: 20px
 	font-weight: normal
 	+fb
 	font-size: 30px
 	color: $black 
-
+.print-link
+	float: right
+	margin-left: 27px
+	position: relative
+	line-height: 1
+	text-decoration: none
+	color: #34332e 
+	border-bottom: 1px dotted
+	&:before
+		content: ""
+		position: absolute
+		left: -27px
+		top: 0
+		+s(print) 
+	&:hover
+		color: $orange
+		&:before
+			+sp(print-h)
 .article
 	font-size: 12px
 	color: #575652
@@ -54,3 +76,130 @@
 	text-transform: uppercase
 	color: $orange 
 	
+.table
+	margin-bottom: 48px
+	border: 1px solid $border
+	border-radius: 6px 
+	border-collapse: separate
+	thead
+		background: #f5f2e9
+		font-size: 12px
+		color: #6e6855
+	th
+		font-weight: normal 
+		padding: 18px 0
+		text-align: left
+		&:first-child
+			text-align: center
+	td
+		position: relative
+		left: 0
+		padding: 20px 0 
+		border-top: 1px solid $border 
+		vertical-align: middle
+		+tr
+		&:first-child
+			text-align: center
+	.is-remove-ready
+		td
+			left: -300px
+			+opacity(0)
+	.price
+		text-align: left
+	.to-center  
+		text-align: center
+	.to-right  
+		text-align: right
+.basket-item
+	width: 150px
+	a
+		font-size: 12px
+		text-transform: uppercase
+		+fb
+.btn-del
+	+s(del)
+.promocode
+	padding-right: 20px
+	span,
+	.field
+		display: inline-block
+		vertical-align: middle
+	span
+		margin-right: 11px
+		color: #64482a
+		font-size: 12px
+		font-weight: bold 
+	.field
+		width: 145px
+		margin: 0
+	input
+		height: 27px
+		border-radius: 3px
+	.btn
+		position: absolute
+		top: 2px
+		right: 2px
+		padding: 0 
+		width: 57px
+		height: 23px
+		line-height: 23px
+		font-size: 12px
+		font-family: Arial 
+		+box-shadow(none)
+.promocode_message
+	padding-right: 31px
+	span,strong,button
+		display: inline-block
+		vertical-align: middle
+	span
+		color: #8ec21c 
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			left: -17px
+			top: 3px
+			+s(arr-green) 
+	strong
+		font-weight: normal
+		+fb	
+		font-size: 18px
+	button
+		margin-left: 8px
+		
+.order-info
+	color: #64482a 
+	.btn
+		margin-bottom: 12px
+		width: 100% 
+		text-align: center
+.order-info__price
+	font-size: 14px
+	white-space: nowrap
+.order-info__meta
+	font-style: italic
+	span
+		font-style: normal
+		color: $orange
+		font-size: 16px
+		font-weight: bold 
+.order-info__value
+	font-size: 16px
+	text-align: center
+	.price
+		font-size: 30px
+		
+.your-bonus
+	margin: 16px 0 
+	padding: 10px 25px 15px
+	border: 1px solid #e7e7e7
+	border-radius: 6px
+	background: #f5f1e9
+	text-align: center
+	span
+		display: block
+		font-size: 18px
+		color: $orange
+		+fb
+	em
+		color: #969696 

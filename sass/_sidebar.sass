@@ -31,12 +31,22 @@
 			font-weight: bold 
 .sidebar__in
 	padding: 0 15px 
-	
+
+.box
+	border: 1px solid #ecdfa8
+	border-radius: 10px
+	background: #f5f5ef	
+.box__item
+	border-bottom: 1px solid #fef7da 
+	padding: 14px 20px 20px
+	+box-shadow(inset 0 -1px 0 #ecdfa8)
+	&:last-child
+		border-bottom: 0   
+		+box-shadow(none)
+.box_yellow
+	background: #fff1b9
 .filter 
 	margin-top: 65px
-	border: 1px solid #dfdbcf
-	border-radius: 10px
-	background: #f5f5ef
 .filter__main-title
 	font-size: 14px
 	+fb
@@ -46,10 +56,6 @@
 	padding: 17px 0 0
 	background: #fff1b9
 	+box-shadow(0 1px 0 rgba(255,255,255,.48))
-.filter__item
-	border-bottom: 1px solid #fff 
-	padding: 14px 20px 20px
-	+box-shadow(inset 0 -1px 0 #e7e7e7)
 .filter__title
 	margin-bottom: 8px
 .filter__footer

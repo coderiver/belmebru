@@ -1,0 +1,48 @@
+.overlay
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 20000
+	background: #000 
+	background: rgba(#000,.48)
+	text-align: center
+	overflow: auto
+	+scrollbar
+		width: 5px
+		height: 5px
+		+border-radius(2px)
+		background: #ededed
+	+scrollbar-thumb
+		background: #c9c9c9
+		+border-radius(2px)
+	+scrollbar-track-piece     
+		width: 5px 
+		+border-radius(2px)
+.popup
+	position: relative
+	display: inline-block
+	margin: 50px 0
+	padding: 22px 22px 30px
+	background: #fff 
+	font-size: 12px
+	+box
+.popup__in
+	border: 1px solid $border
+.popup__close
+	position: absolute
+	top: -18px
+	right: -18px
+	width: 35px
+	height: 35px
+	background: #fff
+	border-radius: 50% 
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -6px 0 0 -7px  
+		+s(close)

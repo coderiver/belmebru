@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Catalog 1.1</title>
+	<title>2-0 korzina</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -425,301 +425,159 @@
 						<a href="#" class="nav__link"><span>Скидки</span></a>
 					</li>                                         
 				</ul>
-				<div class="search-form">
+				<div class="search-form" style="display:block">
 					<input type="text" class="search-form__text" placeholder="Поиск по 10 тыс. товаров">
 					<input type="submit" class="search-form__btn">
 				</div>
 			</div>
 		</div>
 	</header>
-	<div class="main l-center">
-		<div class="l-cols">
+	<div class="l-center">
+		<div class="page-top">
+			<div class="breadcrumbs">
+				<a href="#">Интернет-магазин</a>                            
+			</div>
+			<div class="title">Корзина </div>
+			<a href="#" class="print-link" onClick="window.print()">Распечатать</a>
+		</div>
+		<div class="l-cols2">
 			<div class="l-col1">
-				<div class="sidebar">
-					<div class="item-nav">
-						<div class="item-nav__title">Кресла, пуфики</div>
-						<ul class="item-nav__list">
-							<li><a href="#">Кресла-мешки</a></li>
-							<li><a href="#">Компьютерные кресла</a></li>
-							<li><a href="#">Аксессуары для кресел</a></li>
-							<li><a href="#">Кресла мягкие</a></li>
-							<li><a href="#">Кресла жесткие</a></li>
-							<li>
-								<a href="#">Кресла-качалки</a>
-								<ul>
-									<li class="is-active"><a href="#">Пуфики</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Банкетки</a></li>
-						</ul>
-					</div>
-					<div class="sidebar__in">
-						<a href="#" class="link-prev">Назад в мебель</a>	
-						<form>
-							<div class="box filter">
-								<div class="filter__header">
-									<div class="box__item">
-										<div class="filter__main-title">параметры поиска</div>
-										<div class="filter__title">Категория:</div>
-										<div class="select">
-											<select>
-												<option value="Все">Все</option>
-												<option value="Vegas">Vegas</option>
-												<option value="Арна">Арна</option>
-												<option value="БобруйсМебель">БобруйсМебель</option>
-												<option value="Гомельдрев">Гомельдрев</option>
-												<option value="Арна">Арна</option>
-											</select>
-										</div>
+				<table class="table js-basket">
+					<thead>
+						<tr>
+							<th>Фото</th>
+							<th>Название товара</th>
+							<th>Количество</th>
+							<th>Сумма</th>
+							<th class="to-center">Удалить</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="to-center">
+									<a href="#">
+										<img src="img/item2.png" width="85" alt="img">
+									</a>
+								</div>
+							</td>
+							<td>
+								<div class="basket-item">
+									<a href="#">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
+									<div class="price">1 400 401Р</div>
+								</div>
+							</td>
+							<td>
+								<div class="choose js-choose" data-max-number="10">
+									<button class="choose__minus js-minus"></button>
+		                            <input type="text" class="choose__input" value="1" readonly="">
+		                            <button class="choose__plus js-plus"></button>
+		                        </div>
+							</td>
+							<td>
+								<div class="price">1 400 401Р</div>
+							</td>
+							<td>
+								<div class="to-center">
+									<button class="btn-del js-del-row"></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="to-center">
+									<a href="#">
+										<img src="img/item1.png" width="85" alt="img">
+									</a>
+								</div>
+							</td>
+							<td>
+								<div class="basket-item">
+									<a href="#">шкаф для посуды анатолия</a>
+									<div class="price">1 400 401Р</div>
+								</div>
+							</td>
+							<td>
+								<div class="choose js-choose" data-max-number="10">
+									<button class="choose__minus js-minus"></button>
+		                            <input type="text" class="choose__input" value="1" readonly="">
+		                            <button class="choose__plus js-plus"></button>
+		                        </div>
+							</td>
+							<td>
+								<div class="price">1 400 401Р</div>
+							</td>
+							<td>
+								<div class="to-center">
+									<button class="btn-del js-del-row"></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5">
+								<div class="to-right">
+									<div class="promocode">
+										<form>
+											<span>Введите промокод:</span>
+											<div class="field">
+												<div class="field__el">
+													<input class="has-error" type="text" name="promocode" value="6">
+													<button type="submit" class="btn btn_green">Окей</button>
+													<label class="has-error">Неверный код!</label>
+												</div>
+											</div>
+										</form>
 									</div>
-								</div>
-								<div class="box__item">
-									<div class="filter__title">Производитель:</div>
-									<div class="ui-slider js-ui-slider-range" data-min="0" data-max="1550000">
-										<div class="ui-slider__range">
-											От <span class="js-ui-slider-from"></span>р.
-											До <span class="js-ui-slider-to"></span>р.
-										</div>
-										<div class="ui-slider__main">
-											<div class="js-ui-slider-main"></div>
-										</div>
+									<div class="promocode promocode_message" style="display:none">
+										<span>Промокод принят</span>
+										<strong>50459276А</strong>
+										<button class="btn-del js-del-row"></button>
 									</div>
+									
 								</div>
-								<div class="box__item">
-									<div class="filter__title">Производитель:</div>
-									<div class="select">
-										<select>
-											<option value="Все">Все</option>
-											<option value="Vegas">Vegas</option>
-											<option value="Арна">Арна</option>
-											<option value="БобруйсМебель">БобруйсМебель</option>
-											<option value="Гомельдрев">Гомельдрев</option>
-											<option value="Арна">Арна</option>
-										</select>
-									</div>
-								</div>
-								<div class="box__item">
-									<div class="filter__title">Страна:</div>
-									<div class="select">
-										<select>
-											<option value="Все">Все</option>
-											<option value="Vegas">Vegas</option>
-											<option value="Арна">Арна</option>
-											<option value="БобруйсМебель">БобруйсМебель</option>
-											<option value="Гомельдрев">Гомельдрев</option>
-											<option value="Арна">Арна</option>
-										</select>
-									</div>
-								</div>
-								<div class="box__item">
-									<div class="filter__title">Серия:</div>
-									<div class="select">
-										<select>
-											<option value="Все">Все</option>
-											<option value="Vegas">Vegas</option>
-											<option value="Арна">Арна</option>
-											<option value="БобруйсМебель">БобруйсМебель</option>
-											<option value="Гомельдрев">Гомельдрев</option>
-											<option value="Арна">Арна</option>
-										</select>
-									</div>
-								</div>
-								<div class="filter__footer">
-									<button class="btn btn_orange" type="submit">Подобрать</button>
-									<button class="btn-reset" type="reset"><i></i><span>Сбросить параметры</span></button>
-								</div>
-							</div>
-						</form>
-					</div>
-					
-				</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<a href="#" class="link-prev">Назад в мебель</a>
 			</div>
 			<div class="l-col2">
-				<div class="breadcrumbs">
-					<a href="#">Интернет-магазин</a>                
-					<a href="#">Мебель</a>                
-				</div>
-				<div class="page-top">
-					<div class="title">Кресла и пуфики </div>
-				</div>
-				<div class="sort">
-					<div class="sort__item js-sort">
-						<div class="sort__title">Сортировать:</div>
-						<a href="#" class="sort__key is-top-sort"><span>название</span></a>
-						<a href="#" class="sort__key"><span>цена</span></a>
-						<a href="#" class="sort__key"><span>новинки</span></a>
-					</div>
-					<div class="sort__item">
-						<div class="sort__title">Товаров на странице:</div>
-						<div class="select">
-							<select>
-								<option value="100">100</option>
-								<option value="200">200</option>
-								<option value="300">300</option>
-							</select>
+				<div class="box box_yellow order-info">
+					<div class="box__item">
+						<div class="order-info__price">
+							Общая сумма:
+							<span class="price">1 700 401Р</span>
+						</div>
+						<div class="order-info__meta">
+							<div>	
+								Скидка: 
+								<span>4 500Р</span>
+							</div>
+							<div>	
+								Промокод: 
+								<span>4 500Р</span>
+							</div>
 						</div>
 					</div>
-					<div class="sort__item">
-						<div class="pagination">
-							<a href="#" class="is-active">1</a>
-							<a href="#">2</a>
-							<a href="#">3</a>
-							<a href="#">...</a>
-							<a href="#">48</a>
+					<div class="box__item">
+						<div class="order-info__value">
+							Итого к оплате:
+							<div class="price">1 544 400Р</div>
 						</div>
+					</div>
+					<div class="box__item">
+						<a href="#" class="btn btn_green">Оформить заказ</a>
+						<a href="#" class="btn btn_orange">Купить в кредит</a>
 					</div>
 				</div>
-				<div class="items-row">
-					<div class="item item_round">
-						<span class="badge badge_new">new</span>
-						<span class="badge badge_discount">-15%</span>
-						<span class="badge badge_eco js-tooltip-key" data-title="100% дерево"></span>
-						<div class="item__in">
-							<div class="item__img">
-								<a href="#"><img src="http://lorempixel.com/215/170" alt=""></a>
-							</div>
-							<div class="item__main">
-								<a href="#" class="prod-title">Комод "Луи Филипп ОВ 06.10" </a>
-								<div class="price">31 401Р</div>
-								<div class="item__size">100 x 46 x 46 см</div>
-								<a href="#" class="btn btn_green">Купить</a>
-							</div>
-						</div>
-					</div>
-					<div class="item item_round">
-						<div class="item__in">
-							<div class="item__img">
-								<a href="#"><img src="http://lorempixel.com/215/170" alt=""></a>
-							</div>
-							<div class="item__main">
-								<a href="#" class="prod-title">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
-								<div class="price">14 401Р</div>
-								<div class="item__size">100 x 46 x 46 см</div>
-								<a href="#" class="btn btn_green">Купить</a>
-							</div>
-						</div>
-					</div>
-					<div class="item item_round">
-						<span class="badge badge_new">new</span>
-						<span class="badge badge_discount">-15%</span>
-						<div class="item__in">
-							<div class="item__img">
-								<a href="#"><img src="http://lorempixel.com/215/170" alt=""></a>
-							</div>
-							<div class="item__main">
-								<a href="#" class="prod-title">Стул бежевый элегантный</a>
-								<div class="price">2 800Р</div>
-								<div class="old-price"><span>3 140Р</span></div>
-								<a href="#" class="btn btn_green">Купить</a>
-							</div>
-						</div>
-					</div>
-					<div class="item item_round">
-						<span class="badge badge_new">new</span>
-						<span class="badge badge_discount">-15%</span>
-						<span class="badge badge_eco js-tooltip-key" data-title="100% дерево"></span>
-						<div class="item__in">
-							<div class="item__img">
-								<a href="#"><img src="http://lorempixel.com/215/170" alt=""></a>
-							</div>
-							<div class="item__main">
-								<a href="#" class="prod-title">Комод "Луи Филипп ОВ 06.10" </a>
-								<div class="price">31 401Р</div>
-								<div class="item__size">100 x 46 x 46 см</div>
-								<a href="#" class="btn btn_green">Купить</a>
-							</div>
-						</div>
-					</div>
-					<div class="item item_round">
-						<div class="item__in">
-							<div class="item__img">
-								<a href="#"><img src="http://lorempixel.com/215/170" alt=""></a>
-							</div>
-							<div class="item__main">
-								<a href="#" class="prod-title">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
-								<div class="price">14 401Р</div>
-								<div class="item__size">100 x 46 x 46 см</div>
-								<a href="#" class="btn btn_green">Купить</a>
-							</div>
-						</div>
-					</div>
-					<div class="item item_round">
-						<span class="badge badge_new">new</span>
-						<span class="badge badge_discount">-15%</span>
-						<div class="item__in">
-							<div class="item__img">
-								<a href="#"><img src="http://lorempixel.com/215/170" alt=""></a>
-							</div>
-							<div class="item__main">
-								<a href="#" class="prod-title">Стул бежевый элегантный</a>
-								<div class="price">2 800Р</div>
-								<div class="old-price"><span>3 140Р</span></div>
-								<a href="#" class="btn btn_green">Купить</a>
-							</div>
-						</div>
-					</div>
-					<div class="item item_round">
-						<span class="badge badge_new">new</span>
-						<span class="badge badge_discount">-15%</span>
-						<span class="badge badge_eco js-tooltip-key" data-title="100% дерево"></span>
-						<div class="item__in">
-							<div class="item__img">
-								<a href="#"><img src="http://lorempixel.com/215/170" alt=""></a>
-							</div>
-							<div class="item__main">
-								<a href="#" class="prod-title">Комод "Луи Филипп ОВ 06.10" </a>
-								<div class="price">31 401Р</div>
-								<div class="item__size">100 x 46 x 46 см</div>
-								<a href="#" class="btn btn_green">Купить</a>
-							</div>
-						</div>
-					</div>
-					<div class="item item_round">
-						<div class="item__in">
-							<div class="item__img">
-								<a href="#"><img src="http://lorempixel.com/215/170" alt=""></a>
-							</div>
-							<div class="item__main">
-								<a href="#" class="prod-title">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
-								<div class="price">14 401Р</div>
-								<div class="item__size">100 x 46 x 46 см</div>
-								<a href="#" class="btn btn_green">Купить</a>
-							</div>
-						</div>
-					</div>
-					<div class="item item_round">
-						<span class="badge badge_new">new</span>
-						<span class="badge badge_discount">-15%</span>
-						<div class="item__in">
-							<div class="item__img">
-								<a href="#"><img src="http://lorempixel.com/215/170" alt=""></a>
-							</div>
-							<div class="item__main">
-								<a href="#" class="prod-title">Стул бежевый элегантный</a>
-								<div class="price">2 800Р</div>
-								<div class="old-price"><span>3 140Р</span></div>
-								<a href="#" class="btn btn_green">Купить</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pagination">
-					<a href="#" class="is-active">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">...</a>
-					<a href="#">48</a>
-				</div>
-				<div class="article">
-					<div class="article__title">Качественные гарнитуры из Беларуси</div>
-					<p>Мы искренне верим,  что каждый человек на земле мечтает  сделать свой дом невероятно притягательным и уютным. Но только представьте, как вы проваливаетесь в мягкий диван, и приятно терпкий запах кожи 
-					и хвои успокаивающе действуют на вас, вы дома и все в комнате сделано по вашему замыслу. </p>
-					<p>Вы берете свой любимый журнал или книгу и погружаетесь в чтение. Такие моменты дорогого стоят. </p>
-					<a href="#" class="article__more">Показать больше</a>
+				<div class="your-bonus">
+					<strong>Накопленные бонусы:</strong>
+					<span>2 500Р</span>
+					<em>Вы можете расплатиться ими при оформлении заказа </em>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> 
 	<div class="push"></div>
 </div>
 <footer class="footer">
@@ -807,6 +665,14 @@
 		</div>
 	</div>
 </footer>
+<div class="overlay js-overlay">
+	<div class="popup js-popup">
+		<div class="popup__in">
+			
+		</div>
+		<button class="popup__close js-popup-close"></button>
+	</div>
+</div>
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>

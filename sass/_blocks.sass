@@ -304,3 +304,46 @@
 		display: block
 		width: 100%
 		+box
+
+.choose
+	height: 15px
+	input,button
+		display: inline-block
+		vertical-align: middle
+.choose__input
+	padding: 0 5px 
+	width: 36px
+	font-size: 14px 
+	+box
+	text-align: center
+.choose__plus,
+.choose__minus
+	position: relative
+	width: 14px
+	height: 14px
+	border: 1px solid rgba(79,79,79,.5)
+	border-radius: 3px
+	+box-shadow(inset 0 0 0 1px rgba(255,255,255,.11))
+	+background-image(linear-gradient(bottom, #ededed 0%, #ebebeb 54.13%, #f3f3f3 55.74%, #fff 100%))
+	+tr
+	&:before,
+	&:after
+		background: #474747  
+	&:before
+		content: "" 
+		position: absolute
+		top: 5px
+		left: 2px
+		width: 8px
+		height: 2px
+		+tr
+		
+.choose__plus
+	&:after
+		content: ""
+		position: absolute
+		top: 2px
+		left: 5px
+		height: 8px
+		width: 2px
+		+tr

@@ -256,5 +256,51 @@ head.ready(function() {
 		return false;
 	});
 
+    function choose() {
+        var number = $(".js-choose");
+        number.each(function(){
+            var max_number = +($(this).attr("data-max-number"));
+            var input = $(this).find("input");
+            var plus = $(this).find(".js-plus");
+            var minus = $(this).find(".js-minus");
+            plus.on("click", function(){
+                var val = +(input.val());
+                if (val >= max_number) {
+                    return false
+                }
+                else {
+                    val += 1;
+                    input.val(val);
+                }
+            });
+            minus.on("click", function(){
+                var val = +(input.val());
+                if (val > 1) {
+                    val -= 1;
+                    input.val(val);
+                }
+                else {
+                    return false;
+                }
+            });
+        });
+    }
+    choose();
+
+    $(".js-del-row").on("click", function(){
+    	if ($(".js-basket").find("tbody tr").length >= 2) {
+    		$(this).parents("tr").addClass("is-remove-ready");
+	    	setTimeout(function(){
+	    		$("tr.is-remove-ready").remove();
+	    	}, 200);
+    	}
+	    else {
+	    	$(".js-basket").remove();
+	    	$(".js-basket-action").remove();
+	    	$(".js-basket-message").removeAttr("hidden");
+	    	//alert();
+	    }
+
+    });
 
 });
