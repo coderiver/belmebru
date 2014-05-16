@@ -114,7 +114,7 @@
 .scroller
 	position: relative
 	border: 1px solid #d6d6d6
-	padding: 24px 35px 22px
+	padding: 24px 35px 3px
 	border-radius: 20px
 	background: #fff
 	+box
@@ -123,23 +123,20 @@
 	white-space: nowrap
 	overflow-x: auto
 	overflow-y: hidden
-	+scrollbar
-		width: 15px
-		height: 15px
-		+border-radius(6px)
-		background: #ededed
-	+scrollbar-thumb
-		background: #c9c9c9
-		+border-radius(6px)
-	+scrollbar-track-piece     
-		width: 15px 
-		+border-radius(6px)
-	.item
+	&:focus
+		outline: none
+	.item_no-hover
 		float: none
 		display: inline-block
 		vertical-align: top
+		min-height: 313px
 		margin-right: 10px
-
+		&:hover
+			.item__in
+				padding-top: 25px
+		.item__in
+			padding-top: 25px
+		
 .tab-wrap
 	position: absolute
 	top: -16px

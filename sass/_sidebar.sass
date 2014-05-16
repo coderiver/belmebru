@@ -1,6 +1,8 @@
 .sidebar
 	.item_action
 		margin-top: 66px
+	.link-prev
+		margin-top: 22px
 .item-nav
 	padding: 0 7px 
 .item-nav__title
@@ -21,3 +23,47 @@
 		&:hover
 			color: $orange 
 	
+.sidebar__in
+	padding: 0 15px 
+	
+.filter 
+	margin-top: 65px
+	border: 1px solid #dfdbcf
+	border-radius: 10px
+	background: #f5f5ef
+.filter__main-title
+	font-size: 14px
+	+fb
+	text-transform: uppercase
+.filter__header
+	border-radius: 10px 10px 0 0
+	padding: 17px 0 0
+	background: #fff1b9
+	+box-shadow(0 1px 0 rgba(255,255,255,.48))
+.filter__item
+	border-bottom: 1px solid #fff 
+	padding: 14px 20px 20px
+	+box-shadow(inset 0 -1px 0 #e7e7e7)
+.filter__title
+	margin-bottom: 8px
+.filter__footer
+	padding: 25px 20px 
+	text-align: center
+	.btn
+		margin-bottom: 24px
+		width: 100%
+.btn-reset
+	background: none
+	color: #c3c3c2 
+	font-size: 12px
+	&:hover
+		span
+			border-bottom-color: transparent
+	i,span
+		display: inline-block
+		vertical-align: middle
+	span
+		border-bottom: 1px solid 
+	i
+		margin-right: 7px
+		+s(del)

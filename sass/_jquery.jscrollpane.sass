@@ -1,0 +1,84 @@
+.jspContainer
+	overflow: hidden
+	position: relative
+
+.jspPane
+	position: absolute
+
+.jspVerticalBar
+	position: absolute
+	top: 0
+	right: 0
+	width: 16px
+	height: 100%
+	background: red
+
+.jspHorizontalBar
+	position: absolute
+	bottom: 0
+	left: 0
+	padding: 0 2px 
+	height: 22px
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+	margin: 0
+	padding: 0
+
+.jspCap
+	display: none
+
+.jspHorizontalBar .jspCap
+	float: left
+
+.jspTrack
+	position: relative
+	height: 5px
+	border-radius: 2px
+	background: #eeece7
+
+.jspDrag
+	position: relative
+	top: -5px
+	left: 0
+	height: 13px
+	border-radius: 6px
+	background: #f7f7f7
+	+box-shadow(0 1px 3px rgba(62,48,12,.46))
+	+g(#fdfdfd,#f2f2f2)
+	cursor: pointer
+	&:after
+		content: "" 
+		position: absolute
+		left: 50%
+		top: 4px
+		margin-left: -7px
+		+s(scroll)
+.jspHorizontalBar .jspTrack
+	float: left
+	height: 5px
+.jspArrow
+	background: #50506d
+	text-indent: -20000px
+	display: block
+	cursor: pointer
+
+.jspArrow.jspDisabled
+	cursor: default
+	background: #80808d
+
+.jspVerticalBar .jspArrow
+	height: 16px
+
+.jspHorizontalBar .jspArrow
+	width: 16px
+	float: left
+	height: 100%
+
+.jspVerticalBar .jspArrow:focus
+	outline: none
+
+.jspCorner
+	background: #eeeef4
+	float: left
+	height: 100%

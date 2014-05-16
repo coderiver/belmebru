@@ -3,6 +3,8 @@ head.ready(function() {
 	$(document).click(function(){
 		$(".js-overlay").hide();
 		$("body").removeClass("has-open-popup");
+		$(".js-select-list").hide();
+        $(".js-select").removeClass("is-active");
 	});  
 
 	// validation form
@@ -203,5 +205,56 @@ head.ready(function() {
 		touchMove: true,
 		slidesToScroll: 6
 	});
+
+	$('.js-scroll-pane').jScrollPane();
+
+
+    function ui_slider_range() {
+        $(".js-ui-slider-range").each(function(){
+            var slider = $(this).find(".js-ui-slider-main");
+            var input_from = $(this).find(".js-ui-slider-from");
+            var input_to = $(this).find(".js-ui-slider-to");
+            var min_val = +$(this).attr("data-min");
+            var max_val = +$(this).attr("data-max");
+            slider.slider({
+                range: true,
+                min: min_val,
+                max: max_val,
+                step: 1000,  
+                values: [ min_val, max_val ],
+                slide: function( event, ui ) {
+                    $(this).find(".ui-slider-handle").html("<span></span>");
+                    var handle_0 = $(this).find(".ui-slider-range").next().find("span")
+                    var handle_1 = $(this).find(".ui-slider-range").next().next().find("span");
+                    input_from.text(ui.values[0]);
+                    input_to.text(ui.values[1]);
+                    handle_0.text(ui.values[0]);
+                    handle_1.text(ui.values[1]);
+                }
+            });
+            console.log(handle_0);
+            console.log(handle_1);
+            $(this).find(".ui-slider-handle").html("<span></span>");
+            var handle_0 = $(this).find(".ui-slider-range").next().find("span")
+            var handle_1 = $(this).find(".ui-slider-range").next().next().find("span");
+            handle_0.text(slider.slider( "values", 0 ));
+            handle_1.text(slider.slider( "values", 1 ));
+            input_from.text(slider.slider( "values", 0 ));
+            input_to.text(slider.slider( "values", 1 ));
+        });
+    }
+    ui_slider_range();
+
+    $("body").on("click",".js-sort a", function(){
+    	if ($(this).hasClass("is-top-sort")) {
+    		$(this).removeClass("is-top-sort").addClass("is-down-sort");
+    	}
+    	else {
+    		$(".js-sort a").removeClass("is-top-sort").removeClass("is-down-sort");
+    		$(this).addClass("is-top-sort");
+    	}
+		return false;
+	});
+
 
 });
