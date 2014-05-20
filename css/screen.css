@@ -496,13 +496,13 @@ a:hover { text-decoration: none; }
 
 .main { padding-bottom: 75px; }
 
-.breadcrumbs { margin: 0 0 30px 0; }
+.breadcrumbs { margin: 0 0 30px 0; padding-left: 25px; }
 .breadcrumbs a { display: inline-block; margin-left: 46px; position: relative; font-size: 14px; }
 .breadcrumbs a:first-child { margin-left: 0; }
 .breadcrumbs a:first-child:before { display: none; }
 .breadcrumbs a:before { content: ""; position: absolute; left: -27px; top: 6px; background: url('../img/icons-s3257af07db.png') 0 -1592px no-repeat; width: 3px; height: 6px; }
 
-.page-top { margin: 30px 0 20px; border-bottom: 1px solid #e7e7e7; padding: 0 0 10px 0; color: #575652; line-height: 20px; font-size: 12px; *zoom: 1; }
+.page-top { margin: 30px 0 20px; border-bottom: 1px solid #e7e7e7; padding: 0 0 10px 25px; color: #575652; line-height: 20px; font-size: 12px; *zoom: 1; }
 .page-top:after { content: " "; display: table; clear: both; }
 .page-top p { clear: both; margin-bottom: 20px; }
 
@@ -570,8 +570,9 @@ a:hover { text-decoration: none; }
 
 .btn-begin-buy { margin: 50px 0; }
 
-.page-in { padding: 0 30px; *zoom: 1; }
+.page-in { padding: 0 25px; *zoom: 1; }
 .page-in:after { content: " "; display: table; clear: both; }
+.page-in + .pagination { padding-top: 20px; border-top: 1px solid #e7e7e7; }
 
 .gallery__img { position: relative; width: 440px; }
 .gallery__img a { display: block; height: 340px; line-height: 340px; overflow: hidden; }
@@ -594,6 +595,8 @@ a:hover { text-decoration: none; }
 .search.is-active .search__input + .search__btn { background: url('../img/icons-s3257af07db.png') 0 -1347px no-repeat; width: 13px; height: 14px; }
 .search.is-active .btn-del { display: block; }
 .search .btn-del { display: none; position: absolute; left: 15px; top: 9px; }
+
+.search_fixed-width { width: 640px; }
 
 .search__input { display: block; padding: 0 20px; height: 31px; width: 100%; border: 2px solid #141414; border-radius: 17px; background: white; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .search__input:focus, .search__input.is-active { border-color: #f27623; }
@@ -635,6 +638,12 @@ a:hover { text-decoration: none; }
 .search-list__title:first-child { margin-top: 0; }
 .search-list__title a { font-size: 14px; font-family: "PFAgoraSansBold", Arial, sans-serif; text-transform: uppercase; color: #282621; }
 .search-list__title a:hover { color: #f27623; }
+
+.serch-result-text { margin: 30px 0; font-size: 14px; }
+.serch-result-text p { margin-bottom: 12px; }
+.serch-result-text span { color: #f27623; }
+.serch-result-text em { font-size: 12px; color: #676767; }
+.serch-result-text .link-prev { margin-top: 65px; }
 
 .items-row { *zoom: 1; margin-bottom: 16px; border-bottom: 1px solid #e7e7e7; }
 .items-row:after { content: " "; display: table; clear: both; }
@@ -697,12 +706,14 @@ a:hover { text-decoration: none; }
 
 .link-prev { display: inline-block; margin-left: 20px; position: relative; font-size: 12px; color: #a09e97; }
 .link-prev:before { content: "←"; position: absolute; left: -20px; top: -2px; font-size: 14px; }
-.link-prev:hover { color: #f27623; }
+.link-prev.is-orange { color: #f27623; }
 
 .sort { margin-bottom: 40px; *zoom: 1; }
 .sort:after { content: " "; display: table; clear: both; }
 .sort .select { display: inline-block; vertical-align: middle; width: 55px; }
 .sort .pagination { margin: 0; }
+
+.sort_search { margin-bottom: 50px; }
 
 .sort__item { float: left; margin-left: 35px; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 .sort__item:first-child { margin-left: 0; }
@@ -728,11 +739,13 @@ a:hover { text-decoration: none; }
 
 .l-cols { *zoom: 1; }
 .l-cols:after { content: " "; display: table; clear: both; }
+.l-cols .page-top, .l-cols .breadcrumbs { padding-left: 0; }
 .l-cols .l-col1 { float: left; width: 230px; }
 .l-cols .l-col2 { float: right; width: 675px; }
 
 .l-cols2 { margin-bottom: 93px; *zoom: 1; }
 .l-cols2:after { content: " "; display: table; clear: both; }
+.l-cols2 .page-top, .l-cols2 .breadcrumbs { padding-left: 0; }
 .l-cols2 .l-col1 { float: left; width: 700px; }
 .l-cols2 .l-col2 { float: right; width: 235px; }
 

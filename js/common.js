@@ -303,4 +303,10 @@ head.ready(function() {
 
     });
 
+    $(".js-reset-search").on("click", function(){
+    	$(this).parents(".js-search").removeClass("is-active");
+    	$(this).parents(".js-search").find(".js-search-input").attr("value","").focus();
+
+    });
+
 });
