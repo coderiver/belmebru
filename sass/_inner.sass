@@ -1,5 +1,167 @@
 .main
 	padding-bottom: 75px
+.article
+	padding: 0 25px 0 0 
+	font-size: 12px
+	line-height: 20px
+	color: #575652 
+	h1,h2,h3,h4,h5,h6   
+		color: $black
+	h1
+		font-size: 24px
+		margin: 32px 0 24px
+	h2
+		font-size: 20px
+		margin: 60px 0 22px
+		&:first-child
+			margin-top: 30px
+	h3
+		font-size: 18px
+		margin: 28px 0 20px
+	h4
+		font-size: 16px
+		margin: 26px 0 18px
+	h5
+		font-size: 14px
+		margin: 24px 0 16px
+	h6
+		font-size: 12px
+		margin: 22px 0 14px
+	img
+		margin: 10px 0 27px   
+		max-width: 100%
+		height: auto
+		border-radius: 5px	
+	th
+		padding: 3px 0 3px 30px 
+		font-size: 14px
+		color: $black 
+		background: #f8f6f0 
+		border-radius: 5px
+		text-align: left
+		vertical-align: middle
+		&:first-child
+			border-radius: 5px 0 0 5px
+		&:last-child
+			padding: 3px 30px 3px 10px 
+			border-radius: 0 5px 5px 0
+	td
+		padding: 10px 0 10px 30px 
+		width: 33%
+		&:last-child
+			text-align: center
+	tr
+		&:nth-child(2n)
+			td
+				background: #f8f6f0 
+				&:first-child
+					border-radius: 5px 0 0 5px
+				&:last-child
+					border-radius: 0 5px 5px 0
+	ul
+		margin-bottom: 30px
+		li
+			position: relative
+			padding-left: 50px
+			&:before
+				content: ""
+				position: absolute
+				left: 20px
+				top: 6px
+				width: 6px
+				height: 6px
+				background: $orange 
+				border-radius: 50%  
+	ol
+		margin-bottom: 30px
+		counter-reset: list2
+		li
+			position: relative
+			padding-left: 50px
+			&:before
+				content: ""
+				position: absolute
+				left: 20px
+				top: 0
+				font-size: 12px
+				font-weight: bold
+				color: $orange  
+				counter-increment: list2  
+				content: counter(list2) ". "
+.article_offerta
+	ol
+		margin: 50px 0 30px
+		counter-reset: list3
+		
+		li
+			position: relative
+			margin-bottom: 25px
+			padding-left: 50px
+			text-transform: uppercase
+			font-size: 14px
+			color: $black 
+			+fb
+			&:before
+				content: ""
+				position: absolute
+				left: 20px
+				top: 0
+				font-size: 14px
+				+fb 
+				color: $black 
+				counter-increment: list3 
+				content: counter(list3) ". "
+		ol
+			counter-reset: list4
+			margin: 25px 0 0 -30px
+			li
+				text-transform: none
+				padding-left: 32px
+				font-size: 12px
+				color: #575652
+				font-family: Arial,sans-serif 
+				&:before
+					content: "" 
+					position: absolute
+					left: 0
+					top: 0
+					font-size: 12px  
+					font-weight: bold
+					color: $orange  
+					font-family: Arial,sans-serif 
+					counter-increment: list4
+					content: counter(list3) "." counter(list4) ". "
+.note
+	border-top: 1px solid #f8f6f0 
+	padding: 10px 0 0 30px
+	font-style: italic
+	font-size: 12px
+	color: #818181 
+				
+.list-col
+	counter-reset: list1
+	+clr
+	li
+		position: relative
+		margin-bottom: 4px
+		float: left
+		padding-left: 20px
+		width: 31%
+		margin-left: 2%
+		+box
+		&:first-child,
+		&:nth-child(3n+1)
+			margin-left: 0
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			font-size: 14px
+			font-weight: bold
+			color: $orange  
+			counter-increment: list1  
+			content: counter(list1) ". "
 .breadcrumbs
 	margin: 0 0 30px 0 
 	padding-left: 25px
@@ -26,6 +188,7 @@
 	line-height: 20px
 	font-size: 12px
 	+clr
+	
 	p
 		clear: both
 		margin-bottom: 20px
