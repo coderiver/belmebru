@@ -20,7 +20,7 @@
 .page-top
 	margin: 30px 0 20px
 	border-bottom: 1px solid #e7e7e7 
-	padding: 0 0 10px 26px
+	padding: 0 0 10px 0
 	color: #575652
 	line-height: 20px
 	font-size: 12px
@@ -203,3 +203,176 @@
 		+fb
 	em
 		color: #969696 
+
+.btn-begin-buy
+	margin: 50px 0     
+.page-in
+	padding: 0 30px 
+	+clr
+.gallery__img
+	position: relative
+	width: 440px  
+	a
+		display: block
+		height: 340px
+		line-height: 340px
+		overflow: hidden
+	img
+		max-width: 100%
+		vertical-align: middle
+	.badge
+		position: absolute
+		top: 0
+.gallery__zoom
+	position: absolute
+	top: 0
+	left: 0
+	+s(zoom)
+.gallery__preview
+	padding: 18px 0 
+	width: 410px
+	overflow-y: hidden
+	overflow-x: auto
+	white-space: nowrap
+	font-size: 0
+	+scrollbar
+		width: 5px
+		height: 5px
+		+border-radius(2px)
+		background: #ededed
+	+scrollbar-thumb
+		background: #c9c9c9
+		+border-radius(2px)
+	+scrollbar-track-piece     
+		width: 5px 
+		+border-radius(2px)
+	a
+		display: inline-block
+		margin-left: 15px
+		border: 1px solid #e7e7e7
+		width: 68px
+		height: 68px
+		text-align: center
+		line-height: 68px
+		vertical-align: middle
+		+box
+		&:first-child
+			margin-left: 2px
+		&.is-active
+			border-color: #fa0a0a
+			+box-shadow(0 0 0 2px #fa0a0a)
+		img
+			vertical-align: middle
+			max-width: 100%
+			max-height: 100%
+			height: auto
+.search
+	position: relative
+	margin-bottom: 15px
+	&.is-active
+		.search__input
+			padding-left: 40px
+			border-color: $orange
+			+ .search__btn
+				+s(glass-h)
+		.btn-del
+			display: block
+	.btn-del
+		display: none
+		position: absolute
+		left: 15px
+		top: 9px
+.search__input
+	display: block
+	padding: 0 20px
+	height: 31px
+	width: 100%	
+	border: 2px solid #141414
+	border-radius: 17px
+	background: #fff
+	+box
+	&:focus,
+	&.is-active
+		border-color: $orange
+		+ .search__btn
+			+s(glass-h)
+	&.is-active
+		padding-left: 40px
+	+placeholder
+		color: #a1a1a1
+		font-size: 12px
+		font-style: italic 
+	
+.search__btn
+	position: absolute
+	top: 9px
+	right: 14px
+	+s(glass-black)
+	+hide-text
+
+
+.symbols
+	margin-bottom: 34px
+	line-height: 24px
+	letter-spacing: 1px 
+	a
+		font-size: 12px
+		font-weight: bold
+		text-decoration: none
+		color: #5c584b
+		text-transform: uppercase
+		&:hover
+			color: $orange 
+.symbols__group
+	margin-left: 14px
+	display: inline
+	&:first-child
+		margin-left: 0
+		
+.search-result
+	margin-right: -35px
+	font-size: 0
+.search-list
+	display: inline-block
+	vertical-align: top
+	margin: 0 30px 65px 0
+	width: 205px
+	font-size: 12px
+	+clr
+	ul
+		width: 75px     
+		line-height: 24px
+		margin: 14px 0
+		a
+			color: #5c584b
+			font-size: 12px
+			&:hover
+				color: $orange 
+.search-list__col
+	float: left 
+	margin-right: 30px
+	&:last-child
+		margin-right: 0
+.search-list__symbol
+	margin-bottom: 20px
+	border-bottom: 1px solid $border
+	padding: 0 0 3px 20px
+	a
+		+fb
+		font-size: 20px
+		color: $orange  
+		text-decoration: none
+.search-list__in
+	padding: 0 0 0 20px 
+	+clr
+.search-list__title
+	margin: 20px 0 14px
+	&:first-child
+		margin-top: 0
+	a
+		font-size: 14px
+		+fb
+		text-transform: uppercase
+		color: $black 
+		&:hover
+			color: $orange 

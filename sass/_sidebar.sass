@@ -33,13 +33,13 @@
 	padding: 0 15px 
 
 .box
-	border: 1px solid #ecdfa8
+	border: 1px solid #e0dcd0
 	border-radius: 10px
 	background: #f5f5ef	
 .box__item
-	border-bottom: 1px solid #fef7da 
+	border-bottom: 1px solid #fcfcfa 
 	padding: 14px 20px 20px
-	+box-shadow(inset 0 -1px 0 #ecdfa8)
+	+box-shadow(inset 0 -1px 0 #e7e7e7)
 	&:last-child
 		border-bottom: 0   
 		+box-shadow(none)
@@ -56,6 +56,9 @@
 	padding: 17px 0 0
 	background: #fff1b9
 	+box-shadow(0 1px 0 rgba(255,255,255,.48))
+	.box__item
+		border-bottom: 1px solid #fcfcfa 
+		+box-shadow(inset 0 -1px 0 #e7e7e7)
 .filter__title
 	margin-bottom: 8px
 .filter__footer
@@ -79,3 +82,36 @@
 	i
 		margin-right: 7px
 		+s(del)
+
+.sidebar-menu
+	padding: 23px 10px 23px 38px 
+	border-radius: 5px
+	background: #f5f1e9
+	line-height: 24px
+.menu-title
+	margin-bottom: 11px
+	line-height: 20px    
+	&.is-active
+		a
+			color: $orange
+			text-decoration: none 
+	a
+		color: $black
+		font-size: 14px
+		+fb
+		text-transform: uppercase
+		&:hover
+			color: $orange
+			text-decoration: none 
+.menu
+	margin-bottom: 25px
+	.is-active
+		a
+			color: $orange
+			text-decoration: none 
+	a
+		color: #5c584b
+		font-size: 12px
+		&:hover
+			color: $orange
+			text-decoration: none 
