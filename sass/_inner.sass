@@ -5,6 +5,8 @@
 	font-size: 12px
 	line-height: 20px
 	color: #575652 
+	span
+		color: $orange 
 	h1,h2,h3,h4,h5,h6   
 		color: $black
 	h1
@@ -29,7 +31,7 @@
 		margin: 22px 0 14px
 	img
 		margin: 10px 0 27px   
-		max-width: 100%
+		max-width: 100%  
 		height: auto
 		border-radius: 5px	
 	th
@@ -37,18 +39,17 @@
 		font-size: 14px
 		color: $black 
 		background: #f8f6f0 
-		border-radius: 5px
 		text-align: left
 		vertical-align: middle
-		&:first-child
+		&:first-child  
 			border-radius: 5px 0 0 5px
 		&:last-child
 			padding: 3px 30px 3px 10px 
 			border-radius: 0 5px 5px 0
 	td
 		padding: 10px 0 10px 30px 
-		width: 33%
-		&:last-child
+		//width: 33% 
+		&:last-child      
 			text-align: center
 	tr
 		&:nth-child(2n)
@@ -558,3 +559,68 @@
 		color: #676767 
 	.link-prev
 		margin-top: 65px
+
+.delivery-logo
+	text-align: justify
+	&:after
+		content: ""
+		display: inline-block
+		width: 100%
+		height: 0 
+	a
+		display: inline-block
+		vertical-align: middle
+.map
+	position: relative 
+.map__body
+	height: 335px
+	overflow: hidden
+	border-radius: 5px
+.ymaps-map
+	position: relative
+	overflow: hidden
+	border-radius: 5px
+.ymaps-copyright
+	display: none !important
+.map__popup
+	position: absolute
+	z-index: 300
+	bottom: 10px
+	right: 10px
+	padding: 20px 
+	width: 208px
+	+box
+	border: 1px solid #b5b5b5
+	border-radius: 6px
+	p
+		margin-bottom: 5px
+	background: #fff
+	input
+		+box
+		padding: 0 10px 
+		width: 100%
+		height: 29px
+		border: 1px solid #ddc097
+		background: #fff
+
+.map__popup-title
+	display: block
+	margin-bottom: 5px
+	font-size: 12px
+	+fb
+	text-transform: uppercase
+	color: $black 
+	line-height: 18px
+	
+.wtf
+	position: relative
+	margin: 21px 0 
+	padding-left: 40px
+	&:before
+		content: ""
+		position: absolute
+		left: 16px 
+		top: 2px
+		+s(wtf)  
+	strong
+		margin-left: 20px

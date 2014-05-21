@@ -309,4 +309,41 @@ head.ready(function() {
 
     });
 
+    ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map ("map", {
+                center: [40.743776, -73.992807],
+                zoom: 12,
+                controls: ['smallMapDefaultSet']
+            });
+          //   myPlacemark1 = new ymaps.Placemark([40.748296, -74.004394], 
+	         //    {
+	         //        hintContent: '',
+	         //        balloonContent: '<div class="map-info" style="width:322px;"><div class="map-info__inner"><a class="map-info__img" href="#"><img src="img/map-img.jpg"><div class="map-info__time">Круглосуточно</div><div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div></a><div class="map-info__main"><a class="map-info__title" href="#">George</a><p>Первый премиальный грузинский ресторан в Москве</p><div class="map-info__meta"><span><i class="icon icon-point"></i>м. Братиславская</span><span><i class="icon icon-like-s"></i> 854</span></div></div></div>',
+	         //    }
+	         //    //{	
+	         //    //    iconImageHref: 'img/marker.png',
+	        	// //	iconImageSize: [45, 49],
+	        	// //	iconImageOffset: [-15, -35]
+	         //    //}
+          //   );
+          //   myPlacemark2 = new ymaps.Placemark([40.742963, -73.992335], 
+	         //    {
+	         //        hintContent: '', 
+	         //        balloonContent: '<div class="map-info" style="width:322px;"><div class="map-info__inner"><a class="map-info__img" href="#"><img src="img/map-img.jpg"><div class="map-info__time">Круглосуточно</div><div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div></a><div class="map-info__main"><a class="map-info__title" href="#">George</a><p>Первый премиальный грузинский ресторан в Москве</p><div class="map-info__meta"><span><i class="icon icon-point"></i>м. Братиславская</span><span><i class="icon icon-like-s"></i> 854</span></div></div></div>',
+	         //    }
+	         //    //{	
+	         //    //    iconImageHref: 'img/marker.png',
+	        	// //	iconImageSize: [45, 49],
+	        	// //	iconImageOffset: [-15, -35]
+	         //    //}
+          //   );
+            
+            //myMap.geoObjects.add(myPlacemark1);
+            //myMap.geoObjects.add(myPlacemark2);
+        }
+
 });
