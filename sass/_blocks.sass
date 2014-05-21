@@ -67,7 +67,25 @@
 		+g(#f1651d, #f7aa35)
 	&:active
 		background: #f1651d 
-		
+	&.btn_arr
+		position: relative
+		height: 40px
+		+fb
+		font-size: 12px
+		text-transform: uppercase
+		border-radius: 3px 0 0 3px
+		&:after	
+			content: ""
+			position: absolute
+			top: 0    
+			right: -12px
+			+s(btn-arr-orange)  
+		&:hover
+			&:after
+				+sp(btn-arr-orange-h)
+		&:active
+			&:after
+				+sp(btn-arr-orange-act)   
 
 .cart-item
 	+clr
@@ -347,3 +365,17 @@
 		height: 8px
 		width: 2px
 		+tr
+
+.rating
+	white-space: nowrap
+	font-size: 0
+	img
+		margin-right: 7px
+.rating__in,
+.rating__text  
+	display: inline-block
+	vertical-align: middle
+.rating__text  
+	font-size: 11px
+	color: #949494
+	font-style: italic 

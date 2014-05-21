@@ -624,3 +624,136 @@
 		+s(wtf)  
 	strong
 		margin-left: 20px
+		
+.fancy-img-link
+	display: inline-block
+	margin-left: 12px
+	border: 1px solid #e7e7e7
+	width: 68px
+	height: 68px
+	text-align: center
+	line-height: 68px
+	vertical-align: middle
+	+box-sizing(border-box)
+	+tr
+	&:hover
+		border-color: #bbb 
+	&:first-child
+		margin-left: 0
+	&.is-active
+		border-color: #fa0a0a
+		+box-shadow(0 0 0 2px #fa0a0a)
+	img
+		vertical-align: middle
+		max-width: 100%
+		max-height: 100%
+		height: auto
+
+.comment-title
+	font-size: 20px
+	margin: 40px 0 22px
+	&:first-child
+		margin-top: 30px		
+.comment
+	margin-bottom: 40px
+	border-bottom: 1px solid $border 
+	padding-bottom: 10px
+	font-size: 12px
+	color: #575652 
+	.rating
+		margin: 12px 0 
+.comment_post
+	margin-bottom: 33px
+	.comment__text
+		padding: 10px 20px 
+		background: #f6f4ee
+
+.comment__user
+	font-size: 16px
+	font-weight: bold
+	color: $black
+	text-decoration: none
+	&:hover
+		color: $orange 
+.comment__meta
+	color: #949393
+	font-size: 12px 
+.comment__text
+	margin: 10px 0 16px
+.comment__img
+	margin: 10px 0 24px 
+.comment__answer
+	position: relative
+	margin: 0 50px 15px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: -30px
+		+s(answer) 
+	span
+		display: block
+		margin-bottom: 3px
+		font-size: 14px
+		font-weight: bold
+		color: $black 
+.add-comment
+	margin: 40px 0 45px 
+	+clr
+	.btn
+		float: left
+	.pagination
+		float: right
+
+.posts-wrap
+	margin-bottom: 18px
+	border-bottom: 1px solid #e7e7e7 
+	margin-right: -30px
+	font-size: 0	
+.post
+	display: inline-block
+	margin: 0 25px 50px 0 
+	vertical-align: top
+	width: 325px
+	overflow: hidden
+	font-size: 12px
+.post_width
+	width: 100%
+	+clr
+	.post__img
+		float: left
+		margin-right: 25px
+		width: 430px
+	.post__main
+		position: relative
+		top: -12px
+		overflow: hidden
+.post__img
+	overflow: hidden
+	img
+		border-radius: 5px
+		+tr
+		max-width: 100%
+		height: auto
+		&:hover
+			opacity: .5 
+.date	
+	display: block
+	margin: 8px 0 
+	color: #bfbeb8
+	font-size: 12px 
+.post__title
+	font-size: 12px
+	+fb
+	text-transform: uppercase
+.post__info
+	margin: 10px 0 
+.meta-info
+	padding: 5px 0 
+	border-top: 1px solid $border
+	color: #666  
+	span,a
+		color: #abaaaa 
+	a
+		font-style: italic
+.post-content
