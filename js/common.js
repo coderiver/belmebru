@@ -309,17 +309,7 @@ head.ready(function() {
 
 	});
 
-	ymaps.ready(init);
-		var myMap, 
-			myPlacemark;
-
-		function init(){ 
-			myMap = new ymaps.Map ("map", {
-				center: [40.743776, -73.992807],
-				zoom: 12,
-				controls: ['smallMapDefaultSet']
-			});
-		}
+	
 
 	//rating
 	if ($('.js-rating').length > 0) {

@@ -15,6 +15,10 @@
 	h2
 		font-size: 20px
 		margin: 60px 0 22px
+		+ p
+			color: $black 
+			strong
+				font-size: 14px
 		&:first-child
 			margin-top: 30px
 	h3
@@ -201,6 +205,12 @@
 	font-weight: normal
 	+fb
 	font-size: 30px
+	color: $black 
+.title-h2
+	margin: 45px 0 18px
+	font-weight: normal
+	+fb
+	font-size: 20px
 	color: $black 
 .print-link
 	float: right
@@ -611,7 +621,20 @@
 	text-transform: uppercase
 	color: $black 
 	line-height: 18px
-	
+// .ymaps-balloon
+// 	border-radius: 10px
+// 	overflow: hidden
+// 	border: 1px solid $border	
+// 	+box-shadow(none)
+.map__info
+	padding: 0 10px 
+	font-size: 11px
+	line-height: 18px
+.map__info-title
+	margin-bottom: 10px
+	font-size: 18px
+	color: $black
+	+fb	 
 .wtf
 	position: relative
 	margin: 21px 0 
@@ -756,4 +779,126 @@
 		color: #abaaaa 
 	a
 		font-style: italic
-.post-content
+
+
+.pay
+	display: inline-block
+	margin: 25px 0 15px  
+	padding: 0 45px
+	width: 240px
+	color: #575652 
+	vertical-align: top
+.pay__icon
+	margin: 0 0 25px 
+	height: 66px
+	text-align: center
+	i
+		display: inline-block
+		vertical-align: top
+.icon-card
+	+s(pay-card)
+.icon-credit
+	+s(pay-credit)
+.icon-cash
+	+s(pay-cash)
+.icon-bank
+	+s(pay-bank)
+.pay__title
+	margin: 0 0 22px -17px
+	font-size: 14px
+	color: $black
+	font-weight: bold
+	text-transform: uppercase 
+	span
+		display: inline-block
+		position: relative
+		left: -8px
+.pay__info
+	p
+		margin: 0 0 25px 
+		
+
+.vacancy
+	margin-bottom: 85px
+	border-bottom: 1px solid $border    
+.vacancy__top
+	+clr
+	.date
+		float: left
+.vacancy__badge	
+	position: relative
+	float: right
+	color: #f00 
+	&:before
+		content: ""
+		position: absolute
+		left: -18px
+		top: 0  
+		+s(important)      
+.vacancy___table
+	tr
+		&:first-child
+			td
+				padding-left: 0
+				+fb
+				font-size: 20px
+				line-height: 24px
+	td
+		text-align: left
+		padding: 25px 0 25px 30px 
+		&:first-child
+			font-size: 14px
+			font-weight: bold
+			color: $black 
+		&:last-child
+			text-align: left
+.vacancy__contacts
+	padding: 33px 0 
+	font-size: 12px
+	color: #818181
+	font-style: italic 
+	p
+		margin-bottom: 3px
+	strong
+		font-weight: bold
+		font-style: normal
+		color: $black 
+
+.contact-wrap
+	margin-right: -150px	
+.contact
+	display: inline-block
+	margin: 0 155px 34px 0
+	vertical-align: top
+	width: 250px
+	color: #575652 
+	line-height: 24px
+	ul
+		margin: 7px 0 
+		strong
+			color: $black 
+.contact__title
+	margin-bottom: 11px
+	font-size: 20px
+	+fb
+	color: $black 
+.icon-clock,
+.icon-tel
+	display: inline-block
+	margin-right: 10px
+.icon-clock
+	+s(clock)
+.icon-tel
+	+s(phone)
+.map-link
+	display: inline-block
+	position: relative 
+	margin-left: 16px
+	color: #a3a3a3
+	font-size: 11px 
+	&:before
+		content: ""
+		position: absolute
+		left: -16px
+		top: 7px
+		+s(glass-s)  
