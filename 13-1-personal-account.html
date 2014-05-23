@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>8-1 news inner 1</title>
+	<title>13-1 personal account</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -435,22 +435,17 @@
 		<div class="l-cols">
 			<div class="l-col1">
 				<div class="sidebar-menu">
-					<div class="menu-title"><a href="#">Рубрики</a></div>
+					<div class="menu-title"><a href="#">личный кабинет</a></div>
 					<ul class="menu">
-						<li><a href="#">Все</a></li>
-						<li><a href="#">Интерьеры</a></li>
-						<li><a href="#">Стили в интерьере</a></li>
-						<li><a href="#">Кухня</a></li>
-						<li><a href="#">Мебельные новости</a></li>
-						<li><a href="#">Мебельный бизнес</a></li>
-						<li><a href="#">Досуг</a></li>
-						<li><a href="#">Шкафы</a></li>
-						<li><a href="#">Весна</a></li>
-						<li><a href="#">Ультрамодный интерьер</a></li>
-						<li><a href="#">Москвичи</a></li>
-						<li><a href="#">Карандаши</a></li>
-						<li><a href="#">Чак Норис</a></li>
+						<li><a href="#">История заказов</a></li>
+						<li class="is-active"><a href="#">Редактировать данные</a></li>
+						<li><a href="#">Бонусный счёт</a></li>
 					</ul>
+				</div>
+				<div class="bonus">
+					<div class="bonus__title">накопленные бонусы</div>
+					<div class="bonus__val">1 500Р</div>
+					<a href="#" class="wtf">Как получить</a>
 				</div>
 				<div class="email-subscribe">
 					<div class="email-subscribe__title">подписаться на новости</div>
@@ -468,35 +463,69 @@
 						<button type="submit" class="btn btn_orange btn_arr">Подписаться</button>
 					</form>
 				</div>
-			</div>
+			</div> 
 			<div class="l-col2">
 				<div class="breadcrumbs">
-					<a href="#">Интернет-магазин</a>					 
-					<a href="#">О магазине</a>
+					<a href="#">Интернет-магазин</a>
 				</div>
 				<div class="page-top">
-					<div class="title">Блог</div>
+					<div class="title">Редактировать данные</div>
 				</div>
-				<div class="article">
-					<h2>Огромная распродажа - зимняя олимпиада SOCHI 2014 </h2>
-					<h5>В связи с праздничным событием мы предоставляем скидочные карты всем нашим покупателям до 15 марта! Спешите!</h5>
-					<img src="http://lorempixel.com/640/228" alt="">
-					<p>Мы искренне верим,  что каждый человек на земле мечтает  сделать свой дом невероятно притягательным и уютным. Но только представьте, как вы проваливаетесь в мягкий диван, и приятно терпкий запах кожи и хвои успокаивающе действуют на вас, вы дома и все в комнате сделано по вашему замыслу. </p>
-					<p>Мы искренне верим,  что каждый человек на земле мечтает  сделать свой дом невероятно притягательным и уютным. Но только представьте, как вы проваливаетесь в мягкий диван, и приятно терпкий запах кожи и хвои успокаивающе действуют на вас, вы дома</p>
-					<div class="date">7 Февраля 2014</div>
-					<div class="meta-info">
-						<span>Рубрика: </span>
-						<a href="#">Досуг </a>
-					</div> 
-				</div>
-				
-				<div class="comment-title">Комментарии</div>
-				<p>К сожалению, на сайте ещё нет ни одного отзыва! Будьте первым, оставьте свой отзыв о нашем магазине!</p>
-				<div class="add-comment">
-					<a href="#" class="btn btn_orange">Добавить отзыв</a>
-				</div>
-				<a href="#" class="link-prev is-orange">Назад в блог</a>
-			</div>
+				<div class="wrap">
+					<div class="form-info">
+						<form class="js-validate">
+							<label class="field" for="firstname">
+								<span class="field__label">Ваше имя<sup>*</sup></span>
+								<span class="field__el">
+									<input type="text" name="firstname" id="firstname" required>
+								</span>
+							</label>
+							<label class="field" for="lastname">
+								<span class="field__label">Фамилия</span>
+								<span class="field__el">
+									<input type="text" name="lastname" id="lastname">
+								</span>
+							</label>
+							<label class="field" for="email">
+								<span class="field__label">E-mail<sup>*</sup></span>
+								<span class="field__el">
+									<input type="email" name="email" id="email" required>
+								</span>
+							</label>
+							<label class="field">
+								<span class="field__label">Телефон<sup>*</sup></span>
+								<span class="field__el">
+									<input class="js-input-tel" type="text" name="tel" required placeholder="+___ (__) ___-__-__">
+								</span>
+							</label>
+							<label class="field" for="address">
+								<span class="field__label">Адрес доставки<sup>*</sup></span>
+								<span class="field__el">
+									<input type="text" name="address" id="address" required>
+								</span>
+							</label>
+							<label class="field" for="password">
+								<span class="field__label">Новый пароль<sup>*</sup></span>
+								<span class="field__el">
+									<input type="password" name="password" id="password">
+								</span>
+							</label>
+							<label class="field" for="confirm_password">
+								<span class="field__label">Повторите пароль<sup>*</sup></span>
+								<span class="field__el">
+									<input type="password" name="confirm_password" id="confirm_password" required>
+								</span>
+							</label>
+							<input type="submit" class="btn btn_green" value="Сохранить изменения">
+						</form>
+					</div>
+					<div class="profile-connect">
+						<p>Вы можете связать свой профиль с профилями в социальных сетях и сервисах:</p>
+						<a href="#" class="profile-connect__fb"></a>
+						<a href="#" class="profile-connect__vk"></a>
+					</div>
+				</div>  
+			</div> 
 		</div>
 	</div> 
 	<div class="push"></div>

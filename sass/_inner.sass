@@ -637,13 +637,13 @@
 	+fb	 
 .wtf
 	position: relative
-	margin: 21px 0 
-	padding-left: 40px
+	margin: 21px 0 0 26px
+	padding-left: 24px
 	&:before
 		content: ""
 		position: absolute
-		left: 16px 
-		top: 2px
+		left: 0 
+		top: 0px
 		+s(wtf)  
 	strong
 		margin-left: 20px
@@ -902,3 +902,226 @@
 		left: -16px
 		top: 7px
 		+s(glass-s)  
+		
+
+.order
+	margin: 0 0 40px 
+	border: 1px solid #e7e7e7
+	border-radius: 6px
+	background: #fff
+	overflow: hidden
+	&.is-finished
+		.order__head
+			background: #e7fdcb
+		.status
+			color: #72b416 
+			&:before
+				top: 6px
+				left: -25px
+				+s(status-done)	
+	&.is-received
+		.order__head
+			background: #fef9a3
+		.status
+			color: #ffb400
+			&:before
+				top: 4px
+				left: -28px
+				+s(status-received)
+	&.is-canceled
+		.order__head
+			background: #fee3e1
+		.status
+			color: #ff271c
+			&:before
+				top: 4px
+				left: -28px
+				+s(stutus-cancel)
+
+
+.order__head
+	border-bottom: 1px solid $border 
+	padding: 12px 25px 
+	+clr
+	.status
+		float: right
+.order__title
+	float: left
+	max-width: 460px
+	font-size: 20px
+	+fm
+.order__body
+	padding: 20px 
+.order__table
+	font-size: 12px
+	thead
+		border-bottom: 1px solid $border 
+	tbody
+		border-bottom: 1px solid $border 
+		tr
+			&:first-child
+				td
+					padding-top: 13px
+			&:last-child
+				td
+					padding-bottom: 13px
+	th
+		padding: 7px 0 
+		text-align: left
+		font-weight: normal
+		color: #6e6855  
+		vertical-align: middle
+	td
+		padding: 5px 0
+		&:first-child
+			padding-left: 5px
+	a
+		font-size: 11px
+		+fb
+		text-transform: uppercase
+	strong
+		font-weight: normal
+		+fb
+		font-size: 14px
+.status
+	position: relative
+	font-size: 20px
+	+fm
+	&:before
+		content: ""
+		position: absolute
+	&.is-done
+		color: #72b416 
+		&:before
+			top: 6px
+			left: -25px
+			+s(status-done)
+	&.is-received
+		color: #ffb400
+		&:before
+			top: 4px
+			left: -28px
+			+s(status-received)
+	&.is-canceled
+		color: #ff271c
+		&:before
+			top: 4px
+			left: -28px
+			+s(stutus-cancel)
+   
+.order__promocode
+	float: left
+	padding: 13px 0 0
+	color: #6e6855
+	span
+		color: $black 
+.order__sum
+	padding: 13px 0 0 
+	float: right
+	text-align: right
+	font-size: 14px
+	span
+		+fb 
+	ul
+		margin: 15px 0
+		font-size: 12px
+		color: #64482a
+		font-style: italic
+		strong
+			font-size: 14px
+			color: $orange
+			font-style: normal 
+.order__total
+	margin-bottom: 13px
+	padding: 7px 0 0 
+	width: 285px
+	border-top: 1px solid $border 
+	span
+		font-size: 20px
+.order__status
+	float: left
+	padding: 0 20px 
+	height: 28px
+	line-height: 28px
+	color: #64482a
+	font-size: 12px
+	text-transform: uppercase
+	+fb
+	border-radius: 13px
+	background: #fdf1bb
+	&.is-inactive
+		background: #e5e5e5 
+.order__more
+	float: right
+	margin-top: 6px
+	a
+		border-bottom: 1px dashed 
+		color: $orange 
+		text-decoration: none
+.order__less 
+	display: none
+	float: right
+	margin-top: 6px
+	a
+		border-bottom: 1px dashed 
+		color: #949494 
+		text-decoration: none
+.order__info
+	display: none
+	th
+		padding: 6px 20px 
+		font-size: 20px
+		+fm
+		text-align: left
+		font-weight: normal
+		background: #f5f1e9
+	td
+		padding: 17px 20px
+		&:first-child
+			font-size: 14px
+			+fb   
+			text-transform: uppercase
+		strong
+			display: block
+			margin-bottom: 7px
+	tbody
+		tr
+			&:first-child	
+				td
+					padding: 31px 20px 17px 
+
+.form-info
+	float: left
+	width: 310px
+	.field
+		margin-bottom: 42px
+	.btn
+		padding: 0 35px 
+.profile-connect
+	float: right
+	margin-right: 30px
+	width: 200px
+	line-height: 20px
+	font-size: 12px
+	color: #5d5d5d 
+	a  
+		display: inline-block   
+		margin-right: 16px 
+		vertical-align: top  
+	p
+		margin-bottom: 12px
+.profile-connect__fb
+	+s(connect-fb)
+.profile-connect__vk
+	+s(connect-vk) 
+.bonus-link
+	margin: 52px 0 
+	text-align: center
+	a
+		font-weight: bold
+		font-size: 36px
+		color: $orange
+		text-decoration: none
+		border-bottom: 3px solid  
+		&:hover
+			border-bottom-color: transparent 

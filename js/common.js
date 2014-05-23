@@ -35,7 +35,6 @@ head.ready(function() {
 					tel: {
 						required: true,
 						minlength: 2,
-						phoneUS: true
 					},
 					address: {
 						required: false,
@@ -95,6 +94,10 @@ head.ready(function() {
 			});
 		}
 	});
+
+	if ($(".js-input-tel").length) {
+        $(".js-input-tel").mask("+999 (99) 999-99-99");
+    }
 
 	// popups
 	$(".js-popup-link").on("click", function(event){
@@ -372,4 +375,28 @@ head.ready(function() {
         });
     }
 
+    $(".js-order-more").on("click", function(){
+    	$(this).hide();
+    	$(this).parents(".js-order").find(".js-order-less").show();
+    	$(this).parents(".js-order").find(".js-order-info").slideDown(200);
+    	return false;
+    });
+    $(".js-order-less").on("click", function(){
+    	$(this).hide();
+    	$(this).parents(".js-order").find(".js-order-more").show();
+    	$(this).parents(".js-order").find(".js-order-info").slideUp(200);
+    	return false;
+    });
+
+    $(".field input").each(function(){
+    	if ($(this).val()) {
+    		$(this).addClass("has-value");
+    	}
+    });
+    $(".field input").focusout(function(){
+    	if ($(this).val()) {
+    			$(this).addClass("has-value");
+    	}
+	  	
+	});
 });
