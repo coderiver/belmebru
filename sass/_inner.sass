@@ -169,7 +169,7 @@
 			content: counter(list1) ". "
 .breadcrumbs
 	margin: 0 0 30px 0 
-	padding-left: 25px
+	//padding-left: 25px
 	a
 		display: inline-block
 		margin-left: 46px
@@ -1125,3 +1125,57 @@
 		border-bottom: 3px solid  
 		&:hover
 			border-bottom-color: transparent 
+	
+.order-info
+	border-bottom: 1px solid $border 
+	padding: 0 25px 35px    
+	margin-bottom: 23px
+.order-info__top
+	+clr
+	.link-edit
+		float: right
+.order-info__title
+	position: relative
+	float: left
+	font-size: 20px
+	+fb
+	color: $black 
+	i
+		display: inline-block
+		margin-right: 5px
+		+s(status-done)
+.link-edit
+	position: relative
+	font-size: 12px
+	color: #5c584b
+	text-decoration: none
+	line-height: 1
+	border-bottom: 1px dashed  
+	&:before
+		content: ""
+		position: absolute
+		left: -15px
+		top: 1px
+		+s(pencil) 
+	&:hover
+		border-bottom-color: transparent 
+.order-info__main
+	padding: 0 23px 
+	ul
+		font-style: italic
+		line-height: 18px
+		strong
+			color: $black
+			font-style: normal 
+			
+.order-submit
+	padding: 0 25px 0 50px
+	+clr
+	.checkbox
+		float: right
+		&:first-child
+			float: left
+.order-submit__info
+	margin: 27px 0 32px 
+	color: $orange
+	font-style: italic 
