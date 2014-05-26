@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>3-0 oformlenie</title>
+	<title>3-3 oformlenie</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -434,7 +434,7 @@
 	<div class="l-center">
 		<div class="page-top">
 			<div class="breadcrumbs">
-				<a href="#">Интернет-магазин</a>                            
+				<a href="#">Интернет-магазин</a>               
 				<a href="#">Корзина</a>                            
 			</div>
 			<div class="title">Оформление заказа </div> 
@@ -443,59 +443,140 @@
 			<div class="l-col1">
 				<div class="order-info">
 					<div class="order-info__top">
-						<div class="order-info__title"><i></i>Контактные данные</div>
-						<a href="#" class="link-edit">Изменить</a>
+						<div class="order-info__title">1. Контактные данные</div>
+						<!-- <a href="#" class="link-edit">Изменить</a> -->
 					</div>
 					<div class="order-info__main">
-						<ul>
-							<li>
-								<p><strong>Наталья</strong></p>
-								<p>naftasya@tut.by</p>
-								<p>+375 29 361 55 87</p>
-							</li>
-							<li>
-								<p><strong>Адрес доставки:</strong></p>
-								<p>г. Москва, ул. Звёздная, д. 15, кв. 155</p>
-							</li>
-							<li>
-								<p><strong>Комментарий к заказу:</strong></p>
-								<p>Желательное время доставки с 19 до 23</p>
-							</li>
-							<li>
-								<p><strong>Дополнительно:</strong></p>
-								<p>Требуется сборка</p>
-								<p>Подъём на 20 этаж</p>
-							</li>
-						</ul>
+						<div class="order-info__form">
+							<form class="js-validate">
+								<label class="field" for="firstname">
+									<span class="field__label">Ваше имя<sup>*</sup></span>
+									<span class="field__el">
+										<input type="text" name="firstname" id="firstname" required>
+									</span>
+								</label>
+								<label class="field" for="email">
+									<span class="field__label">E-mail<sup>*</sup></span>
+									<span class="field__el">
+										<input type="email" name="email" id="email" required>
+									</span>
+								</label>
+								<label class="field">
+									<span class="field__label">Телефон<sup>*</sup></span>
+									<span class="field__el">
+										<input class="js-input-tel" type="text" name="tel" required placeholder="+___ (__) ___-__-__">
+									</span>
+								</label>
+								<label class="field" for="address">
+									<span class="field__label">Адрес доставки<sup>*</sup></span>
+									<span class="field__el">
+										<input type="text" name="address" id="address" placeholder="Например: г. Москва, ул. Первопроходцев 21" required>
+									</span>
+								</label>
+								<label class="field">
+									<span class="field__label">Комментарий к заказу</span>
+									<span class="field__el">
+										<textarea placeholder="Например: желаемое время доставки с 19 до 22" name="comment"></textarea>
+									</span>
+								</label>
+								<div class="field">
+									<span class="field__label">Дополнительные услуги</span>
+									<div class="checkbox-wrap">
+										<label class="checkbox checkbox_normal">
+											<input type="checkbox">
+											<span>Требуется сборка</span>
+										</label>
+									</div>
+									<div class="checkbox-wrap">
+										<label class="checkbox checkbox_normal">
+											<input type="checkbox">
+											<span>Подъём на <input type="text" class="input"> этаж</span>
+										</label>
+									</div>
+									<div class="checkbox-wrap">
+										<label class="checkbox checkbox_normal">
+											<input type="checkbox">
+											<span>Есть грузовой лифт</span>
+										</label>
+									</div>
+								</div>
+								<button type="submit" class="btn btn_green btn_next">Продолжить</button> 
+							</form>
+						</div>
 					</div>
 				</div>
-				<div class="order-info">
+				<div class="order-info is-inactive">
 					<div class="order-info__top">
-						<div class="order-info__title"><i></i>Способ оплаты</div>
-						<a href="#" class="link-edit">Изменить</a>
+						<div class="order-info__title">2. Способ оплаты</div>
 					</div>
-					<div class="order-info__main">
-						<ul>
-							<li>
-								<p>Наличные курьеру</p>
-							</li>
-						</ul>
+					<div class="order-info__main js-radio-group">
+						<div class="wrapper wrapper_radio">
+							<div class="radio-box-wrap">	
+								<div class="radio-box js-radio-box">
+									<label class="radio">
+										<input type="radio" checked name="radio">
+										<i></i>
+										<strong>Наличные курьеру</strong>
+										<span>Оплата наличными при получении заказа курьеру.</span>
+									</label>
+								</div>
+								<div class="radio-box js-radio-box">
+									<label class="radio">
+										<input type="radio" name="radio">
+										<i></i>
+										<strong>Кредитная карта</strong>
+										<span>Вы сможете произвести оплату картой в нашем офисе, или оплатить курьеру при получении заказа.</span>
+									</label>
+								</div>
+								<div class="radio-box js-radio-box">
+									<label class="radio">
+										<input type="radio" name="radio">
+										<i></i>
+										<strong>Сбербанк</strong>
+										<span>Вы можете оплатить заказ в любом отделении любого банка. За услугу по переводу денег с Вас возьмут от 3 до 7% от стоимости заказа, в зависимости от региона. Перечисление денег займет порядка 10 дней..</span>
+									</label>
+								</div>
+								<div class="radio-box js-radio-box">
+									<label class="radio">
+										<input type="radio" name="radio">
+										<i></i>
+										<strong>Оплата в кредит</strong>
+										<span>Мы сотрудничаем с банком Ренессанс кредит. Беспроцентная рассрочка до полу года.</span>
+									</label>
+								</div>
+								<button type="submit" class="btn btn_green btn_next">Продолжить</button>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="order-info">
+				<div class="order-info is-inactive">
 					<div class="order-info__top">
-						<div class="order-info__title"><i></i>Тип доставки</div>
-						<a href="#" class="link-edit">Изменить</a>
+						<div class="order-info__title">3. Тип доставки</div>
 					</div>
 					<div class="order-info__main">
-						<ul>
-							<li>
-								<p>Доставка курьером по Москве</p>
-							</li>
-						</ul>
+						<div class="wrapper wrapper_radio">
+							<div class="radio-box-wrap">	
+								<div class="radio-box js-radio-box">
+									<label class="radio">
+										<input type="radio" checked name="radio2">
+										<i></i>
+										<strong>Доставка курьером по Москве</strong>
+										<span>Доставка осуществляется в течение дня в удобное для вас время.Срок доставки от 1 до 7 дней </span>
+									</label>
+								</div>
+								<div class="radio-box js-radio-box">
+									<label class="radio">
+										<input type="radio" name="radio2">
+										<i></i>
+										<strong>Самовывоз</strong>
+										<span>Вы можете самостоятельно забрать заказ из нашего склада. </span>
+									</label>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="order-submit">
+				<div class="order-submit order-submit_mod">
 					<div class="wrap">	
 						<label class="checkbox">
 							<input type="checkbox" checked>
@@ -509,14 +590,10 @@
 					<div class="order-submit__info">
 						Пожалуйста, проверьте введенные данные и нажмите "Подтвердить заказ" для завершения оформления.
 					</div>
-					<input type="submit" class="btn btn_green" value="Подтвердить заказ">
+					<input type="submit" class="btn btn_green" value="Подтвердить заказ" disabled>
 				</div>
 			</div>
 			<div class="l-col2">
-				<div class="enter-box">
-					<div class="enter-box__text">Если вы уже регистрировались или совершали покупки  вам необходимо:</div>
-					<a href="#" class="btn btn_green">Войти </a>
-				</div>
 				<div class="your-order">
 					<div class="your-order__head">
 						<span>ваш заказ:</span>

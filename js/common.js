@@ -37,7 +37,6 @@ head.ready(function() {
 						minlength: 2,
 					},
 					address: {
-						required: false,
 						minlength: 2
 					},
 					message: {

@@ -150,3 +150,81 @@
 	font-size: 24px
 	color: $orange
 
+.your-order
+	overflow: hidden
+	border-radius: 6px
+	border: 1px solid $border
+.your-order__head
+	padding: 17px 16px 14px
+	background: #f5f1e9
+	+clr
+	border-bottom: 1px solid $border
+	span
+		float: left
+		+fb
+		font-size: 14px
+		text-transform: uppercase
+	.link-edit
+		float: right
+.your-order__body
+	padding: 0 18px 
+	border-bottom: 1px solid $border
+	.cart-item
+		&:last-child
+			border-bottom: 0
+.cart-item__meta
+	+clr
+	padding-top: 10px
+	span
+		float: left
+		font-size: 14px
+	em
+		font-size: 12px
+		font-style: normal
+	strong
+		float: right
+		font-size: 16px
+.your-order__footer
+	background: #fef1bb
+	border-top: 1px solid #fffae9 
+	.order
+		margin: 0
+		padding: 4px 0 0
+		border: 0
+		color: #64482a 
+		background: none    
+		span
+			font-size: 18px
+			color: #000 
+			+fb
+	.order__sum
+		float: none
+		border-bottom: 1px solid #ecdfa8 
+		padding: 0 20px 
+	.order__total
+		margin: 0
+		padding: 8px 0 
+		border-top-color: #fffae9      
+		padding-right: 20px
+		width: 100%
+		+box
+		text-align: right
+		
+.enter-box
+	margin: 0 0 47px 
+	padding: 12px 
+	border: 1px solid #d5eaa4
+	border-radius: 6px
+	background: #f6fde3
+	+clr
+.enter-box__text
+	float: left
+	width: 180px
+.enter-box
+	.btn
+		float: right
+		margin-top: 7px
+		width: 100px
+		text-align: center
+		height: 33px
+		line-height: 33px

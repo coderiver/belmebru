@@ -342,23 +342,23 @@
 	button
 		margin-left: 8px
 		
-.order-info
+.cart-info
 	color: #64482a 
 	.btn
 		margin-bottom: 12px
 		width: 100% 
 		text-align: center
-.order-info__price
+.cart-info__price
 	font-size: 14px
 	white-space: nowrap
-.order-info__meta
+.cart-info__meta
 	font-style: italic
 	span
 		font-style: normal
 		color: $orange
 		font-size: 16px
 		font-weight: bold 
-.order-info__value
+.cart-info__value
 	font-size: 16px
 	text-align: center
 	.price
@@ -647,6 +647,8 @@
 		+s(wtf)  
 	strong
 		margin-left: 20px
+	p
+		margin-bottom: 5px
 		
 .fancy-img-link
 	display: inline-block
@@ -1126,16 +1128,28 @@
 		&:hover
 			border-bottom-color: transparent 
 	
-.order-info
-	border-bottom: 1px solid $border 
-	padding: 0 25px 35px    
+.order-info  
 	margin-bottom: 23px
+	.wrapper_radio
+		margin-left: -22px
+	&.is-inactive
+		margin-bottom: 3px
+		.order-info__main
+			display: none
+		.order-info__top
+			height: 52px
+			line-height: 52px
+			border-radius: 5px
+			background: #f5f1e9
+		.order-info__title
+			color: #a6a6a6 
 .order-info__top
 	+clr
 	.link-edit
 		float: right
 .order-info__title
 	position: relative
+	padding: 0 25px 
 	float: left
 	font-size: 20px
 	+fb
@@ -1160,7 +1174,8 @@
 	&:hover
 		border-bottom-color: transparent 
 .order-info__main
-	padding: 0 23px 
+	padding: 0 48px 35px
+	border-bottom: 1px solid $border 
 	ul
 		font-style: italic
 		line-height: 18px
@@ -1175,7 +1190,73 @@
 		float: right
 		&:first-child
 			float: left
+.order-submit_mod
+	margin-top: 33px
 .order-submit__info
 	margin: 27px 0 32px 
 	color: $orange
 	font-style: italic 
+
+	
+.order-info__form
+	margin-top: 25px
+	width: 310px
+	.field__el
+		label
+			position: absolute
+			top: 7px
+			left: 110%
+			white-space: nowrap
+			
+
+.order-finish
+	margin: 0 auto 37px
+	padding: 27px 88px 50px 
+	width: 795px
+	border: 1px solid #d3f1bf
+	border-radius: 6px
+	background: #edffe1
+	text-align: center
+	+box
+	em
+		display: block
+		color: #575652 
+	strong
+		font-size: 20px
+	.wtf
+		display: inline-block
+		margin-bottom: 7px
+		color: $orange 
+	.btn
+		margin-top: 14px
+.order-finish__title
+	margin-bottom: 17px
+	font-size: 20px
+	+fb
+	color: #000 
+	a
+		color: $orange
+		text-decoration: none
+		border-bottom: 1px dotted 
+		&:hover
+			border-color: transparent 
+.order-finish_invite
+	background: #fff1bd
+	border-color: #ebdfa7
+	.social
+		margin-top: 38px 
+.order-finish__invite
+	margin: 36px 0 00 
+	padding: 16px 22px 16px 45px 
+	background: #fff 
+	text-align: left
+	border-radius: 7px
+	+clr
+	span
+		float: left
+		font-size: 28px
+		font-weight: bold
+		color: $orange 
+	.btn-copy
+		float: right
+		margin-top: 5px
