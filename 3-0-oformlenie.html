@@ -515,7 +515,7 @@
 			<div class="l-col2">
 				<div class="enter-box">
 					<div class="enter-box__text">Если вы уже регистрировались или совершали покупки  вам необходимо:</div>
-					<a href="#" class="btn btn_green">Войти </a>
+					<a href="js-popup-enter" class="btn btn_green js-popup-link">Войти </a>
 				</div>
 				<div class="your-order">
 					<div class="your-order__head">
@@ -671,9 +671,69 @@
 	</div>
 </footer>
 <div class="overlay js-overlay">
-	<div class="popup js-popup">
-		<div class="popup__in">
-			
+	<div class="popup popup_small js-popup js-popup-enter">
+		<div class="popup__in js-tab-group">
+			<ul class="tab-simple js-tab">
+				<li>
+					<a href="js-tab1"><span>Вход</span></a>
+				</li>
+				<li>
+					<a href="js-tab2"><span>Регистрация</span></a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="js-tab-cont js-tab1">
+					<form class="js-validate-enter">
+						<label class="field">
+							<span class="field__label">Ваш e-mail<sup>*</sup></span>
+							<span class="field__el">
+								<input type="email" name="email" required>
+							</span>
+						</label>
+						<label class="field">
+							<span class="field__label">Пароль<sup>*</sup></span>
+							<span class="field__el">
+								<input type="password" name="password" required>
+							</span>
+						</label>
+						<div class="field-check">
+							<label class="checkbox checkbox_normal">
+								<input type="checkbox">
+								<span>Запомнить меня</span>
+							</label>
+							<a href="js-popup-password" class="js-popup-link">Забыли пароль?</a>
+						</div>
+						<button type="submit" class="btn btn_green">Войти</button>
+						<div class="profile-connect">
+							<span>Войти через социальные сети:</span>
+							<a href="#" class="profile-connect__fb"></a>
+							<a href="#" class="profile-connect__vk"></a>
+						</div>
+					</form>
+				</div>
+				<div class="js-tab-cont js-tab2">
+					<form class="js-validate-enter">
+						<label class="field">
+							<span class="field__label">Ваше имя<sup>*</sup></span>
+							<span class="field__el">
+								<input type="text" name="firstname" required>
+							</span>
+						</label>
+						<label class="field">
+							<span class="field__label">Ваш e-mail<sup>*</sup></span>
+							<span class="field__el">
+								<input type="email" name="email" required>
+							</span>
+						</label>
+						<button type="submit" class="btn btn_green">Зарегистрироваться</button>
+						<div class="profile-connect">
+							<span>Войти через социальные сети:</span>
+							<a href="#" class="profile-connect__fb"></a>
+							<a href="#" class="profile-connect__vk"></a>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 		<button class="popup__close js-popup-close"></button>
 	</div>

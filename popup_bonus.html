@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>8-1 news inner</title>
+	<title>13-0 personal account</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -435,22 +435,17 @@
 		<div class="l-cols">
 			<div class="l-col1">
 				<div class="sidebar-menu">
-					<div class="menu-title"><a href="#">Рубрики</a></div>
+					<div class="menu-title"><a href="#">личный кабинет</a></div>
 					<ul class="menu">
-						<li><a href="#">Все</a></li>
-						<li><a href="#">Интерьеры</a></li>
-						<li><a href="#">Стили в интерьере</a></li>
-						<li><a href="#">Кухня</a></li>
-						<li><a href="#">Мебельные новости</a></li>
-						<li><a href="#">Мебельный бизнес</a></li>
-						<li><a href="#">Досуг</a></li>
-						<li><a href="#">Шкафы</a></li>
-						<li><a href="#">Весна</a></li>
-						<li><a href="#">Ультрамодный интерьер</a></li>
-						<li><a href="#">Москвичи</a></li>
-						<li><a href="#">Карандаши</a></li>
-						<li><a href="#">Чак Норис</a></li>
+						<li class="is-active"><a href="#">История заказов</a></li>
+						<li><a href="#">Редактировать данные</a></li>
+						<li><a href="#">Бонусный счёт</a></li>
 					</ul>
+				</div>
+				<div class="bonus">
+					<div class="bonus__title">накопленные бонусы</div>
+					<div class="bonus__val">1 500Р</div>
+					<a href="js-popup-bonus" class="wtf js-popup-link">Как получить</a>
 				</div>
 				<div class="email-subscribe">
 					<div class="email-subscribe__title">подписаться на новости</div>
@@ -468,44 +463,291 @@
 						<button type="submit" class="btn btn_orange btn_arr">Подписаться</button>
 					</form>
 				</div>
-			</div>
+			</div> 
 			<div class="l-col2">
 				<div class="breadcrumbs">
-					<a href="#">Интернет-магазин</a>					 
-					<a href="#">О магазине</a>
+					<a href="#">Интернет-магазин</a>
 				</div>
 				<div class="page-top">
-					<div class="title">Блог</div>
+					<div class="title">История заказов</div>
 				</div>
-				<div class="article">
-					<h2>Огромная распродажа - зимняя олимпиада SOCHI 2014 </h2>
-					<h5>В связи с праздничным событием мы предоставляем скидочные карты всем нашим покупателям до 15 марта! Спешите!</h5>
-					<img src="http://lorempixel.com/640/228" alt="">
-					<p>Мы искренне верим,  что каждый человек на земле мечтает  сделать свой дом невероятно притягательным и уютным. Но только представьте, как вы проваливаетесь в мягкий диван, и приятно терпкий запах кожи и хвои успокаивающе действуют на вас, вы дома и все в комнате сделано по вашему замыслу. </p>
-					<p>Мы искренне верим,  что каждый человек на земле мечтает  сделать свой дом невероятно притягательным и уютным. Но только представьте, как вы проваливаетесь в мягкий диван, и приятно терпкий запах кожи и хвои успокаивающе действуют на вас, вы дома</p>
-					<div class="date">7 Февраля 2014</div>
-					<div class="meta-info">
-						<span>Рубрика: </span>
-						<a href="#">Досуг </a>
-					</div> 
+				<div class="order is-finished js-order">
+					<div class="order__head">
+						<div class="order__title">Заказ № 1 от 13.02.2014 в 15:45</div>
+						<div class="status">Выполнен</div>
+					</div>
+					<div class="order__body">
+						<div class="order__subtitle">состав заказа:</div>
+						<table class="order__table">
+							<thead>
+								<tr>
+									<th>Наименование товара</th>
+									<th>Количество</th>
+									<th>Стоимость</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1. <a href="#">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a></td>
+									<td>1</td>
+									<td><strong>14 401Р</strong></td>
+								</tr>
+								<tr>
+									<td>2. <a href="#">комод “луи филипп ов 06.10”</a></td>
+									<td>2</td>
+									<td><strong>14 401Р</strong></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="wrap">
+							<div class="order__promocode">Ваш промокод: <span>675219</span></div>
+							<div class="order__sum">
+								Общая сумма: <span>1 700 401Р</span>
+								<ul>
+									<li>Скидка:  <strong>- 4 500Р</strong></li>
+									<li>Промокод:  <strong>- 2 500Р</strong></li>
+									<li>Бонусы:  <strong>- 2 500Р</strong></li>
+								</ul>
+								<div class="order__total">
+									Итого к оплате: <span>1 300 300Р</span>
+								</div>
+							</div>
+						</div>
+						<div class="order__info js-order-info">
+							<table>
+								<thead>
+									<tr>
+										<th colspan="2">Дополнительная информация о заказе</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>тип доставки:</td>
+										<td>Доставка курьером по Москве</td>
+									</tr>
+									<tr>
+										<td>способ оплаты:</td>
+										<td>Наличные курьеру</td>
+									</tr>
+									<tr>
+										<td>контактные данные:</td>
+										<td>
+											Наталья Климова <br>
+											naftasya@tut.by <br>
+											+375 29 361 55 87
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<strong>Адрес доставки:</strong>
+											г. Москва, ул. Звёздная, д. 15, кв. 155.  <br>
+											Желательное время доставки с 19 до 23<br>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<strong>Адрес доставки:</strong>
+											Требуется сборка<br>
+											Подъём на 20 этаж<br>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="wrap">
+							<div class="order__status">Заказ оплачен</div>
+							<div class="order__more js-order-more"><a href="#">Подробнее о заказе</a></div>
+							<div class="order__less js-order-less"><a href="#">Скрыть подробную информацию</a></div>
+						</div> 
+					</div>
 				</div>
-				
-				<div class="comment-title">Комментарии</div>
-				<div class="comment comment_post">
-					<a class="comment__user" href="#">Александр</a>
-					<div class="comment__meta">28.02.2014</div>
-					<div class="comment__text">Отличный магазин и замечательные товары. Спасибо за работу.</div>
+				<div class="order is-received js-order">
+					<div class="order__head">
+						<div class="order__title">Заказ № 1 от 13.02.2014 в 15:45</div>
+						<div class="status">Принят</div>
+					</div>
+					<div class="order__body">
+						<div class="order__subtitle">состав заказа:</div>
+						<table class="order__table">
+							<thead>
+								<tr>
+									<th>Наименование товара</th>
+									<th>Количество</th>
+									<th>Стоимость</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1. <a href="#">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a></td>
+									<td>1</td>
+									<td><strong>14 401Р</strong></td>
+								</tr>
+								<tr>
+									<td>2. <a href="#">комод “луи филипп ов 06.10”</a></td>
+									<td>2</td>
+									<td><strong>14 401Р</strong></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="wrap">
+							<div class="order__promocode">Ваш промокод: <span>675219</span></div>
+							<div class="order__sum">
+								Общая сумма: <span>1 700 401Р</span>
+								<ul>
+									<li>Скидка:  <strong>- 4 500Р</strong></li>
+									<li>Промокод:  <strong>- 2 500Р</strong></li>
+									<li>Бонусы:  <strong>- 2 500Р</strong></li>
+								</ul>
+								<div class="order__total">
+									Итого к оплате: <span>1 300 300Р</span>
+								</div>
+							</div>
+						</div>
+						<div class="order__info js-order-info">
+							<table>
+								<thead>
+									<tr>
+										<th colspan="2">Дополнительная информация о заказе</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>тип доставки:</td>
+										<td>Доставка курьером по Москве</td>
+									</tr>
+									<tr>
+										<td>способ оплаты:</td>
+										<td>Наличные курьеру</td>
+									</tr>
+									<tr>
+										<td>контактные данные:</td>
+										<td>
+											Наталья Климова <br>
+											naftasya@tut.by <br>
+											+375 29 361 55 87
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<strong>Адрес доставки:</strong>
+											г. Москва, ул. Звёздная, д. 15, кв. 155.  <br>
+											Желательное время доставки с 19 до 23<br>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<strong>Адрес доставки:</strong>
+											Требуется сборка<br>
+											Подъём на 20 этаж<br>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="wrap">
+							<div class="order__status">Заказ оплачен</div>
+							<div class="order__more js-order-more"><a href="#">Подробнее о заказе</a></div>
+							<div class="order__less js-order-less"><a href="#">Скрыть подробную информацию</a></div>
+						</div> 
+					</div>
 				</div>
-				<div class="comment comment_post">
-					<a class="comment__user" href="#">Александр</a>
-					<div class="comment__meta">28.02.2014</div>
-					<div class="comment__text">Отличный магазин и замечательные товары. Спасибо за работу.</div>
+				<div class="order is-canceled js-order">
+					<div class="order__head">
+						<div class="order__title">Заказ № 1 от 13.02.2014 в 15:45</div>
+						<div class="status">Отменён</div>
+					</div>
+					<div class="order__body">
+						<div class="order__subtitle">состав заказа:</div>
+						<table class="order__table">
+							<thead>
+								<tr>
+									<th>Наименование товара</th>
+									<th>Количество</th>
+									<th>Стоимость</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1. <a href="#">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a></td>
+									<td>1</td>
+									<td><strong>14 401Р</strong></td>
+								</tr>
+								<tr>
+									<td>2. <a href="#">комод “луи филипп ов 06.10”</a></td>
+									<td>2</td>
+									<td><strong>14 401Р</strong></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="wrap">
+							<div class="order__promocode">Ваш промокод: <span>675219</span></div>
+							<div class="order__sum">
+								Общая сумма: <span>1 700 401Р</span>
+								<ul>
+									<li>Скидка:  <strong>- 4 500Р</strong></li>
+									<li>Промокод:  <strong>- 2 500Р</strong></li>
+									<li>Бонусы:  <strong>- 2 500Р</strong></li>
+								</ul>
+								<div class="order__total">
+									Итого к оплате: <span>1 300 300Р</span>
+								</div>
+							</div>
+						</div>
+						<div class="order__info js-order-info">
+							<table>
+								<thead>
+									<tr>
+										<th colspan="2">Дополнительная информация о заказе</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>тип доставки:</td>
+										<td>Доставка курьером по Москве</td>
+									</tr>
+									<tr>
+										<td>способ оплаты:</td>
+										<td>Наличные курьеру</td>
+									</tr>
+									<tr>
+										<td>контактные данные:</td>
+										<td>
+											Наталья Климова <br>
+											naftasya@tut.by <br>
+											+375 29 361 55 87
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<strong>Адрес доставки:</strong>
+											г. Москва, ул. Звёздная, д. 15, кв. 155.  <br>
+											Желательное время доставки с 19 до 23<br>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<strong>Адрес доставки:</strong>
+											Требуется сборка<br>
+											Подъём на 20 этаж<br>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="wrap">
+							<div class="order__status is-inactive">Заказ не оплачен</div>
+							<div class="order__more js-order-more"><a href="#">Подробнее о заказе</a></div>
+							<div class="order__less js-order-less"><a href="#">Скрыть подробную информацию</a></div>
+						</div> 
+					</div>
 				</div>
-				<div class="add-comment">
-					<a href="js-popup-comment" class="btn btn_orange  js-popup-link">Добавить комментарий</a>
-				</div>
-				<a href="#" class="link-prev is-orange">Назад в блог</a>
-			</div>
+			</div> 
 		</div>
 	</div> 
 	<div class="push"></div>
@@ -595,32 +837,14 @@
 		</div>
 	</div>
 </footer>
-<div class="overlay js-overlay">
-	<div class="popup popup_small js-popup js-popup-comment">
+<div class="overlay js-overlay" style="display:block">
+	<div class="popup popup_small js-popup js-popup-bonus">
 		<div class="popup__in">
 			<div class="popup__wrap">
-				<div class="popup__title">Добавить комментарий</div>
-				<form class="js-validate-enter">
-					<label class="field">
-						<span class="field__label">Ваше имя<sup>*</sup></span>
-						<span class="field__el">
-							<input type="text" name="firstname" required>
-						</span>
-					</label>
-					<label class="field">
-						<span class="field__label">Ваш e-mail<sup>*</sup></span>
-						<span class="field__el">
-							<input type="email" name="email" required>
-						</span>
-					</label>
-					<label class="field">
-						<span class="field__label">Комментарий<sup>*</sup></span>
-						<span class="field__el">
-							<textarea required></textarea>
-						</span>
-					</label>
-					<button type="submit" class="btn btn_green">Добавить</button>
-				</form>
+				<div class="popup__title">Как получить бонусные баллы?</div>
+				<div class="popup__text">
+					<p>Мы искренне верим,  что каждый человек на земле мечтает  сделать свой дом невероятно ритягательным и уютным. Но только представьте, как вы проваливаетесь в мягкий диван, и приятно терпкий запах кожи и хвои успокаивающе действуют на вас, вы дома и все в комнате сделано по вашему замыслу. </p>
+				</div>
 			</div>
 		</div>
 		<button class="popup__close js-popup-close"></button>

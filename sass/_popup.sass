@@ -10,6 +10,13 @@
 	background: rgba(#000,.48)
 	text-align: center
 	overflow: auto
+	font-size: 0
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		width: 0
+		height: 100% 
 	+scrollbar
 		width: 5px
 		height: 5px
@@ -24,13 +31,24 @@
 .popup
 	position: relative
 	display: inline-block
+	vertical-align: middle
 	margin: 50px 0
 	padding: 22px 22px 30px
 	background: #fff 
 	font-size: 12px
+	border-radius: 10px
+	text-align: left
 	+box
+	+box-shadow(0 0 50px rgba(#000, 1))
+	em
+		color: #817f7f 
+		a
+			color: #949494 
+	sup
+		color: #db2121 
 .popup__in
 	border: 1px solid $border
+	border-radius: 4px
 .popup__close
 	position: absolute
 	top: -18px
@@ -44,5 +62,103 @@
 		position: absolute
 		top: 50%
 		left: 50%
-		margin: -6px 0 0 -7px  
+		margin: -7px 0 0 -6px  
 		+s(close)
+.popup_small
+	width: 356px
+	.tab-content
+		border: 0
+		padding: 35px 15px 
+		border-radius: 0
+	.profile-connect
+		float: none
+		width: auto
+		margin: 31px 0 0
+		padding: 11px 0 0 
+		text-align: center
+		border-top: 1px solid $border
+		a,span
+			margin-right: 5px
+	.tab-simple
+		margin-top: 0
+		li
+			width: 203px
+			&:first-child
+				width: 122px
+				a
+					border-left: 0
+			&:last-child
+				a
+					border-right: 0
+					border-radius: 10px 0 0 0
+		a
+			border-top: 0
+	.btn
+		min-width: 155px
+.popup_middle
+	width: 530px
+.popup_width
+	width: 733px
+.popup__wrap
+	padding: 18px 35px 32px
+.popup__title
+	margin-bottom: 8px
+	+fb
+	font-size: 20px
+	color: $black
+.popup__text
+	margin-bottom: 24px
+	&:last-child
+		margin-bottom: 0
+.field-check
+	margin: -5px 0 29px
+	+clr
+	.checkbox
+		float: left
+	a
+		float: right
+		
+.popup__message
+	padding: 10px 20px 
+	border-radius: 4px
+	text-align: center
+	font-size: 14px
+	line-height: 24px
+	background: #edffe1
+	p
+		margin-bottom: 10px
+
+.popup__region
+	margin-bottom: 25px
+	padding: 18px 10px 18px 35px 
+	line-height: 24px
+	background: #fcf5db 
+	ul
+		+column-count(2)
+	a
+		color: #5c584b
+		&.is-red
+			color: #db2121 
+		&.is-active
+			color: $orange 
+			
+.popup__left
+	float: left
+	width: 250px
+	padding-top: 10px
+.popup__right
+	overflow: hidden
+	padding-top: 10px
+	color: #575652
+	line-height: 24px 
+	p
+		margin-bottom: 14px
+		&:last-child
+			margin-bottom: 0
+.popup__img-gift
+	width: 190px
+	height: 190px
+	
+.popup__img-gift
+	border-radius: 50%
+	overflow: hidden

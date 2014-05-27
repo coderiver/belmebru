@@ -8,91 +8,99 @@ head.ready(function() {
 	});	
 
 	// validation form
-	$(".js-validate").each(function(){
-		if ($(this).length > 0) {
-			$(this).validate({
-				errorClass: "has-error",
-				rules: {
-					firstname: "required",
-					lastname: "required",
-					username: {
-						required: true,
-						minlength: 2
+	function validate() {
+		$(".js-validate").each(function(){
+			if ($(this).length > 0) {
+				$(this).validate({
+					errorClass: "has-error",
+					rules: {
+						firstname: "required",
+						lastname: "required",
+						username: {
+							required: true,
+							minlength: 2
+						},
+						password: {
+							required: true,
+							minlength: 5
+						},
+						confirm_password: {
+							required: true,
+							minlength: 5,
+							equalTo: "#password"
+						},
+						email: {
+							required: true,
+							email: true
+						},
+						tel: {
+							required: true,
+							minlength: 2,
+						},
+						address: {
+							minlength: 2
+						},
+						message: {
+							minlength: 4
+						}
 					},
-					password: {
-						required: true,
-						minlength: 5
-					},
-					confirm_password: {
-						required: true,
-						minlength: 5,
-						equalTo: "#password"
-					},
-					email: {
-						required: true,
-						email: true
-					},
-					tel: {
-						required: true,
-						minlength: 2,
-					},
-					address: {
-						minlength: 2
-					},
-					message: {
-						minlength: 4
+					messages: {
+						firstname: "Вас так зовут?",
+						lastname: "У вас такая фамилия?",
+						password: {
+							required: "Пароли не совпадают",
+							minlength: "Минимум 5 символов"
+						},
+						confirm_password: {
+							required: "Пароли не совпадают",
+							minlength: "Минимум 5 символов",
+							equalTo: "Пароли не совпадают"
+						},
+						email: "Неверный формат",
+						address: "Это Ваш адрес?",
+						tel: {
+							required: "Телефон с ошибкой",
+							phoneUS: "Please enter a valid phone number: (e.g. 19999999999 or 9999999999)"
+						},
+						message: {
+							required: "Это Ваш вопрос?",
+							minlength: "Это Ваш вопрос?"
+						}
 					}
-				},
-				messages: {
-					firstname: "Вас так зовут?",
-					lastname: "У вас такая фамилия?",
-					password: {
-						required: "Пароли не совпадают",
-						minlength: "Минимум 5 символов"
+				});
+			}
+		});
+	}
+		
+	validate();
+
+	function validateEnter() {
+		$(".js-validate-enter").each(function(){
+			if ($(this).length > 0) {
+				$(this).validate({
+					errorClass: "has-error",
+					rules: {
+						password: {
+							required: true,
+							minlength: 5
+						},
+						email: {
+							required: true,
+							email: true
+						},
 					},
-					confirm_password: {
-						required: "Пароли не совпадают",
-						minlength: "Минимум 5 символов",
-						equalTo: "Пароли не совпадают"
-					},
-					email: "Неверный формат",
-					address: "Это Ваш адрес?",
-					tel: {
-						required: "Телефон с ошибкой",
-						phoneUS: "Please enter a valid phone number: (e.g. 19999999999 or 9999999999)"
-					},
-					message: {
-						required: "Это Ваш вопрос?",
-						minlength: "Это Ваш вопрос?"
+					messages: {
+						password: {
+							required: "Неверный пароль",
+							minlength: "Минимум 5 символов"
+						},
+						email: "Неверный формат"
 					}
-				}
-			});
-		}
-	});
-	$(".js-validate-enter").each(function(){
-		if ($(this).length > 0) {
-			$(this).validate({
-				errorClass: "has-error",
-				rules: {
-					password: {
-						required: true,
-						minlength: 5
-					},
-					email: {
-						required: true,
-						email: true
-					},
-				},
-				messages: {
-					password: {
-						required: "Неверный пароль",
-						minlength: "Минимум 5 символов"
-					},
-					email: "Неверный формат"
-				}
-			});
-		}
-	});
+				});
+			}
+		});
+	}
+	validateEnter();
 
 	if ($(".js-input-tel").length) {
         $(".js-input-tel").mask("+999 (99) 999-99-99");
@@ -100,7 +108,8 @@ head.ready(function() {
 
 	// popups
 	$(".js-popup-link").on("click", function(event){
-		var popup = $(this).attr("data-popup");
+		$(".js-overlay").fadeOut(200);
+		var popup = $(this).attr("href");
 		$("body").addClass("has-open-popup");
 		$("."+popup).parent().fadeIn(200);
 		event.stopPropagation();
@@ -415,6 +424,15 @@ head.ready(function() {
         });
     }
 
+    $(".js-fancybox-popup-link").fancybox({
+	    openEffect  : 'elastic',
+        closeEffect : 'elastic',
+	    afterLoad   : function() {
+
+	        this.content = this.content.html();
+	    }
+	});
+
     $(".js-order-more").on("click", function(){
     	$(this).hide();
     	$(this).parents(".js-order").find(".js-order-less").show();
@@ -466,15 +484,15 @@ head.ready(function() {
             tab_cont.hide();
             tab_item.first().addClass("is-active");
             $(this).parents(".js-tab-group").find(".js-tab1").show();
-            tab_link.on("click", function() {
-                var index = $(this).attr("href");
-                tab_item.removeClass("is-active");
-                $(this).parent().addClass("is-active");
-                tab_cont.slideUp("fast");
-                $(this).parents(".js-tab-group").find("."+index).slideDown("fast");
-                return false;
-          });
        });
+       $(".js-tab a").on("click", function() {
+            var index = $(this).attr("href");  
+            $(this).parents(".js-tab").find("li").removeClass("is-active");
+            $(this).parent().addClass("is-active");
+            $(this).parents(".js-tab-group").find(".js-tab-cont").slideUp("fast");
+            $(this).parents(".js-tab-group").find("."+index).slideDown("fast");
+            return false;
+      });
   }
   tab();
 });
