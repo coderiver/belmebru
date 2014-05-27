@@ -341,6 +341,45 @@
 	border: 1px solid $border
 	height: 537px
 	border-radius: 10px
+	.slick-slider
+		position: relative
+		margin-top: 32px  
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 2px
+			background: #fff  
+		.vertical-slider__item
+			border-bottom: 1px solid $border 
+		.slick-prev,
+		.slick-next
+			left: 50%
+			margin-left: -11px
+			z-index: 10
+		.slick-prev
+			top: 0
+			margin-top: -8px
+			&:before
+				+arr(8,6,#a2a2a2,t)
+				top: 8px
+				left: 7px
+			&:hover
+				&:before
+					+arr(8,6,#fff,t)
+		.slick-next
+			top: auto
+			margin: 0 0 -8px -11px
+			bottom: 0
+			&:before
+				+arr(8,6,#a2a2a2,b)
+				top: 9px
+				left: 7px
+			&:hover
+				&:before
+					+arr(8,6,#fff,b)
 .vertical-slider__title
 	position: absolute
 	left: 0
@@ -357,7 +396,7 @@
 .vertical-slider__item
 	padding: 30px 0 25px
 	text-align: center 
-	border-bottom: 1px solid $border 
+	
 	span
 		display: block
 		margin-top: 7px

@@ -200,6 +200,22 @@ head.ready(function() {
 		slidesToScroll: 6,
 		arrows: false
 	});
+	$('.js-slider-items2').slick({
+		slidesToShow: 6,
+		dots: true,
+		infinite: false,
+		speed: 300,
+		touchMove: true,
+		slidesToScroll: 6,
+	});
+	$('.js-slider-kit').slick({
+		slidesToShow: 1,
+		dots: true,
+		infinite: false,
+		speed: 300,
+		touchMove: true,
+		slidesToScroll: 1,
+	});
 	$('.js-slider-partners').slick({
 		slidesToShow: 6,
 		infinite: false,
@@ -229,7 +245,6 @@ head.ready(function() {
 		slidesToShow: 2,
 		infinite: false,
 		speed: 300,
-		touchMove: true,
 		slidesToScroll: 2,
 		vertical: true
 	});

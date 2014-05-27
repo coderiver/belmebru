@@ -1456,3 +1456,104 @@
 		display: table-cell
 	span 
 		text-align: right
+		
+.catalog-back
+	margin-bottom: 50px
+.kit-items
+	position: relative
+	margin: 100px 0 0 
+	.slick-slider
+		padding-top: 13px
+		border: 2px solid #faca0a
+		height: 273px
+		border-radius: 20px
+		background: #fff
+	.slick-slide  
+		text-align: center
+		height: 255px
+	.slick-dots
+		position: absolute
+		bottom: -4px
+		left: 0
+		right: 0
+	.item
+		float: none
+		margin-left: 20px
+		display: inline-block
+		vertical-align: top
+		.item__img
+			height: 120px
+			line-height: 120px
+			img
+				display: inline-block
+			
+	.icon-plus,
+	.icon-equ
+		position: absolute
+		top: 88px
+		font-size: 36px
+		color: #c0c0c0
+		font-style: normal
+		+fb 
+	.icon-plus
+		right: -20px
+	.icon-equ
+		right: -10px
+.kit-items__title
+	position: absolute
+	left: 0
+	right: 0
+	top: -8px
+	text-align: center
+	font-size: 14px
+	+fb
+	z-index: 2
+	text-transform: uppercase
+	span
+		display: inline-block
+		padding: 0 30px
+		background: #fff  
+.kit-items__total
+	margin-top: 24px
+	padding: 20px 10px 28px 
+	width: 210px
+	border: 1px solid #eaeaea
+	border-radius: 10px
+	+box
+	text-align: center
+	background: #f5f5ef
+.kit-items__price
+	margin-bottom: 20px
+	font-size: 24px
+	+fb
+.kit-items__discount
+	position: relative
+	margin-bottom: 13px
+	padding: 0 11px 
+	height: 29px
+	font-size: 11px
+	line-height: 29px
+	border: 1px solid #ebe5ca
+	border-radius: 15px
+	font-weight: bold
+	color: #64482a 
+	background: #ffeca4
+	&:after
+		content: ""
+		position: absolute
+		left: 50%
+		bottom: -7px
+		z-index: 2
+		margin-left: -5px
+		+arr(12,7,#ffeca4,b) 
+	&:before
+		content: ""
+		position: absolute
+		left: 50%
+		bottom: -8px
+		margin-left: -7px
+		+arr(14,8,#ebe5ca,b) 
+	span
+		color: $orange
+	strong
+		color: #ff2d0a 
