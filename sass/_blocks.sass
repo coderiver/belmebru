@@ -110,7 +110,15 @@
 		border-color: #656565 
 		+box-shadow(0 2px 4px rgba(0,0,0,.3))
 		+background-image(linear-gradient(bottom, rgba(0,0,0,.29) 0%, rgba(255,255,255,.29) 100%))
-
+	&.btn_basket
+		position: relative
+		padding: 0 42px 0 60px 
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: 20px 
+			+s(basket)      
 .btn_orange
 	background: #f7aa35
 	+g(#f7aa35, #f1651d)
@@ -530,3 +538,9 @@
 		+box-shadow(none)
 	&:active
 		background: #e8e8e8 
+		
+.color
+	width: 45px
+	height: 45px
+	border-radius: 50%
+	overflow: hidden

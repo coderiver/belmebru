@@ -387,6 +387,10 @@
 	+ .pagination
 		padding-top: 20px
 		border-top: 1px solid $border 
+.gallery
+	float: left
+	margin-bottom: 42px
+	width: 445px
 .gallery__img
 	position: relative
 	width: 440px  
@@ -444,8 +448,93 @@
 			max-width: 100%
 			max-height: 100%
 			height: auto
-.search
+.prod
+	float: right
+	width: 275px
+	border: 1px solid #e6e5e0
+	border-radius: 10px
+	background: #fef7dc
+	overflow: hidden
+	.slick-slider  
+		margin: 12px auto
+		width: 180px
+	.slick-slide 
+		width: 45px !important
+		height: 45px
+		margin-left: 15px
+	.slick-disabled
+		opacity: .3 
+	.slick-prev,
+	.slick-next,
+		position: absolute
+		top: 17px
+	.slick-prev
+		+s(arr9)
+		left: -18px
+	.slick-next
+		+s(arr10)
+		right: -32px
+.prod__head
+	background: #f6f5f0 
+.prod__meta
+	border-bottom: 1px solid #fff
+	+box-shadow(inset 0 -1px 0 #e7e7e7) 
+	padding: 20px 35px 17px 23px 
+	+clr
+	color: #545453 
+.prod__state
 	position: relative
+	float: left
+	padding-left: 24px
+	font-weight: bold
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0 
+	&.is-order
+		color: $orange 
+		&:before
+			+s(clock)
+
+.prod__delivery
+	float: right
+	font-size: 11px
+.prod__param
+	padding: 15px 25px 
+	border-bottom: 1px solid #fff
+	+box-shadow(inset 0 -1px 0 #e7e7e7) 
+.prod__price
+	padding: 83px 0 110px
+	text-align: center
+	.old-price
+		font-weight: normal
+		font-size: 12px
+		color: #c2bb9f 
+		font-family: Arial,sans-serif 
+		span
+			&:before
+				top: 7px
+	.btn
+		margin-bottom: 20px
+.prod__sum
+	font-size: 30px
+	color: #000
+	+fb 
+.buy-click
+	position: relative
+	color: $orange
+	margin-left: 25px
+	text-decoration: none
+	border-bottom: 1px dotted 
+	&:before 
+		content: ""
+		position: absolute
+		top: 0  
+		left: -25px 
+		+s(hand)
+.search
+	position: relative 
 	margin-bottom: 15px
 	&.is-active
 		.search__input
@@ -1260,3 +1349,110 @@
 	.btn-copy
 		float: right
 		margin-top: 5px
+
+.tab-simple
+	margin-top: 23px
+	clear: both
+	overflow: hidden
+	li
+		float: left
+		margin-right: -15px
+		position: relative
+		&:nth-child(6)
+			z-index: 1
+		&:nth-child(5)
+			z-index: 2
+		&:nth-child(4)
+			z-index: 3
+		&:nth-child(3)
+			z-index: 4
+		&:nth-child(2)
+			z-index: 5
+		&:nth-child(1)
+			z-index: 6
+		&.is-active
+			z-index: 30
+			&:first-child
+				&:before
+					display: none
+			&:after
+				content: ""
+				position: absolute
+				right: -2px
+				bottom: 0
+				width: 5px
+				height: 13px
+				background: #fff  
+			&:before
+				content: ""
+				position: absolute
+				left: -2px
+				bottom: 0
+				width: 5px
+				height: 13px
+				background: #fff 
+			a
+				background: #fff
+				border-bottom-color: #fff
+			span
+				border-color: transparent 
+	a
+		display: block
+		padding: 0 25px
+		height: 54px
+		line-height: 40px
+		border: 1px solid #e3e3e3
+		border-radius: 10px 10px 0 0
+		background: #f7f7f7
+		+background-image(linear-gradient(bottom, #f5f1e9 0%, #fff 100%))
+		font-size: 20px
+		color: #000
+		+fb 
+		+box
+		text-decoration: none
+		&:hover
+			span
+				border-color: transparent 
+	span
+		border-bottom: 1px dotted 
+		
+.tab-content
+	position: relative
+	z-index: 20
+	margin-top: -14px
+	border: 1px solid #e4e4e4
+	padding: 35px 
+	background: #fff 
+	border-radius: 10px
+	overflow: hidden
+.prod-descr
+	color: #575652
+	font-size: 12px
+	line-height: 2
+	ul
+		margin-bottom: 30px
+		strong
+			color: $black 
+	img
+		float: right
+.prod-descr__title
+	font-weight: bold
+	font-size: 16px
+	color: $black
+	margin-bottom: 10px 
+.prod-param
+	float: left
+	margin-left: 22px
+	width: 330px
+	&:first-child
+		margin-left: 0
+	li
+		display: table
+		width: 332px
+		&:nth-child(2n+1)
+			background: #f8f6f0 
+	span,strong
+		padding: 6px 17px
+		display: table-cell
+	span 
+		text-align: right
