@@ -508,7 +508,7 @@
 					<a class="comment__user" href="#">Александр</a>
 					<div class="comment__meta">28.02.2014</div>
 					<div class="rating">
-					<div class="rating__in js-rating-read" data-score="3"></div>
+						<div class="rating__in js-rating-read" data-score="3"></div>
 						<span class="rating__text js-rating-text"></span>
 					</div>
 					<div class="comment__text">Отличный магазин и замечательные товары. Спасибо за работу. Отличный магазини замечательные товары. Спасибо за работу. Отличный магазин и замечательные товары. Спасибо за работу.</div>
@@ -544,13 +544,13 @@
 					<a class="comment__user" href="#">Александр</a>
 					<div class="comment__meta">28.02.2014</div>
 					<div class="rating">
-					<div class="rating__in js-rating-read" data-score="5"></div>
+						<div class="rating__in js-rating-read" data-score="5"></div>
 						<span class="rating__text js-rating-text"></span>
 					</div>
 					<div class="comment__text">Отличный магазин и замечательные товары. Спасибо за работу. Отличный магазини замечательные товары. Спасибо за работу. Отличный магазин и замечательные товары. Спасибо за работу.</div>
 				</div>
 				<div class="add-comment">
-					<a href="#" class="btn btn_orange">Добавить отзыв</a>
+					<a href="js-popup-comment" class="btn btn_orange js-popup-link">Добавить отзыв</a>
 					<div class="pagination">
 						<a href="#" class="is-active">1</a>
 						<a href="#">2</a>
@@ -649,6 +649,89 @@
 		</div>
 	</div>
 </footer>
+<div class="overlay js-overlay" style="display:block">
+	<div class="popup popup_small js-popup js-popup-comment">
+		<div class="popup__in">
+			<div class="popup__wrap">
+				<div class="popup__title">Добавить комментарий</div>
+					<div class="rating">
+						<div class="rating__in js-rating" data-score="5"></div>
+						<span class="rating__text js-rating-text"></span>
+					</div>
+				<form class="js-validate-enter">
+					<label class="field">
+						<span class="field__label">Ваше имя<sup>*</sup></span>
+						<span class="field__el">
+							<input type="text" name="firstname" required>
+						</span>
+					</label>
+					<label class="field">
+						<span class="field__label">E-mail<sup>*</sup></span>
+						<span class="field__el">
+							<input type="email" name="email" required>
+						</span>
+					</label>
+					<label class="field">
+						<span class="field__label">Комментарий<sup>*</sup></span>
+						<span class="field__el">
+							<textarea required></textarea>
+						</span>
+					</label>
+					<label class="field field_file">
+						<span class="field__label">Добавить фотографии</span>
+						<span class="field__el">
+							<span class="btn-file">
+								<input type="file" class="field__file">
+								<span>Выбрать </span>
+							</span>
+							<span class="field__file-info">Размером до 10 Мб GIF, JPEG или PNG</span>
+						</span>
+					</label>
+					<div class="wrap">
+						<div class="download js-download has-status-done">
+							<div class="download__img js-download-img">
+								<img src="http://lorempixel.com/66/66" alt="">
+							</div>
+							<button type="button" class="js-del-img"></button>
+							<div class="download__progress">
+								<span><i></i>Загружено</span>
+							</div>
+						</div>
+						<div class="download js-download">
+							<div class="download__img js-download-img">
+								<img src="http://lorempixel.com/66/66" alt="">
+							</div>
+							<button type="button" class="js-del-img"></button>
+							<div class="download__progress">
+								<div class="progress"><span style="width:25%"></span></div>
+							</div>
+						</div>
+						<div class="download js-download">
+							<div class="download__img js-download-img">
+								<img src="http://lorempixel.com/66/66" alt="">
+							</div>
+							<button type="button" class="js-del-img"></button>
+							<div class="download__progress">
+								<div class="progress"><span style="width:50%"></span></div>
+							</div>
+						</div>
+						<div class="download js-download">
+							<div class="download__img js-download-img">
+								<img src="http://lorempixel.com/66/66" alt="">
+							</div>
+							<button type="button" class="js-del-img"></button>
+							<div class="download__progress">
+								<div class="progress"><span style="width:75%"></span></div>
+							</div>
+						</div>
+					</div>
+					<button type="submit" class="btn btn_green">Добавить отзыв</button>
+				</form>
+			</div>
+		</div>
+		<button class="popup__close js-popup-close"></button>
+	</div>
+</div>
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>

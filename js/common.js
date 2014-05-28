@@ -495,4 +495,10 @@ head.ready(function() {
       });
   }
   tab();
+
+  $(".js-del-img").on("click", function() {
+        $(this).parents(".js-download").remove();
+        return false;
+  });
+
 });

@@ -162,3 +162,43 @@
 .popup__img-gift
 	border-radius: 50%
 	overflow: hidden
+	
+.download
+	position: relative 
+	margin: 0 0 18px 18px  
+	float: left
+	width: 68px
+	height: 82px
+	&:first-child,
+	&:nth-child(3n+1)
+		margin-left: 0
+	&:last-child
+		margin-bottom: 35px
+	button
+		position: absolute
+		top: -6px
+		right: -6px
+		+s(del-red)
+	span
+		color: #bababa
+		font-style: italic
+		font-size: 10px
+	i
+		display: inline-block 
+		vertical-align: middle
+		margin-right: 5px
+	&.has-status-done
+		span
+			i
+				+s(arr-green)
+.download__img
+	width: 66px
+	height: 66px
+	border: 1px solid $border
+	img
+		display: block
+		max-width: 100%
+		height: auto
+		max-height: 100%
+.download__progress
+	margin-top: 7px
