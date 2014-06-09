@@ -257,6 +257,24 @@
 	top: auto
 	margin: 0 0 0 14px
 	z-index: 1000
+	&.has-img
+		margin-left: -62px
+		padding-bottom: 13px
+		.tooltip__in
+			&:after
+				content: ""
+				position: absolute
+				bottom: 5px
+				left: 50%
+				margin-left: -10px
+				+arr(20,8,#fff,b)
+			&:before
+				content: ""
+				position: absolute
+				left: 50%
+				bottom: 3px
+				margin-left: -11px 
+				+arr(22,10,rgba(#000,.3),b)
 .tooltip__in
 	padding: 3px 10px
 	font-size: 11px
@@ -265,6 +283,22 @@
 	+box
 	background: #fff
 	+box-shadow(0 1px 3px rgba(0,0,0,.54))
+	
+.tooltip__with-img
+	padding: 14px 0 
+	width: 148px
+	+box
+	text-align: center
+	
+.tooltip__img
+	margin: 0 auto 10px 
+	width: 118px
+	height: 118px
+	border-radius: 50%
+	img
+		width: 100%
+		height: 100%
+		border-radius: 50%
 
 
 .soc
@@ -352,6 +386,7 @@
 .subscribe__btn
 	display: inline-block
 	vertical-align: middle
+	line-height: 1
 .subscribe__text
 	margin: -4px 7px 0 28px 
 	width: 335px
@@ -580,10 +615,22 @@
 .color
 	width: 45px
 	height: 45px
-	border-radius: 50%
-	overflow: hidden
-	
-
+	cursor: pointer
+	&:hover
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+			z-index: 2
+			border-radius: 50%
+			border: 4px solid $red 
+	img
+		width: 100%
+		height: 100%
+		border-radius: 50%
 .progress
 	position: relative
 	height: 4px

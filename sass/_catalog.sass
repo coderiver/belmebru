@@ -38,6 +38,10 @@
 	width: 225px
 	height: 335px
 	+box
+	.prod-title
+		display: inline-block
+		max-height: 32px
+		overflow: hidden
 	.badge
 		z-index: 2
 		top: 7px
@@ -59,13 +63,13 @@
 		.item__size
 			visibility: visible
 			+opacity(1)
-		.badge
-			//top: 14px
+	
 		
 .item_round
 	.item__img
 		img
 			+border-radius(7px)
+	
 .wrap
 	.item_action
 		float: left
@@ -171,7 +175,7 @@
 			display: inline-block
 	.slick-dots
 		position: absolute
-		bottom: -4px
+		bottom: -7px
 		left: 0  
 		right: 0
 	.tab-wrap

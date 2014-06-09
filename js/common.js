@@ -162,6 +162,21 @@ head.ready(function() {
 			tooltip.hide();
 		}
 	);
+	$(".js-tooltip-img-key").hover(
+		function(){
+			tooltip.addClass("has-img");
+			var left = $(this).offset().left;
+			var bottom = $(window).height() - $(this).offset().top;
+			tooltip.css({
+				left: left,
+				bottom: bottom
+			});
+		},
+		function() {
+			tooltip.hide();
+			tooltip.removeClass("has-img");
+		}
+	);
 	tooltip.hover(
 		function(){
 			tooltip.show();
