@@ -476,6 +476,9 @@ a:hover { text-decoration: none; }
 .radio-box input { position: absolute; top: 5px; left: 0; }
 .radio-box input:checked + i { display: block; }
 
+.radio-box_bonus i { background: #fef1bb; }
+.radio-box_bonus .price { margin: 15px 0; text-align: left; font-size: 26px; color: #f27623; }
+
 .radio { display: inline-block; color: #818181; line-height: 20px; }
 .radio input, .radio strong { display: inline-block; vertical-align: middle; }
 .radio span { display: block; }
