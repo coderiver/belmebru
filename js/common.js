@@ -145,9 +145,12 @@ head.ready(function() {
 	// });
 
 	$("body").prepend( '<div class="tooltip js-tooltip"><div class="tooltip__in"></div></div>' );
+	$("body").prepend( '<div class="tooltip js-tooltip-img has-img"><div class="tooltip__in"></div></div>' );
 	var tooltip = $(".js-tooltip");
+	var tooltip_img = $(".js-tooltip-img");
 	$(".js-tooltip-key").hover(
 		function(){
+
 			var left = $(this).offset().left;
 			var bottom = $(window).height() - $(this).offset().top;
 			var tooltip_html = $(this).attr("data-title");
@@ -164,17 +167,19 @@ head.ready(function() {
 	);
 	$(".js-tooltip-img-key").hover(
 		function(){
-			tooltip.addClass("has-img");
+			//tooltip.addClass("has-img");
 			var left = $(this).offset().left;
 			var bottom = $(window).height() - $(this).offset().top;
-			tooltip.css({
+			var tooltip_html = $(this).attr("data-title");
+			tooltip_img.css({
 				left: left,
 				bottom: bottom
 			});
+			tooltip_img.find(".tooltip__in").html(tooltip_html).fadeIn("fast");
+			tooltip_img.fadeIn("fast");
 		},
 		function() {
-			tooltip.hide();
-			tooltip.removeClass("has-img");
+			tooltip_img.hide();
 		}
 	);
 	tooltip.hover(
@@ -183,6 +188,14 @@ head.ready(function() {
 		},
 		function() {
 			tooltip.hide(); 
+		}
+	);
+	tooltip_img.hover(
+		function(){
+			tooltip_img.show();
+		},
+		function() {
+			tooltip_img.hide(); 
 		}
 	);
 
@@ -513,6 +526,12 @@ head.ready(function() {
 
   $(".js-del-img").on("click", function() {
         $(this).parents(".js-download").remove();
+        return false;
+  });
+
+  $(".js-color").on("click", function() {
+  		$(this).parents(".js-slider-color").find(".js-color").removeClass("is-active");
+        $(this).addClass("is-active");
         return false;
   });
 
