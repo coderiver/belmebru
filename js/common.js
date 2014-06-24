@@ -534,5 +534,9 @@ head.ready(function() {
         $(this).addClass("is-active");
         return false;
   });
+  	$(".js-reset-filter").on("click", function() {
+  		ui_slider_range();
+ 	 });
+  	
 
 });

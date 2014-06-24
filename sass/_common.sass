@@ -123,14 +123,18 @@ a
 	line-height: 42px
 	cursor: default
 	z-index: 4 
+	cursor: pointer
 	span
 		border-bottom: 1px dotted
-		color: $orange
+		color: $black
 	i
 		position: absolute
 		top: 12px
 		left: 11px
 		+s(top-callback)
+	&:hover
+		span
+			color: $orange 
 .top__callback-drop
 	display: none
 	position: absolute

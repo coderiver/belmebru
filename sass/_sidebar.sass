@@ -285,9 +285,8 @@
 	font-weight: bold
 	&:before
 		content: ""
-		position: absolute
-		left: -17px
-		top: 0 
+		display: inline-block
+		margin-right: 5px
 		+s(doc) 
 .yandex-market_static
 	position: relative
@@ -300,17 +299,23 @@
 		height: auto
 
 .slider-add
-	margin: 14px 0 
+	margin: 14px 0 16px
 	.slick-slider
 		height: 121px
 		border-radius: 10px
 		background: #f7f7f7
 		+box-shadow(0 2px 10px rgba(105,99,83,.29))
 		+background-image(linear-gradient(bottom, rgba(245,242,233,.46) 0%, rgba(255,255,255,.46) 100%))
+		&:hover
+			+box-shadow(0 2px 10px rgba(105,99,83,.29),0 0 0 3px $orange)
+			.icon-email
+				+sp(mail-h)
+			.icon-gift
+				+sp(gift-h)
 	.slick-slide
 		height: 121px
 		line-height: 121px
-		text-align: center
+		text-align: center 
 		span
 			display: inline-block
 			vertical-align: middle
