@@ -513,42 +513,52 @@
 							<p><em>Самовывоз и посещение склада осуществляется только по предварительному согласованию.</em></p>
 							<a href="#" class="map-link">Показать на карте</a>
 						</div>
-						<div class="title-h2">Карта проезда</div>
-						<div class="map">
-							<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-							<script>
-								ymaps.ready(init);
-								var myMap, 
-									myPlacemark;
-
-								function init(){ 
-									myMap = new ymaps.Map ("map-contacts", {
-										center: [55.860259,37.397229],
-										zoom: 16,
-										controls: ['smallMapDefaultSet']
-									});
-									myPlacemark1 = new ymaps.Placemark([55.860259,37.397229], 
-							            {
-							                hintContent: '',
-							                balloonContent: '<div class="map__info"><div class="map__info-title">Офис</div><p>г.Москва, МКАД 71-й км <br>ТЦ Кухни Парк  </p><p><i class="icon-clock"></i>10:00-19:00 ежедневно</p><p><i class="icon-tel"></i>8 800 555-10-32</p></div></div>',
-							            },
-							            {	
-							            	iconLayout: 'default#image',
-							                iconImageHref: 'img/marker.png',
-							                iconImageSize: [23, 33]
-							            }
-							        );
-							        
-							        myMap.geoObjects.add(myPlacemark1);
-								}
-							</script>
-							<div id="map-contacts" class="map__body"></div>
-						</div>
-						<div class="title-h2">Смотрите как легко до нас добраться!</div>
-						<div class="youtube">
-							<iframe width="675" height="360" src="http://www.youtube.com/embed/Mnq30O6Szow" frameborder="0" allowfullscreen></iframe>
-						</div>
 					</div>
+				</div>
+				<div class="title-h2">Карта проезда</div>
+					<div class="map">
+					<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+					<script>
+						ymaps.ready(init);
+						var myMap, 
+							myPlacemark;
+
+						function init(){ 
+							myMap = new ymaps.Map ("map-contacts", {
+								center: [55.860259,37.397229],
+								zoom: 16,
+								controls: ['smallMapDefaultSet']
+							});
+							myPlacemark1 = new ymaps.Placemark([55.860259,37.397229], 
+					            {
+					                hintContent: '',
+					                balloonContent: '<div class="map__info"><div class="map__info-title">Офис</div><p>г.Москва, МКАД 71-й км <br>ТЦ Кухни Парк  </p><p><i class="icon-clock"></i>10:00-19:00 ежедневно</p><p><i class="icon-tel"></i>8 800 555-10-32</p></div></div>',
+					            },
+					            {	
+					            	iconLayout: 'default#image',
+					                iconImageHref: 'img/marker.png',
+					                iconImageSize: [23, 33]
+					            }
+					        );
+					        
+					        myMap.geoObjects.add(myPlacemark1);
+						}
+					</script>
+					<div id="map-contacts" class="map__body"></div>
+				</div>
+				<div class="title-h2">Смотрите как легко до нас добраться!</div>
+				<div class="youtube">
+					<iframe width="675" height="360" src="http://www.youtube.com/embed/Mnq30O6Szow" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="details">
+					<div class="details__title">Реквизиты</div>
+					<ul class="details__list">
+						<li><strong>Юридическое лицо:</strong> ООО «БелМебель»</li>
+						<li><strong>ОГРН:</strong> 1125024008670</li>
+						<li><strong>ИНН:</strong> 5024133143</li>
+						<li><strong>КПП:</strong> 502401001</li>
+					</ul>
+					<a href="#" class="copy-link"><span>Копировать</span></a>
 				</div>
 			</div> 
 		</div>

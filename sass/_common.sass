@@ -1,17 +1,20 @@
-+font(PFAgoraSansBold, pfagorasanspro-bold)  
++font(pfagorasanspro-bold, pfagorasanspro-bold)  
 =fb
-	font-family: "PFAgoraSansBold", Arial, sans-serif 
-+font(PFAgoraSansBoldItalic, pfagorasanspro-bolditalic)  
+	font-family: "pfagorasanspro-bold", Arial, sans-serif 
++font(pfagorasanspro-bolditalic, pfagorasanspro-bolditalic)  
 =fbi
-	font-family: "PFAgoraSansBoldItalic", Arial, sans-serif 
-+font(PFAgoraSansMedium, pfagorasanspro-medium)  
+	font-family: "pfagorasanspro-bolditalic", Arial, sans-serif 
++font(pfagorasanspro-medium, pfagorasanspro-medium)  
 =fm
-	font-family: "PFAgoraSansMedium", Arial, sans-serif 
+	font-family: "pfagorasanspro-medium", Arial, sans-serif 
 +font(pfagorasanspro-black, pfagorasanspro-black)  
 =fblack
 	font-family: "pfagorasanspro-black", Arial, sans-serif 
++font(arial-black, arial-black)  
+=arial
+	font-family: "arial-black", Arial, sans-serif 
 
-
+  
 $orange: #f27623
 $red: #fe4747
 $black: #282621
@@ -145,7 +148,6 @@ a
 	background: #fff
 	+tr
 	box-shadow: 0 5px 15px rgba(137,117,59,.65)
-
 .header
 	position: relative
 	z-index: 10
@@ -439,8 +441,12 @@ a
 	margin-bottom: 27px
 	line-height: 24px  
 .subnav__promo
+	position: relative
 	overflow: hidden
 	border-left: 1px solid #dadada 
+	.badge-wrap
+		top: 0
+		right: 9px
 .promo-item
 	position: relative
 	margin: 0 0 0 15px
@@ -661,13 +667,3 @@ a
 	&:hover
 		+s(logo-flex-hover)
 
-.ie8
-	.overlay     
-		background: #ccc 
-	.field__el 
-		input
-			line-height: 27px
-	.search__input
-		line-height: 27px
-	.subscribe__input
-		line-height: 37px   

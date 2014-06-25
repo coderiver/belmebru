@@ -40,10 +40,15 @@
 			position: absolute
 			top: 100%
 			left: 0
+			font-size: 12px
 	input[value],
 	.has-value
 		border: 1px solid #ddc097
 		background: #fdf8f0
+	.has-error
+		&.has-value
+			background: #fff 
+			border-color: #f00 
 	.field__file
 		border: 0
 		padding: 0
@@ -82,6 +87,18 @@
 		background: #fff 
 		color: #bababa
 		font-style: italic 
+.field__message
+	position: relative
+	padding-left: 25px
+	font-style: italic
+	font-size: 12px
+	color: #a1a1a1 
+	line-height: 1.5
+	&:before
+		content: "—"
+		position: absolute
+		left: 0
+		top: 0 
 .input, 
 .input_textarea
 	border: 1px solid #d6d6d6
@@ -96,6 +113,9 @@
 	&.has-value
 		border: 1px solid #ddc097
 		background: #fdf8f0
+	&.has-error
+		&.has-value
+			background: #fff 
 .input_textarea
 	padding: 11px
 	resize: vertical
@@ -117,7 +137,10 @@
 	padding: 0 17px
 	border-radius: 3px
 	border-bottom: 2px solid 
-	font: normal 12px/33px "Arial Black",Arial,sans-serif
+	font-weight: normal 
+	font-size: 12px
+	line-height: 33px
+	+arial
 	text-decoration: none
 	color: #fefefe !important
 	+box
@@ -232,23 +255,31 @@
 			right: -2px
 			height: 1px
 			background: $red  
-			
-.badge
+
+.badge-wrap
 	position: absolute
+	font-size: 0		
+.badge
+	//position: absolute
+	margin-left: 11px
+	display: inline-block
+	vertical-align: middle
 	line-height: 30px
 	text-align: center
 	font-weight: bold  
 	font-size: 10px
 	color: #fff 
+	img
+		vertical-align: middle
 .badge_new	
-	right: 88px
+	//right: 88px
 	+s(badge-new)
 .badge_discount
-	right: 48px
+	//right: 48px
 	+s(badge-discount)
 .badge_eco
 	cursor: pointer
-	right: 8px
+	//right: 8px
 	+s(badge-eco)
 
 .tooltip
@@ -419,8 +450,11 @@
 		background: #f37f1b 
 	&:focus
 		background: #fff 
+		+box-shadow(0 1px 0 rgba(255,255,255,.23))
 		+placeholder
 			+hide-text
+	&.has-value 
+		background: #fff  
 .subscribe__email
 	font-size: 24px
 	+placeholder

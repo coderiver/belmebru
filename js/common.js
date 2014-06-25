@@ -485,6 +485,22 @@ head.ready(function() {
     	}
 	  	
 	});
+	$(".js-subscribe-input").each(function(){
+    	if ($(this).val().length > 0) {
+    		$(this).addClass("has-value");
+    	}
+    	else {
+    		$(this).removeClass("has-value");
+    	}
+    });
+    $(".js-subscribe-input").focusout(function(){
+    	if ($(this).val().length > 0) {
+    		$(this).addClass("has-value");
+    	}
+	  	else {
+    		$(this).removeClass("has-value");
+    	}
+	});
 
 
 	$(".js-gallery").each(function(){
@@ -536,6 +552,13 @@ head.ready(function() {
   });
   	$(".js-reset-filter").on("click", function() {
   		ui_slider_range();
+ 	 });
+
+  	$(".js-checkbox-input").on("change", function() {
+  		if ($(this).is(":checked")) {
+  			$(this).parent().find(".input").focus();
+  		}
+  		
  	 });
   	
 
