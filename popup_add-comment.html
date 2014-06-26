@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="top__auth">
-				<a class="top__auth-link js-popup-link" href="js-enter-popup">Авторизоваться<i></i></a>
+				<a class="top__auth-link js-popup-link" href="js-popup-enter">Авторизоваться<i></i></a>
 			</div>
 		</div>
 	</div>
@@ -191,9 +191,19 @@
 									<div class="price">2 800Р</div>
 									<div class="old-price"><span>3 140Р</span></div>
 									<a href="#" class="btn btn_green">Купить</a>
-									<span class="badge badge_new">new</span>
-									<span class="badge badge_discount">-15%</span>
-									<span class="badge badge_eco"></span>
+									<div class="badge-wrap">
+										<span class="badge">
+											new
+											<img src="img/badge-new.png" alt="">
+										</span>
+										<span class="badge">
+											-15%
+											<img src="img/badge-discount.png" alt="">
+										</span>
+										<span class="badge js-tooltip-key" data-title="100% дерево">
+											<img src="img/badge-eco.png" alt="">
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -244,9 +254,19 @@
 									<div class="price">2 800Р</div>
 									<div class="old-price"><span>3 140Р</span></div>
 									<a href="#" class="btn btn_green">Купить</a>
-									<span class="badge badge_new">new</span>
-									<span class="badge badge_discount">-15%</span>
-									<span class="badge badge_eco"></span>
+									<div class="badge-wrap">
+										<span class="badge">
+											new
+											<img src="img/badge-new.png" alt="">
+										</span>
+										<span class="badge">
+											-15%
+											<img src="img/badge-discount.png" alt="">
+										</span>
+										<span class="badge js-tooltip-key" data-title="100% дерево">
+											<img src="img/badge-eco.png" alt="">
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -293,7 +313,19 @@
 									<div class="price">2 800Р</div>
 									<div class="old-price"><span>3 140Р</span></div>
 									<a href="#" class="btn btn_green">Купить</a>
-									<span class="badge badge_eco"></span>
+									<div class="badge-wrap">
+										<span class="badge">
+											new
+											<img src="img/badge-new.png" alt="">
+										</span>
+										<span class="badge">
+											-15%
+											<img src="img/badge-discount.png" alt="">
+										</span>
+										<span class="badge js-tooltip-key" data-title="100% дерево">
+											<img src="img/badge-eco.png" alt="">
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -352,9 +384,19 @@
 									<div class="price">2 800Р</div>
 									<div class="old-price"><span>3 140Р</span></div>
 									<a href="#" class="btn btn_green">Купить</a>
-									<span class="badge badge_new">new</span>
-									<span class="badge badge_discount">-15%</span>
-									<span class="badge badge_eco"></span>
+									<div class="badge-wrap">
+										<span class="badge">
+											new
+											<img src="img/badge-new.png" alt="">
+										</span>
+										<span class="badge">
+											-15%
+											<img src="img/badge-discount.png" alt="">
+										</span>
+										<span class="badge js-tooltip-key" data-title="100% дерево">
+											<img src="img/badge-eco.png" alt="">
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -413,101 +455,610 @@
 									<div class="price">2 800Р</div>
 									<div class="old-price"><span>3 140Р</span></div>
 									<a href="#" class="btn btn_green">Купить</a>
-									<span class="badge badge_new">new</span>
-									<span class="badge badge_discount">-15%</span>
-									<span class="badge badge_eco"></span>
+									<div class="badge-wrap">
+										<span class="badge">
+											new
+											<img src="img/badge-new.png" alt="">
+										</span>
+										<span class="badge">
+											-15%
+											<img src="img/badge-discount.png" alt="">
+										</span>
+										<span class="badge js-tooltip-key" data-title="100% дерево">
+											<img src="img/badge-eco.png" alt="">
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</li>	 
+					</li>   
 					<li class="nav__item is-marked has-not-subnav">
 						<a href="#" class="nav__link"><span>Скидки</span></a>
-					</li>																				 
+					</li>                                         
 				</ul>
-				<div class="search-form">
+				<div class="search-form" style="display:block">
 					<input type="text" class="search-form__text" placeholder="Поиск по 10 тыс. товаров">
 					<input type="submit" class="search-form__btn">
+					<div class="search-drop" style="display:block">
+						<ul class="list-categ-wrap">
+							<li class="list-categ">
+								<div class="list-categ__name">
+									<a href="#">кресла-качалки</a>
+								</div>
+								<div class="list-categ__price">
+									от <strong>5 500р</strong>
+								</div>
+							</li>
+							<li class="list-categ">
+								<div class="list-categ__name">
+									<a href="#">комоды</a>
+								</div>
+								<div class="list-categ__price">
+									от <strong>5 500р</strong>
+								</div>
+							</li>
+							<li class="list-categ">
+								<div class="list-categ__name">
+									<a href="#">кровати двухспальные</a>
+								</div>
+								<div class="list-categ__price">
+									от <strong>25 500р</strong>
+								</div>
+							</li>
+							<li class="list-categ">
+								<div class="list-categ__name">
+									<a href="#">кресла-качалки</a>
+								</div>
+								<div class="list-categ__price">
+									от <strong>5 500р</strong>
+								</div>
+							</li>
+							<li class="list-categ">
+								<div class="list-categ__name">
+									<a href="#">комоды</a>
+								</div>
+								<div class="list-categ__price">
+									от <strong>5 500р</strong>
+								</div>
+							</li>
+						</ul>
+						<ul class="list-item-wrap">
+							<li class="list-item">
+								<div class="list-item__img">
+									<a href="#"><img src="img/item2.png" alt="" width="63"></a>
+								</div>
+								<div class="list-item__info">
+									<a href="#">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
+									<span>100 x 46 x 46 см</span>
+								</div>
+								<div class="list-item__price">
+									<div class="price">14 401Р</div>
+									<div class="old-price"><span>15 401Р</span></div>
+								</div>
+							</li>
+							<li class="list-item">
+								<div class="list-item__img">
+									<a href="#"><img src="img/item2.png" alt="" width="63"></a>
+								</div>
+								<div class="list-item__info">
+									<a href="#">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
+									<span>100 x 46 x 46 см</span>
+								</div>
+								<div class="list-item__price">
+									<div class="price">14 401Р</div>
+									<div class="old-price"><span>15 401Р</span></div>
+								</div>
+							</li>
+							<li class="list-item">
+								<div class="list-item__img">
+									<a href="#"><img src="img/item2.png" alt="" width="63"></a>
+								</div>
+								<div class="list-item__info">
+									<a href="#">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
+									<span>100 x 46 x 46 см</span>
+								</div>
+								<div class="list-item__price">
+									<div class="price">14 401Р</div>
+									<div class="old-price"><span>15 401Р</span></div>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
-	<div class="main l-center">
-		<div class="l-cols">
-			<div class="l-col1">
-				<div class="sidebar-menu">
-					<div class="menu-title"><a href="#">Рубрики</a></div>
-					<ul class="menu">
-						<li><a href="#">Все</a></li>
-						<li><a href="#">Интерьеры</a></li>
-						<li><a href="#">Стили в интерьере</a></li>
-						<li><a href="#">Кухня</a></li>
-						<li><a href="#">Мебельные новости</a></li>
-						<li><a href="#">Мебельный бизнес</a></li>
-						<li><a href="#">Досуг</a></li>
-						<li><a href="#">Шкафы</a></li>
-						<li><a href="#">Весна</a></li>
-						<li><a href="#">Ультрамодный интерьер</a></li>
-						<li><a href="#">Москвичи</a></li>
-						<li><a href="#">Карандаши</a></li>
-						<li><a href="#">Чак Норис</a></li>
-					</ul>
-				</div>
-				<div class="email-subscribe">
-					<div class="email-subscribe__title">подписаться на новости</div>
-					<form class="js-validate">
-						<label class="field" for="firstname">
-							<span class="field__el">
-								<input type="text" name="firstname" id="firstname" placeholder="Ваше имя">
-							</span>
-						</label>
-						<label class="field" for="email2">
-							<span class="field__el">
-								<input type="email" name="email" id="email2" placeholder="E-mail">
-							</span>
-						</label>
-						<button type="submit" class="btn btn_orange btn_arr">Подписаться</button>
-					</form>
+	<div class="index-promo">
+		<div class="l-center">
+			<div class="promo-links">
+				<a href="#">
+					<i class="icon-delivery"></i>
+					<div><span>Бесплатная доставка по Москве</span></div>
+				</a>
+				<a href="#">
+					<i class="icon-gift"></i>
+					<div><span>Подарок к каждому заказу</span></div>
+				</a>
+				<a href="#">
+					<i class="icon-choice"></i>
+					<div><span>Самый большой выбор мебели из массива</span></div>
+				</a>
+			</div>
+			<div class="slider-banner">
+				<div class="js-slider-banner">
+					<div><a href="#"><img src="img/slide-ban.jpg" alt="banner"></a></div>
+					<div><a href="#"><img src="img/slide-ban.jpg" alt="banner"></a></div>
+					<div><a href="#"><img src="img/slide-ban.jpg" alt="banner"></a></div>
+					<div><a href="#"><img src="img/slide-ban.jpg" alt="banner"></a></div>
+					<div><a href="#"><img src="img/slide-ban.jpg" alt="banner"></a></div>
 				</div>
 			</div>
-			<div class="l-col2">
-				<div class="breadcrumbs">
-					<a href="#">Интернет-магазин</a>					 
-					<a href="#">О магазине</a>
+		</div>
+	</div>
+	<div class="l-center">
+		<div class="wrap">
+			<div class="item item_action">
+				<div class="counter">
+					<div class="counter__title">до конца акции</div>
+					<div class="counter__main js-counter" data-year="2014" data-month="5" data-day="25" data-hour="23" data-minute="0"></div>
 				</div>
-				<div class="page-top">
-					<div class="title">Блог</div>
+				<div class="item__img">
+					<a href="#"><img src="img/item4.png" alt=""></a>
 				</div>
-				<div class="article">
-					<h2>Огромная распродажа - зимняя олимпиада SOCHI 2014 </h2>
-					<h5>В связи с праздничным событием мы предоставляем скидочные карты всем нашим покупателям до 15 марта! Спешите!</h5>
-					<img src="http://lorempixel.com/640/228" alt="">
-					<p>Мы искренне верим,  что каждый человек на земле мечтает  сделать свой дом невероятно притягательным и уютным. Но только представьте, как вы проваливаетесь в мягкий диван, и приятно терпкий запах кожи и хвои успокаивающе действуют на вас, вы дома и все в комнате сделано по вашему замыслу. </p>
-					<p>Мы искренне верим,  что каждый человек на земле мечтает  сделать свой дом невероятно притягательным и уютным. Но только представьте, как вы проваливаетесь в мягкий диван, и приятно терпкий запах кожи и хвои успокаивающе действуют на вас, вы дома</p>
-					<div class="date">7 Февраля 2014</div>
-					<div class="meta-info">
-						<span>Рубрика: </span>
-						<a href="#">Досуг </a>
+				<div class="item__main">
+					<a href="#" class="prod-title">Комод "Луи Филипп ОВ 06.10" </a>
+					<div class="price">31 401Р</div>
+					<div class="old-price"><span>40 401Р</span></div>
+				</div>
+				<div class="item__save">Экономия 3 500Р</div>
+			</div>
+			<div class="scroller-wrap">
+				<div class="scroller">
+					<div class="tab-wrap">
+						<ul class="tab">
+							<li class="tab__item is-active">
+								<a href="#"><span>Популярные товары</span></a>
+							</li>
+							<li class="tab__item">
+								<a href="#"><span>Большая скидка</span></a>
+							</li>
+							<li class="tab__item">
+								<a href="#"><span>Новинки</span></a>
+							</li>
+						</ul>
 					</div> 
+					<div class="scroller__in js-scroll-pane">
+						<div class="item item_no-hover">
+							<div class="badge-wrap">
+								<span class="badge">
+									new
+									<img src="img/badge-new.png" alt="">
+								</span>
+								<span class="badge">
+									-15%
+									<img src="img/badge-discount.png" alt="">
+								</span>
+								<span class="badge js-tooltip-key" data-title="100% дерево">
+									<img src="img/badge-eco.png" alt="">
+								</span>
+							</div>
+							<div class="item__in">
+								<div class="item__img">
+									<a href="#"><img src="img/item1.png" alt=""></a>
+								</div>
+								<div class="item__main">
+									<a href="#" class="prod-title">Комод "Луи Филипп ОВ 06.10" </a>
+									<div class="price">31 401Р</div>
+								</div>
+							</div>
+						</div>
+						<div class="item item_no-hover">
+							<div class="item__in">
+								<div class="item__img">
+									<a href="#"><img src="img/item2.png" alt=""></a>
+								</div>
+								<div class="item__main">
+									<a href="#" class="prod-title">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
+									<div class="price">14 401Р</div>
+								</div>
+							</div>
+						</div>
+						<div class="item item_no-hover">
+							<div class="item__in">
+								<div class="item__img">
+									<a href="#"><img src="img/item3.png" alt=""></a>
+								</div>
+								<div class="item__main">
+									<a href="#" class="prod-title">Стул бежевый элегантный</a>
+									<div class="price">2 800Р</div>
+								</div>
+							</div>
+						</div>
+						<div class="item item_no-hover">
+							<div class="item__in">
+								<div class="item__img">
+									<a href="#"><img src="img/item1.png" alt=""></a>
+								</div>
+								<div class="item__main">
+									<a href="#" class="prod-title">Комод "Луи Филипп ОВ 06.10" </a>
+									<div class="price">31 401Р</div>
+								</div>
+							</div>
+						</div>
+						<div class="item item_no-hover">
+							<div class="badge-wrap">
+								<span class="badge">
+									new
+									<img src="img/badge-new.png" alt="">
+								</span>
+								<span class="badge">
+									-15%
+									<img src="img/badge-discount.png" alt="">
+								</span>
+								<span class="badge js-tooltip-key" data-title="100% дерево">
+									<img src="img/badge-eco.png" alt="">
+								</span>
+							</div>
+							<div class="item__in">
+								<div class="item__img">
+									<a href="#"><img src="img/item2.png" alt=""></a>
+								</div>
+								<div class="item__main">
+									<a href="#" class="prod-title">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
+									<div class="price">14 401Р</div>
+								</div>
+							</div>
+						</div>
+						<div class="item item_no-hover">
+							<div class="item__in">
+								<div class="item__img">
+									<a href="#"><img src="img/item3.png" alt=""></a>
+								</div>
+								<div class="item__main">
+									<a href="#" class="prod-title">Стул бежевый элегантный</a>
+									<div class="price">2 800Р</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="subscribe">
+			<div class="subscribe__in">
+				<form>
+					<i class="subscribe__icon"></i>
+					<span class="subscribe__text">Подпишись на новости и подпиши 3 друзей и <em>получи скидку 20%</em></span>
+					<input class="subscribe__input subscribe__email js-subscribe-input" type="email" placeholder="@" required>
+					<input class="subscribe__input js-subscribe-input" type="text" placeholder="Ваше имя" require>
+					<button class="subscribe__btn" type="submit">Подписаться</button>
+				</form>
+			</div>
+		</div>
+		<div class="subscribe subscribe_finish">
+			<div class="subscribe__in">
+				<form>
+					<i class="subscribe__icon"></i>
+					<span class="subscribe__text">Спасибо! Вам на почту выслан промо код на 20% скидку. Не забудьте воспользоваться им при <em>оформлении заказа!</em></span>
+				</form>
+			</div>
+		</div>
+		<div class="item-slider">
+			<div class="item-slider__title">
+				<span>Популярные категории</span>
+			</div>
+			<div class="js-slider-items slider-with-arr"> 
+				<div class="item item_no-hover">
+					<div class="badge-wrap">
+						<span class="badge">
+							new
+							<img src="img/badge-new.png" alt="">
+						</span>
+						<span class="badge">
+							-15%
+							<img src="img/badge-discount.png" alt="">
+						</span>
+						<span class="badge js-tooltip-key" data-title="100% дерево">
+							<img src="img/badge-eco.png" alt="">
+						</span>
+					</div>
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item1.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">Комод "Луи Филипп ОВ 06.10" </a>
+							<div class="price">31 401Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item2.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
+							<div class="price">14 401Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item3.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">Стул бежевый элегантный</a>
+							<div class="price">2 800Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item1.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">Комод "Луи Филипп ОВ 06.10" </a>
+							<div class="price">31 401Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="badge-wrap">
+						<span class="badge">
+							new
+							<img src="img/badge-new.png" alt="">
+						</span>
+						<span class="badge">
+							-15%
+							<img src="img/badge-discount.png" alt="">
+						</span>
+						<span class="badge js-tooltip-key" data-title="100% дерево">
+							<img src="img/badge-eco.png" alt="">
+						</span>
+					</div>
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item2.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
+							<div class="price">14 401Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item3.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">Стул бежевый элегантный</a>
+							<div class="price">2 800Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="badge-wrap">
+						<span class="badge">
+							new
+							<img src="img/badge-new.png" alt="">
+						</span>
+						<span class="badge">
+							-15%
+							<img src="img/badge-discount.png" alt="">
+						</span>
+						<span class="badge js-tooltip-key" data-title="100% дерево">
+							<img src="img/badge-eco.png" alt="">
+						</span>
+					</div>
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item1.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">Комод "Луи Филипп ОВ 06.10" </a>
+							<div class="price">31 401Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item2.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
+							<div class="price">14 401Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item3.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">Стул бежевый элегантный</a>
+							<div class="price">2 800Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item1.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">Комод "Луи Филипп ОВ 06.10" </a>
+							<div class="price">31 401Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="badge-wrap">
+						<span class="badge">
+							new
+							<img src="img/badge-new.png" alt="">
+						</span>
+						<span class="badge">
+							-15%
+							<img src="img/badge-discount.png" alt="">
+						</span>
+						<span class="badge js-tooltip-key" data-title="100% дерево">
+							<img src="img/badge-eco.png" alt="">
+						</span>
+					</div>
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item2.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">кресло-качалка "Луи Филипп ОВ 06.10" с набросом</a>
+							<div class="price">14 401Р</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item_no-hover">
+					<div class="item__in">
+						<div class="item__img">
+							<a href="#"><img src="img/item3.png" alt=""></a>
+						</div>
+						<div class="item__main">
+							<a href="#" class="prod-title">Стул бежевый элегантный</a>
+							<div class="price">2 800Р</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about">
+			<div class="about__blog">
+				<div class="about__title">Блог</div>
+				<div class="post">
+					<div class="post__meta">7 Февраля 2014</div>
+					<a href="#" class="post__title">Огромная распродажа - Зимняя олимпиада Sochi 14</a>
+					<div class="post__text">В связи с таким событием скидки всем покупателям!</div>
+				</div>
+				<div class="post">
+					<div class="post__meta">7 Февраля 2014</div>
+					<a href="#" class="post__title">Елочка зажгись!</a>
+					<div class="post__text">Люди во всем мире ежегодно ждут чудес, подарков и просто приятно и красиво провести время.</div>
+				</div>
+			</div>
+			<div class="about__info">
+				<div class="about__title">Интернет - магазин мебели в Москве</div>
+				<p><strong>Скорее мы продавцы уюта, комфорта, спокойствия и надежности. Вы пришли к нам, чтобы сделать свою жизнь более комфортной и удобной и наша задача содействовать вам.</strong></p>
+				<div class="article">
+					<p>Мы искренне верим,  что каждый человек на земле мечтает  сделать свой дом невероятно притягательным и уютным. Но только представьте, как вы проваливаетесь в мягкий диван, и приятно терпкий запах кожи 
+					и хвои успокаивающе действуют на вас, вы дома и все в комнате сделано по вашему замыслу. </p>
+					<p>Вы берете свой любимый журнал или книгу и погружаетесь в чтение. Такие моменты дорогого стоят. </p>
+					<a href="#" class="article__more">Показать больше</a>
 				</div>
 				
-				<div class="comment-title">Комментарии</div>
-				<div class="comment comment_post">
-					<a class="comment__user" href="#">Александр</a>
-					<div class="comment__meta">28.02.2014</div>
-					<div class="comment__text">Отличный магазин и замечательные товары. Спасибо за работу.</div>
+				<div class="yandex-market">
+					<img src="img/yandex-market.png" alt="">
+					<div><a href="#">Отзывы о магазине</a></div>
 				</div>
-				<div class="comment comment_post">
-					<a class="comment__user" href="#">Александр</a>
-					<div class="comment__meta">28.02.2014</div>
-					<div class="comment__text">Отличный магазин и замечательные товары. Спасибо за работу.</div>
+			</div>
+		</div>
+		<div class="partners">
+			<div class="js-slider-partners slider-with-arr"> 
+				<div>
+					<a href="#"><img src="img/p1.png" alt="logo"></a>
 				</div>
-				<div class="add-comment">
-					<a href="js-popup-comment" class="btn btn_orange  js-popup-link">Добавить комментарий</a>
+				<div>
+					<a href="#"><img src="img/p2.png" alt="logo"></a>
 				</div>
-				<a href="#" class="link-prev is-orange">Назад в блог</a>
+				<div>
+					<a href="#"><img src="img/p3.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p4.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p5.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p6.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p1.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p2.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p3.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p4.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p5.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p6.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p1.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p2.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p3.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p4.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p5.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p6.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p1.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p2.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p3.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p4.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p5.png" alt="logo"></a>
+				</div>
+				<div>
+					<a href="#"><img src="img/p6.png" alt="logo"></a>
+				</div>
+			</div>
+		</div>
+		<div class="soc-widget">
+			<div class="soc-widget__title">Давайте общаться!</div>
+			<p>Делимся впечатлениями, задаём вопросы и получаем ответы!</p>
+			<div class="wrap">
+				<div class="soc-widget__col">
+					<img src="img/widget-tw.png" alt="">
+				</div>
+				<div class="soc-widget__col">
+					<img src="img/widget-fb.png" alt="">
+				</div>
+				<div class="soc-widget__col">
+					<img src="img/widget-vk.png" alt="">
+				</div>
 			</div>
 		</div>
 	</div> 
+	<div class="soc-share">
+		<div class="soc-share__in"><img src="img/soc-share.png" alt=""></div>
+	</div>
 	<div class="push"></div>
 </div>
 <footer class="footer">

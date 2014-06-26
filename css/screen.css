@@ -353,8 +353,8 @@ a:hover { text-decoration: none; }
 
 .badge-wrap { position: absolute; font-size: 0; }
 
-.badge { margin-left: 11px; display: inline-block; vertical-align: middle; line-height: 30px; text-align: center; font-weight: bold; font-size: 10px; color: white; }
-.badge img { vertical-align: middle; }
+.badge { position: relative; margin-left: 11px; display: inline-block; vertical-align: middle; line-height: 30px; width: 30px; height: 30px; text-align: center; font-weight: bold; font-size: 10px; color: white; }
+.badge img { position: absolute; left: 0; top: 0; z-index: -1; }
 
 .badge_new { background: url('../img/icons-s73a4a094b3.png') 0 -2086px no-repeat; width: 30px; height: 30px; }
 
@@ -730,7 +730,7 @@ a:hover { text-decoration: none; }
 .gallery__img { position: relative; width: 440px; }
 .gallery__img a { display: block; height: 340px; line-height: 340px; overflow: hidden; }
 .gallery__img img { max-width: 100%; vertical-align: middle; }
-.gallery__img .badge { position: absolute; top: 0; }
+.gallery__img .badge-wrap { position: absolute; top: 0; right: 0; z-index: 2; }
 
 .gallery__zoom { position: absolute; top: 0; left: 0; background: url('../img/icons-s73a4a094b3.png') 0 -1955px no-repeat; width: 27px; height: 26px; }
 
