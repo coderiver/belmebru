@@ -506,6 +506,10 @@
 		color: $orange 
 		&:before
 			+s(clock)
+	&.is-available
+		color: #64ac13
+		&:before 
+			+s(status-done)
 
 .prod__delivery
 	float: right
@@ -1603,15 +1607,17 @@
 .kit-items__discount
 	position: relative
 	margin-bottom: 13px
-	padding: 0 11px 
-	height: 29px
+	padding: 7px 11px 
 	font-size: 11px
-	line-height: 29px
 	border: 1px solid #ebe5ca
 	border-radius: 15px
 	font-weight: bold
 	color: #64482a 
 	background: #ffeca4
+	div
+		display: inline-block
+		vertical-align: middle
+		line-height: 1.2
 	&:after
 		content: ""
 		position: absolute

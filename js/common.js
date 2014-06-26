@@ -562,6 +562,11 @@ head.ready(function() {
  	 });
 
 	
-  	
+  	$(".item").each(function(){
+  		var height = $(this).height();
+  		$(this).css({
+  			height: height
+  		})
+  	});
 
 });
