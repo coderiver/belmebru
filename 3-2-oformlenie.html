@@ -591,8 +591,25 @@
 				<img src="img/soc.png" alt="">
 			</div>
 			<div class="order-finish__invite">
-				<span>http://belmebru.ru/id62536912</span>
-				<a href="#" class="btn-copy">Копировать</a>
+				<span id="clipboard_textarea">http://belmebru.ru/id62536912</span>
+				<button class="btn-copy" data-clipboard-target="clipboard_textarea" id="copy-button" title="Click to copy me.">Копировать</button>
+					
+				<!-- <button id="copy-button" data-clipboard-text="Copy Me!" title="Click to copy me.">Copy to Clipboard</button> -->
+				<script src="js/lib/ZeroClipboard.js"></script>
+   				<script>
+   					 var client = new ZeroClipboard( document.getElementById("copy-button") );
+						client.on( "ready", function( readyEvent ) {
+						  //alert( "ZeroClipboard SWF is ready!" );
+
+							client.on( "aftercopy", function( event ) {
+							    // `this` === `client`
+							    // `event.target` === the element that was clicked
+							    event.target.style.display = "none";
+							    alert("Copied text to clipboard: " + event.data["text/plain"] );
+							});
+						});
+						
+   				</script>
 			</div>
 		</div>
 	</div> 
