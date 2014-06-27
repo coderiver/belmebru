@@ -223,29 +223,35 @@
 		
 .sort
 	margin-bottom: 40px
-	+clr
+	//+clr
+	+justify   
 	.select
 		display: inline-block
-		margin-top: 1px
+		//margin-top: 1px
+		margin-left: 5px
 		vertical-align: middle
 		width: 55px
 	.select_width
 		width: 155px
 	.pagination
-		margin: 3px 0 0
+		margin: 0
+		position: relative
+		top: 4px
 .sort_mod
 	.sort__item
 		margin-left: 25px
 .sort_search
 	margin-bottom: 50px
 .sort__item
-	float: left
-	margin-left: 30px
+	display: inline-block
+	text-align: left
+	//float: left
+	//margin-left: 30px
 	+tr   
 	&:first-child
-		margin-left: 0
+		//margin-left: 0
 	&:last-child
-		float: right
+		//float: right
 .sort__title,
 .sort__key
 	display: inline-block

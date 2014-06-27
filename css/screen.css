@@ -1261,19 +1261,17 @@ a:hover { text-decoration: none; }
 .link-prev:before { content: "←"; position: absolute; left: -20px; top: -2px; font-size: 14px; }
 .link-prev:hover, .link-prev.is-orange { color: #f27623; }
 
-.sort { margin-bottom: 40px; *zoom: 1; }
-.sort:after { content: " "; display: table; clear: both; }
-.sort .select { display: inline-block; margin-top: 1px; vertical-align: middle; width: 55px; }
+.sort { margin-bottom: 40px; text-align: justify; font-size: 0; }
+.sort:after { content: ""; display: inline-block; width: 100%; height: 0; }
+.sort .select { display: inline-block; margin-left: 5px; vertical-align: middle; width: 55px; }
 .sort .select_width { width: 155px; }
-.sort .pagination { margin: 3px 0 0; }
+.sort .pagination { margin: 0; position: relative; top: 4px; }
 
 .sort_mod .sort__item { margin-left: 25px; }
 
 .sort_search { margin-bottom: 50px; }
 
-.sort__item { float: left; margin-left: 30px; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
-.sort__item:first-child { margin-left: 0; }
-.sort__item:last-child { float: right; }
+.sort__item { display: inline-block; text-align: left; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 
 .sort__title, .sort__key { display: inline-block; vertical-align: middle; }
 
