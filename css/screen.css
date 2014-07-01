@@ -37,7 +37,7 @@ html ::-moz-selection { background: rgba(0, 0, 0, 0.1); }
 
 body { min-width: 1024px; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; color: #282621; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
 
-input, textarea { width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12px; }
+input, textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: Arial, sans-serif; font-size: 12px; }
 
 a { color: #f27623; }
 a:hover { text-decoration: none; }
@@ -276,7 +276,7 @@ a:hover { text-decoration: none; }
 .field__label sup { font-size: 12px; color: #fe4747; }
 
 .field__el { position: relative; }
-.field__el input, .field__el textarea { border: 1px solid #d6d6d6; font: normal 12px Arial, sans-serif; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
+.field__el input, .field__el textarea { width: 100%; border: 1px solid #d6d6d6; font: normal 12px Arial, sans-serif; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 .field__el input:-ms-input-placeholder, .field__el textarea:-ms-input-placeholder { font-style: italic; color: #a1a1a1; }
 .field__el input:-moz-placeholder, .field__el textarea:-moz-placeholder { font-style: italic; color: #a1a1a1; }
 .field__el input::-moz-placeholder, .field__el textarea::-moz-placeholder { font-style: italic; color: #a1a1a1; }

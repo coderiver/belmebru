@@ -554,12 +554,21 @@ head.ready(function() {
   		ui_slider_range();
  	 });
 
-  	$(".js-checkbox-input").on("change", function() {
-  		if ($(this).is(":checked")) {
-  			$(this).parent().find(".input").focus();
-  		}
-  		
- 	 });
+  // 	$(".js-checkbox-label").on("click", function() {
+  // 		if ($(this).find(".js-checkbox-input").is(":checked")) {
+  // 			$(this).find(".input").focus();
+  // 		}
+  // 		else {
+  // 			//$(this).find(".input").focus();
+  // 		}
+ 	// });
+ 	// $(".js-checkbox-label .input").focusin(function() {
+  // 		$(this).parents(".js-checkbox-label").find(".js-checkbox-input").attr("checked","checked");
+ 	// });
+ 	// $(".js-checkbox-label .input").focusout(function() {
+  // 		$(this).parents(".js-checkbox-label").find(".js-checkbox-input").removeAttr("checked");
+ 	// });
+  	
 
 	
   	$(".item").each(function(){
