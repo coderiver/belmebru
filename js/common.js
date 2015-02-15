@@ -291,29 +291,39 @@ head.ready(function() {
 
 	function ui_slider_range() {
 		$(".js-ui-slider-range").each(function(){
-			var slider = $(this).find(".js-ui-slider-main");
-			var input_from = $(this).find(".js-ui-slider-from");
-			var input_to = $(this).find(".js-ui-slider-to");
-			var min_val = +$(this).attr("data-min");
-			var max_val = +$(this).attr("data-max");
+			var slider = $(this).find(".js-ui-slider-main"),
+				input_from = $(this).find(".js-ui-slider-from"),
+				input_to = $(this).find(".js-ui-slider-to"),
+				min_val = +$(this).attr("data-min"),
+				max_val = +$(this).attr("data-max"),
+				inputFromHidden = $(this).find(".js-input-from-hidden"),
+				inputToHidden = $(this).find(".js-input-to-hidden"),
+				valFrom = inputFromHidden.val(),
+            	valTo = inputToHidden.val();
+            if (!valFrom) {
+            	var valFrom = min_val;
+            }
+            if (!valTo) {
+            	var valTo = max_val;
+            }
 			slider.slider({
 				range: true,
 				min: min_val,
 				max: max_val,
 				step: 1000,	
-				values: [ min_val, max_val ],
+				values: [ valFrom, valTo ],
 				slide: function( event, ui ) {
 					$(this).find(".ui-slider-handle").html("<span></span>");
 					var handle_0 = $(this).find(".ui-slider-range").next().find("span")
 					var handle_1 = $(this).find(".ui-slider-range").next().next().find("span");
 					input_from.text(ui.values[0]);
+					inputFromHidden.val(ui.values[0]);
 					input_to.text(ui.values[1]);
+					inputToHidden.val(ui.values[1]);
 					handle_0.text(ui.values[0]);
 					handle_1.text(ui.values[1]);
 				}
 			});
-			console.log(handle_0);
-			console.log(handle_1);
 			$(this).find(".ui-slider-handle").html("<span></span>");
 			var handle_0 = $(this).find(".ui-slider-range").next().find("span")
 			var handle_1 = $(this).find(".ui-slider-range").next().next().find("span");
